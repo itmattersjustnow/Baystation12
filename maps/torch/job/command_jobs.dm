@@ -327,7 +327,7 @@
 		                   SKILL_WEAPONS     = SKILL_MAX,
 		                   SKILL_FORENSICS   = SKILL_MAX)
 	skill_points = 20
-	access = list(access_representative, access_security, access_medical,
+	access = list(access_security, access_medical,
 			            access_bridge, access_cargo, access_solgov_crew, access_hangar, access_sec_guard)
 	//defer_roundstart_spawn = TRUE
 /*

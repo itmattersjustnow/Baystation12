@@ -17,7 +17,7 @@
 	name = "mounted flash"
 	desc = "You are the law."
 	icon_state = "flash"
-	
+
 	selectable = 0
 	toggleable = 1
 	activates_on_touch = 1
@@ -329,10 +329,6 @@
 	return ..()
 
 /obj/item/rig_module/mounted/energy_blade/activate()
-
-	if(!..() || !gun)
-		return 0
-
 	var/mob/living/M = holder.wearer
 
 	if(M.l_hand && M.r_hand)

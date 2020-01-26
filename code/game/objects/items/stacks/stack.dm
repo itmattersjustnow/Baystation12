@@ -31,7 +31,6 @@
 		stacktype = type
 	if (amount >= 1)
 		src.amount = amount
-		update_icon()
 	..()
 
 /obj/item/stack/Initialize()
