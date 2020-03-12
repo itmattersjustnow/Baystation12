@@ -15,7 +15,7 @@ Buildable meters
 	item_state = "buildpipe"
 	w_class = ITEM_SIZE_NORMAL
 	level = 2
-	obj_flags = OBJ_FLAG_ROTATABLE 
+	obj_flags = OBJ_FLAG_ROTATABLE
 	dir = SOUTH
 	var/constructed_path = /obj/machinery/atmospherics/pipe/simple/hidden
 	var/pipe_class = PIPE_CLASS_BINARY
@@ -76,7 +76,7 @@ Buildable meters
 		to_chat(usr, pipefailtext)
 		return 1
 	P.build_network()
-	if(P.node)		
+	if(P.node)
 		P.node.atmos_init()
 		P.node.build_network()
 	return 0
@@ -99,8 +99,8 @@ Buildable meters
 	P.atmos_init()
 	if (QDELETED(P))
 		to_chat(usr, pipefailtext)
-		return 1	
-	P.build_network()	
+		return 1
+	P.build_network()
 	if(P.node1)
 		P.node1.atmos_init()
 		P.node1.build_network()
@@ -208,30 +208,6 @@ Buildable meters
 	desc = I.desc
 	connect_types = I.connect_types
 
-/obj/item/pipe_meter
-	name = "meter"
-	desc = "A meter that can measure gas inside pipes or in the general area."
-	icon = 'icons/obj/pipe-item.dmi'
-	icon_state = "meter"
-	item_state = "buildpipe"
-	w_class = ITEM_SIZE_LARGE
-	var/constructed_path = /obj/machinery/meter
-
-/obj/item/pipe_meter/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	..()
-
-	if(!isWrench(W))
-		return ..()
-	if(!locate(/obj/machinery/atmospherics/pipe, src.loc))	
-		new /obj/machinery/meter/turf(loc)
-		to_chat(user, "<span class='notice'>You have fastened the meter to the [loc].</span>")
-	else
-		new/obj/machinery/meter(loc)
-		to_chat(user, "<span class='notice'>You have fastened the meter to the pipe.</span>")
-	playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-		
-	qdel(src)
-
 /obj/item/machine_chassis
 	var/build_type
 
@@ -253,4 +229,13 @@ Buildable meters
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "gsensor1"
 	w_class = ITEM_SIZE_LARGE
-	build_type = /obj/machinery/air_sensor/buildable
+	build_type = /obj/machinery/air_sensor
+
+/obj/item/machine_chassis/pipe_meter
+	name = "meter"
+	desc = "A meter that can measure gas inside pipes or in the general area."
+	icon = 'icons/obj/pipe-item.dmi'
+	icon_state = "meter"
+	item_state = "buildpipe"
+	w_class = ITEM_SIZE_LARGE
+	build_type = /obj/machinery/meter

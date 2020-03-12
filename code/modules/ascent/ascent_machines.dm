@@ -38,6 +38,12 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 	. = ..()
 	scrubbing_gas -= GAS_METHYL_BROMIDE
 
+/obj/machinery/atmospherics/unary/vent_scrubber/on/ascent/shuttle
+	stock_part_presets = list(
+		/decl/stock_part_preset/radio/receiver/vent_scrubber/shuttle = 1,
+		/decl/stock_part_preset/radio/event_transmitter/vent_scrubber/shuttle = 1
+	)
+
 /obj/machinery/recharge_station/ascent
 	name = "mantid recharging dock"
 	desc = "An oddly organic aperture stuffed with power connectors."
@@ -235,6 +241,6 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 /obj/machinery/power/smes/buildable/power_shuttle/ascent
 	name = "mantid battery"
 	desc = "Some kind of strange alien SMES technology."
-	icon = 'icons/obj/machines/power/mantid_smes.dmi'	
+	icon = 'icons/obj/machines/power/mantid_smes.dmi'
 	overlay_icon = 'icons/obj/machines/power/mantid_smes.dmi'
 	construct_state = /decl/machine_construction/default/no_deconstruct

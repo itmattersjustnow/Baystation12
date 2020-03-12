@@ -526,9 +526,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/scrap/dock)
 "bZ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "dock_star_pump"
 	},
 /obj/structure/cable{
@@ -3557,8 +3556,7 @@
 	pressure_checks = 2;
 	external_pressure_bound_default = 0;
 	internal_pressure_bound_default = 2000;
-	pressure_checks_default = 2;
-	frequency = 1443
+	pressure_checks_default = 2
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/scrap/maintenance/atmos)
@@ -3991,8 +3989,7 @@
 	pressure_checks = 2;
 	external_pressure_bound_default = 0;
 	internal_pressure_bound_default = 2000;
-	pressure_checks_default = 2;
-	frequency = 1443
+	pressure_checks_default = 2
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/ship/scrap/maintenance/atmos)
@@ -4137,8 +4134,7 @@
 	pressure_checks = 2;
 	external_pressure_bound_default = 0;
 	internal_pressure_bound_default = 2000;
-	pressure_checks_default = 2;
-	frequency = 1443
+	pressure_checks_default = 2
 	},
 /turf/simulated/floor/reinforced/nitrogen,
 /area/ship/scrap/maintenance/atmos)
@@ -4704,9 +4700,8 @@
 /turf/simulated/wall,
 /area/ship/scrap/garden)
 "nc" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 4;
-	frequency = 1383;
 	id_tag = "dock_port_pump"
 	},
 /obj/structure/cable{

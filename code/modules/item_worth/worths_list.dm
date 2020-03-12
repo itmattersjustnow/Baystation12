@@ -518,7 +518,7 @@ var/list/worths = list(
 					/obj/item/supply_beacon = 5000,
 					/obj/item/frame = 60,
 					/obj/item/pipe = 100,
-					/obj/item/pipe_meter = 300,
+					/obj/item/machine_chassis/pipe_meter = 300,
 					/obj/item/missile = 1200,
 					/obj/item/blueprints = 4000, //Information is valuable,
 					/obj/item/bodybag/cryobag = 2000,
@@ -653,7 +653,6 @@ var/list/worths = list(
 					/obj/machinery/atmospherics/tvalve = -150,
 					/obj/machinery/atmospherics/valve = -120,
 					/obj/machinery/atmospherics/binary/circulator = -2500,
-					/obj/machinery/atmospherics/binary/dp_vent_pump = -850,
 					/obj/machinery/atmospherics/binary/passive_gate = -1600,
 					/obj/machinery/atmospherics/pipeturbine = -3000,
 					/obj/machinery/atmospherics/binary/pump = -1900,
@@ -729,4 +728,3 @@ var/list/worths = list(
 					/obj/machinery/bookbinder = -1200,
 					/obj/machinery = -1000,
 					) //Must be in descending order. Child before parents, otherwise it doesn't work.,
-
