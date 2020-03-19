@@ -370,3 +370,8 @@
 #define MODIFIER_STACK_ALLOWED	3	// Multiple instances are allowed.
 
 #define MODIFIER_GENETIC	1	// Modifiers with this flag will be copied to mobs who get cloned.
+
+// used in /mob/living/carbon/human/can_inject, and by various callers of that proc
+#define CAN_INJECT 1
+#define INJECTION_PORT 2
+#define INJECTION_PORT_DELAY 3 SECONDS // used by injectors to apply delay due to searching for a port on the injectee's suit
