@@ -158,6 +158,9 @@
 
 /datum/gear/clothing/suspenders
 
+/datum/gear/clothing/suspenders/colorable
+	allowed_branches = CIVILIAN_BRANCHES
+
 /datum/gear/clothing/wcoat
 
 /datum/gear/clothing/zhongshan
