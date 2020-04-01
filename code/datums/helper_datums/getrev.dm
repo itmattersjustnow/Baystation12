@@ -1,7 +1,9 @@
 var/global/datum/getrev/revdata = new()
 
 /datum/getrev
+	var/branch
 	var/revision
+	var/date
 	var/showinfo
 
 /datum/getrev/New()
@@ -16,8 +18,10 @@ var/global/datum/getrev/revdata = new()
 				if(last_entry.len < 2)	continue
 				revision = last_entry[2]
 
-	world.log << "Running revision:"
-	world.log << revision
+	to_world_log("Running revision:")
+	to_world_log(branch)
+	to_world_log(date)
+	to_world_log(revision)
 
 /client/verb/showrevinfo()
 	set category = "OOC"

@@ -1353,8 +1353,9 @@
 	name = "Gin"
 	description = "It's gin. In space. I say, good sir."
 	taste_description = "an alcoholic christmas tree"
-	color = "#0064c6"
+	color = "#bcf5ff"
 	strength = 15
+	alpha = 120
 
 	glass_name = "gin"
 	glass_desc = "A crystal clear glass of Griffeater gin."
@@ -1426,6 +1427,7 @@
 	taste_description = "paint stripper"
 	color = "#ffff91"
 	strength = 25
+	alpha = 120
 
 	glass_name = "Tequilla"
 	glass_desc = "Now all that's missing is the weird colored shades!"
@@ -1466,8 +1468,9 @@
 	name = "Vodka"
 	description = "Number one drink AND fueling choice for Independents around the galaxy."
 	taste_description = "grain alcohol"
-	color = "#0064c8" // rgb: 0, 100, 200
+	color = "#d5eaff" // rgb: 0, 100, 200
 	strength = 15
+	alpha = 120
 
 	glass_name = "vodka"
 	glass_desc = "The glass contain wodka. Xynta."
@@ -1717,7 +1720,7 @@
 	name = "Classic Martini"
 	description = "Vermouth with Gin. Not quite how 007 enjoyed it, but still delicious."
 	taste_description = "dry class"
-	color = "#0064c8"
+	color = "#bff5ee"
 	strength = 25
 
 	glass_name = "classic martini"
@@ -1812,7 +1815,7 @@
 	name = "Gin and Tonic"
 	description = "An all time classic, mild cocktail."
 	taste_description = "mild tartness" //???
-	color = "#0064c8"
+	color = "#bef3f3"
 	strength = 50
 
 	glass_name = "gin and tonic"
@@ -1889,7 +1892,7 @@
 	name = "Irish Cream"
 	description = "Whiskey-imbued cream, what else would you expect from the Irish."
 	taste_description = "creamy alcohol"
-	color = "#dddd9a3"
+	color = "#dddd9a"
 	strength = 25
 
 	glass_name = "Irish cream"
@@ -2194,7 +2197,7 @@
 	name = "Vodka Martini"
 	description = "Vodka with Gin. Not quite how 007 enjoyed it, but still delicious."
 	taste_description = "shaken, not stirred"
-	color = "#0064c8"
+	color = "#b8e3e7"
 	strength = 12
 
 	glass_name = "vodka martini"
@@ -2205,7 +2208,7 @@
 	name = "Vodka and Tonic"
 	description = "For when a gin and tonic isn't russian enough."
 	taste_description = "tart bitterness"
-	color = "#0064c8" // rgb: 0, 100, 200
+	color = "#c1dcf7" // rgb: 0, 100, 200
 	strength = 15
 
 	glass_name = "vodka and tonic"
@@ -2216,7 +2219,7 @@
 	name = "White Russian"
 	description = "That's just, like, your opinion, man..."
 	taste_description = "bitter cream"
-	color = "#a68340"
+	color = "#aa976e"
 	strength = 15
 
 	glass_name = "White Russian"

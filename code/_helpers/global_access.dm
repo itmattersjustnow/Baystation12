@@ -861,8 +861,6 @@
 			return global.tape_roll_applications;
 		if("telecomms_list")
 			return global.telecomms_list;
-		if("text_tag_icons")
-			return global.text_tag_icons;
 		if("tgs")
 			return global.tgs;
 		if("ticket_panels")
@@ -937,7 +935,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ANTAG_FREQS")
@@ -1800,8 +1798,6 @@
 			global.tape_roll_applications=newval;
 		if("telecomms_list")
 			global.telecomms_list=newval;
-		if("text_tag_icons")
-			global.text_tag_icons=newval;
 		if("tgs")
 			global.tgs=newval;
 		if("ticket_panels")
@@ -1876,7 +1872,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ANTAG_FREQS",
 	"BSACooldown",
@@ -2308,7 +2304,6 @@
 	"tank_gauge_cache",
 	"tape_roll_applications",
 	"telecomms_list",
-	"text_tag_icons",
 	"tgs",
 	"ticket_panels",
 	"tickets",

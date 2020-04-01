@@ -102,11 +102,11 @@
 		"power" = use_power,
 		"scrubbing" = scrubbing,
 		"panic" = panic,
-		"filter_o2" = (GAS_OXYGEN in scrubbing_gas),
-		"filter_n2" = (GAS_NITROGEN in scrubbing_gas),
-		"filter_co2" = (GAS_CO2 in scrubbing_gas),
-		"filter_phoron" = (GAS_PHORON in scrubbing_gas),
-		"filter_n2o" = (GAS_N2O in scrubbing_gas),
+		"filter_o2" = ("oxygen" in scrubbing_gas),
+		"filter_n2" = ("nitrogen" in scrubbing_gas),
+		"filter_co2" = ("carbon_dioxide" in scrubbing_gas),
+		"filter_phoron" = ("phoron" in scrubbing_gas),
+		"filter_n2o" = ("sleeping_agent" in scrubbing_gas),
 		"sigtype" = "status"
 	)
 	if(!initial_loc.air_scrub_names[id_tag])
@@ -133,7 +133,7 @@
 	if(!scrubbing_gas)
 		scrubbing_gas = list()
 		for(var/g in gas_data.gases)
-			if(g != GAS_OXYGEN && g != GAS_NITROGEN)
+			if(g != "oxygen" && g != "nitrogen")
 				scrubbing_gas += g
 
 /obj/machinery/atmospherics/unary/vent_scrubber/Process()
@@ -215,30 +215,30 @@
 
 	var/list/toggle = list()
 
-	if(!isnull(signal.data["o2_scrub"]) && text2num(signal.data["o2_scrub"]) != (GAS_OXYGEN in scrubbing_gas))
-		toggle += GAS_OXYGEN
+	if(!isnull(signal.data["o2_scrub"]) && text2num(signal.data["o2_scrub"]) != ("oxygen" in scrubbing_gas))
+		toggle += "oxygen"
 	else if(signal.data["toggle_o2_scrub"])
-		toggle += GAS_OXYGEN
+		toggle += "oxygen"
 
-	if(!isnull(signal.data["n2_scrub"]) && text2num(signal.data["n2_scrub"]) != (GAS_NITROGEN in scrubbing_gas))
-		toggle += GAS_NITROGEN
+	if(!isnull(signal.data["n2_scrub"]) && text2num(signal.data["n2_scrub"]) != ("nitrogen" in scrubbing_gas))
+		toggle += "nitrogen"
 	else if(signal.data["toggle_n2_scrub"])
-		toggle += GAS_NITROGEN
+		toggle += "nitrogen"
 
-	if(!isnull(signal.data["co2_scrub"]) && text2num(signal.data["co2_scrub"]) != (GAS_CO2 in scrubbing_gas))
-		toggle += GAS_CO2
+	if(!isnull(signal.data["co2_scrub"]) && text2num(signal.data["co2_scrub"]) != ("carbon_dioxide" in scrubbing_gas))
+		toggle += "carbon_dioxide"
 	else if(signal.data["toggle_co2_scrub"])
-		toggle += GAS_CO2
+		toggle += "carbon_dioxide"
 
-	if(!isnull(signal.data["tox_scrub"]) && text2num(signal.data["tox_scrub"]) != (GAS_PHORON in scrubbing_gas))
-		toggle += GAS_PHORON
+	if(!isnull(signal.data["tox_scrub"]) && text2num(signal.data["tox_scrub"]) != ("phoron" in scrubbing_gas))
+		toggle += "phoron"
 	else if(signal.data["toggle_tox_scrub"])
-		toggle += GAS_PHORON
+		toggle += "phoron"
 
-	if(!isnull(signal.data["n2o_scrub"]) && text2num(signal.data["n2o_scrub"]) != (GAS_N2O in scrubbing_gas))
-		toggle += GAS_N2O
+	if(!isnull(signal.data["n2o_scrub"]) && text2num(signal.data["n2o_scrub"]) != ("sleeping_agent" in scrubbing_gas))
+		toggle += "sleeping_agent"
 	else if(signal.data["toggle_n2o_scrub"])
-		toggle += GAS_N2O
+		toggle += "sleeping_agent"
 
 	scrubbing_gas ^= toggle
 
@@ -318,17 +318,10 @@
 
 	return ..()
 
-/obj/machinery/atmospherics/unary/vent_scrubber/examine(mob/user, distance)
-	. = ..()
-	if(distance <= 1)
+/obj/machinery/atmospherics/unary/vent_scrubber/examine(mob/user)
+	if(..(user, 1))
 		to_chat(user, "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W")
 	else
 		to_chat(user, "You are too far away to read the gauge.")
 	if(welded)
 		to_chat(user, "It seems welded shut.")
-
-
-
-/obj/machinery/atmospherics/unary/vent_scrubber/on/sauna/Initialize()
-	. = ..()
-	scrubbing_gas -= GAS_STEAM
