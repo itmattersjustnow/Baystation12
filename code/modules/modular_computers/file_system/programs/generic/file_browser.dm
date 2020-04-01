@@ -30,20 +30,18 @@
 		if(computer.create_file(newname, file_type = /datum/computer_file/data/text))
 			return 1
 	if(href_list["PRG_deletefile"])
-		. = 1
-		computer.delete_file(href_list["PRG_deletefile"])
+		return computer.delete_file(href_list["PRG_deletefile"])
+	
 	if(href_list["PRG_usbdeletefile"])
-		. = 1
 		var/obj/item/weapon/stock_parts/computer/hard_drive/RHDD = computer.get_component(PART_DRIVE)
-		computer.delete_file(href_list["PRG_usbdeletefile"], RHDD)
+		return computer.delete_file(href_list["PRG_deletefile"], RHDD)
 
 	if(href_list["PRG_closefile"])
 		. = 1
 		open_file = null
 		error = null
 	if(href_list["PRG_clone"])
-		. = 1
-		computer.clone_file(href_list["PRG_clone"])
+		return computer.clone_file(href_list["PRG_clone"])
 	if(href_list["PRG_rename"])
 		. = 1
 		var/datum/computer_file/F = computer.get_file(href_list["PRG_rename"])
@@ -85,11 +83,9 @@
 			error = "Hardware error: Unable to print the file."
 			return 1
 	if(href_list["PRG_copytousb"])
-		. = 1
-		computer.copy_between_disks(href_list["PRG_copytousb"], computer.get_component(PART_HDD), computer.get_component(PART_DRIVE))
+		computer.copy_between_disks(computer.get_component(PART_HDD), computer.get_component(PART_DRIVE))
 	if(href_list["PRG_copyfromusb"])
-		. = 1
-		computer.copy_between_disks(href_list["PRG_copyfromusb"], computer.get_component(PART_DRIVE), computer.get_component(PART_HDD))
+		computer.copy_between_disks(computer.get_component(PART_DRIVE), computer.get_component(PART_HDD))
 	if(.)
 		SSnano.update_uis(NM)
 

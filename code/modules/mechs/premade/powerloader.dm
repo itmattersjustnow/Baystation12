@@ -62,7 +62,6 @@
 	desc = "A Xion industrial brand roll cage. Technically OSHA compliant. Technically."
 	max_damage = 100
 	power_use = 0
-	climb_time = 6
 
 /obj/item/mech_component/chassis/powerloader/prebuild()
 	. = ..()

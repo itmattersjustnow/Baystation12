@@ -1,5 +1,6 @@
 /datum/reagent
 	var/name = "Reagent"
+	var/id = "reagent"
 	var/description = "A non-descript chemical."
 	var/taste_description = "old rotten bandaids"
 	var/taste_mult = 1 //how this taste compares to others. Higher values means it is more noticable
@@ -14,7 +15,6 @@
 	var/scannable = 0 // Shows up on health analyzers.
 	var/color = "#000000"
 	var/color_weight = 1
-	var/alpha = 255
 	var/flags = 0
 	var/hidden_from_codex
 

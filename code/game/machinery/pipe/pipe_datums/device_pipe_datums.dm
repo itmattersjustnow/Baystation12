@@ -76,7 +76,7 @@
 /datum/pipe/pipe_dispenser/device/meter
 	name = "meter"
 	desc = "a meter that monitors pressure and temperature on the attached pipe."
-	build_path = /obj/item/machine_chassis/pipe_meter
+	build_path = /obj/item/pipe_meter
 	pipe_color = null
 	connect_types = null
 	colorable = FALSE
@@ -172,7 +172,7 @@
 	pipe_color = null
 	connect_types = null
 	colorable = FALSE
-	constructed_path = /obj/machinery/air_sensor
+	constructed_path = /obj/machinery/air_sensor/buildable
 	pipe_class = PIPE_CLASS_OTHER
 
 /datum/pipe/pipe_dispenser/device/outlet_injector

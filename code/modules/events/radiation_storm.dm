@@ -2,7 +2,7 @@
 	var/const/enterBelt		= 30
 	var/const/radIntervall 	= 5	// Enough time between enter/leave belt for 10 hits, as per original implementation
 	var/const/leaveBelt		= 80
-	var/const/revokeAccess	= 165 //Hopefully long enough for radiation levels to dissipate.
+	var/const/revokeAccess	= 250 //Hopefully long enough for radiation levels to dissipate.
 	startWhen				= 2
 	announceWhen			= 1
 	endWhen					= revokeAccess
@@ -53,7 +53,7 @@
 			continue
 		if(istype(C,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = C
-			if(prob(5 * (1 - H.get_blocked_ratio(null, IRRADIATE, damage_flags = DAM_DISPERSED, armor_pen = radiation_level))))
+			if(prob(5 * (1 - H.get_blocked_ratio(null, IRRADIATE, damage_flags = DAM_DISPERSED, radiation_level))))
 				if (prob(75))
 					randmutb(H) // Applies bad mutation
 					domutcheck(H,null,MUTCHK_FORCED)

@@ -12,7 +12,11 @@
 #define MUTATION_LASER           7  // Harm intent - click anywhere to shoot lasers from eyes.
 #define MUTATION_HEAL            8 // Healing people with hands.
 #define MUTATION_SPACERES        9 // Can't be harmed via pressure damage.
-#define MUTATION_SKELETON        10
+#define MUTATION_NOCLONE        10
+
+//#define MUTATION_       28
+#define MUTATION_SKELETON      29
+#define MUTATION_PLANT         30
 
 // Other Mutations:
 #define mNobreath      100 // No need to breathe.
@@ -35,9 +39,9 @@
 #define NERVOUS     0x10
 
 // sdisabilities
-#define BLINDED 0x1
-#define MUTED  0x2
-#define DEAFENED  0x4
+#define BLIND 0x1
+#define MUTE  0x2
+#define DEAF  0x4
 
 // The way blocks are handled badly needs a rewrite, this is horrible.
 // Too much of a project to handle at the moment, TODO for later.

@@ -1,10 +1,14 @@
-#define any2ref(x) "\ref[x]"
-
 #if DM_VERSION < 513
+
+#define any2ref(x) "\ref[x]"
 
 #define islist(A) istype(A, /list)
 
 #define ismovable(A) istype(A, /atom/movable)
+
+#else
+
+#define any2ref(x) ref(x)
 
 #endif
 
@@ -87,11 +91,7 @@
 
 #define isPlunger(A) istype(A, /obj/item/clothing/mask/plunger) || istype(A, /obj/item/device/plunger/robot)
 
-/proc/isspecies(A, B)
-	if(!iscarbon(A))
-		return FALSE
-	var/mob/living/carbon/C = A
-	return C.species?.name == B
+#define isspecies(A, B) (iscarbon(A) && A:species?.name == B)
 
 #define sequential_id(key) uniqueness_repository.Generate(/datum/uniqueness_generator/id_sequential, key)
 
@@ -162,8 +162,6 @@
 #define SPAN_MFAUNA(X) "<span class='mfauna'>[X]</span>"
 
 #define SPAN_SUBTLE(X) "<span class='subtle'>[X]</span>"
-
-#define SPAN_INFO(X) "<span class='info'>[X]</span>"
 
 #define FONT_SMALL(X) "<font size='1'>[X]</font>"
 

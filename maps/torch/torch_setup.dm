@@ -5,13 +5,15 @@
 
 /datum/map/torch/get_map_info()
 	. = list()
-	. +=  "You're aboard the <b>[station_name]</b>, an Expeditionary Corps starship. Its primary mission is looking for undiscovered sapient alien species, and general exploration along the way."
-	. +=  "The vessel is staffed with a mix of SCG government personnel and hired contractors."
-	. +=  "This area of space is uncharted, away from SCG territory. You might encounter remote outposts or drifting hulks, but no recognized government holds claim on this sector."
+	. += "Поздравляем с вашим трудоустройством на борт NTEV (NanoTrasen Exploratory Vessel) Blue Jay."
+	. += "Это судно класса Эпсилон, оборудованное по последнему слову медицины, науки, и охранного снаряжения для всех ваших нужд!"
+	. += ""
+	. += "Это вновь введенное в эксплуатацию научное судно, реконструированное, для исследования далекого космоса."
+	. += "Способен быстро реагировать на большинство мелких угроз повстанцев, а также исследовать любые «забытые» планеты в этих секторах."
 	return jointext(., "<br>")
 
 /datum/map/torch/send_welcome()
-	var/welcome_text = "<center><img src = sollogo.png /><br /><font size = 3><b>SEV Torch</b> Sensor Readings:</font><br>"
+	var/welcome_text = "<center><img src = bluentlogo.png /><br /><font size = 3><b>NTEV Blue Jay</b> Sensor Readings:</font><br>"
 	welcome_text += "Report generated on [stationdate2text()] at [stationtime2text()]</center><br /><br />"
 	welcome_text += "<hr>Current system:<br /><b>[system_name()]</b><br /><br>"
 
@@ -23,7 +25,7 @@
 	welcome_text += "Travel time to Sol:<br /><b>[rand(15,45)] days</b><br /><br>"
 	welcome_text += "Time since last port visit:<br /><b>[rand(60,180)] days</b><br /><hr>"
 	welcome_text += "Scan results show the following points of interest:<br />"
-	
+
 	for(var/zlevel in map_sectors)
 		var/obj/effect/overmap/visitable/O = map_sectors[zlevel]
 		if(O.name == torch.name)
@@ -52,5 +54,5 @@
 		welcome_text += "<br>No distress calls logged.<br />"
 	welcome_text += "<hr>"
 
-	post_comm_message("SEV Torch Sensor Readings", welcome_text)
+	post_comm_message("NTEV Blue Jay Sensor Readings", welcome_text)
 	minor_announcement.Announce(message = "New [GLOB.using_map.company_name] Update available at all communication consoles.")

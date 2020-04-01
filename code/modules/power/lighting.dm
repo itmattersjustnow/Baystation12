@@ -143,7 +143,7 @@
 	use_power = POWER_USE_ACTIVE
 	idle_power_usage = 2
 	active_power_usage = 20
-	power_channel = LIGHT //Lights are calc'd via area so they don't need to be in the machine list
+	power_channel = LIGHT //Lights are calc'd via area so they dont need to be in the machine list
 
 	var/on = 0					// 1 if on, 0 if off
 	var/flickering = 0
@@ -581,6 +581,12 @@
 	b_colour = "#fffee0"
 	lighting_modes = list(
 		LIGHTMODE_EMERGENCY = list(l_outer_range = 4, l_max_bright = 1, l_color = "#da0205"),
+		LIGHTMODE_NIGHTMODE = list(l_outer_range = 4, l_max_bright = 0.75, l_color = "#ffbb73"),
+		LIGHTMODE_VIOLET = list(l_outer_range = 4, l_max_bright = 1, l_color = "#8a11c2"),
+		LIGHTMODE_ORANGE = list(l_outer_range = 4, l_max_bright = 1, l_color = "#f59c16"),
+		LIGHTMODE_RED = list(l_outer_range = 4, l_max_bright = 1, l_color = "#f50c0c"),
+		LIGHTMODE_DELTA = list(l_outer_range = 4, l_max_bright = 1, l_color = "#ffd000"),
+		LIGHTMODE_BLUE = list(l_outer_range = 4, l_max_bright = 1, l_color = "#0d45fc")
 		)
 	sound_on = 'sound/machines/lightson.ogg'
 

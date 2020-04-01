@@ -31,7 +31,6 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 	idle_power_usage = 100
 	atom_flags = ATOM_FLAG_CLIMBABLE
 	var/turn = DISPOSAL_FLIP_NONE
-	throwpass = TRUE
 
 // create a new disposal
 // find the attached trunk (if present) and init gas resvr.
@@ -267,7 +266,7 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 
 
 	user.set_machine(src)
-	show_browser(user, dat, "window=disposal;size=360x170")
+	user << browse(dat, "window=disposal;size=360x170")
 	onclose(user, "disposal")
 
 // handle machine interaction

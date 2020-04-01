@@ -75,9 +75,6 @@
 		SSao.queue -= src
 		ao_queued = 0
 
-	if (z_flags & ZM_MIMIC_BELOW)
-		cleanup_zmimic()
-
 	if (bound_overlay)
 		QDEL_NULL(bound_overlay)
 
@@ -303,13 +300,10 @@ var/const/enterloopsanity = 100
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.turf_collision(src, TT.speed)
-			if(M.pinned.len)
-				return
-
 		var/intial_dir = TT.init_dir
 		spawn(2)
 			step(AM, turn(intial_dir, 180))
-				
+
 /turf/proc/can_engrave()
 	return FALSE
 

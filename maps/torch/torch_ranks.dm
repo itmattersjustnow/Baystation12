@@ -38,14 +38,25 @@
 	)
 
 	species_to_branch_whitelist = list(
-		/datum/species/diona      = list(/datum/mil_branch/civilian),
+		/datum/species/diona      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
 		/datum/species/nabber     = list(/datum/mil_branch/civilian),
 		/datum/species/skrell     = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps, /datum/mil_branch/skrell_fleet),
 		/datum/species/unathi     = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
-		/datum/species/adherent   = list(/datum/mil_branch/civilian),
-		/datum/species/vox        = list(/datum/mil_branch/alien)
+		/datum/species/adherent   = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/sergal     = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/sergal/northern      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/sergal/eastern      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/akula     = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/custom      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/humanathi      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/tajaran      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/vasilissan      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/vulpkanin      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/customhuman      = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		//datum/species/tesh/  list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/vox        = list(/datum/mil_branch/alien),
+		/datum/species/vox/armalis        = list(/datum/mil_branch/alien)
 	)
-
 	species_to_rank_blacklist = list(
 		/datum/species/machine = list(
 			/datum/mil_branch/solgov = list(
@@ -53,7 +64,7 @@
 			)
 		)
 	)
-
+/*
 	species_to_rank_whitelist = list(
 		/datum/species/machine = list(
 			/datum/mil_branch/expeditionary_corps = list(
@@ -93,16 +104,16 @@
 			)
 		)
 	)
-
+*/
 /*
  *  Branches
  *  ========
  */
 
 /datum/mil_branch/expeditionary_corps
-	name = "Expeditionary Corps"
-	name_short = "SCGEC"
-	email_domain = "torch.ec.scg"
+	name = "Surveyor Corps"
+	name_short = "NTSC"
+	email_domain = "bluejay.nt.exp"
 
 	rank_types = list(
 		/datum/mil_rank/ec/e3,
@@ -131,8 +142,8 @@
 
 /datum/mil_branch/fleet
 	name = "Fleet"
-	name_short = "SCGF"
-	email_domain = "torch.fleet.mil"
+	name_short = "NTF"
+	email_domain = "bluejay.fleet.sec"
 
 	rank_types = list(
 		/datum/mil_rank/fleet/e1,
@@ -175,7 +186,8 @@
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6
 	)
 
 	assistant_job = /datum/job/crew
@@ -238,7 +250,7 @@
 /datum/mil_branch/solgov
 	name = "SolGov Employee"
 	name_short = "SCG"
-	email_domain = "torch.scg"
+	email_domain = "bluejay.exp"
 
 	rank_types = list(
 		/datum/mil_rank/sol/gov,

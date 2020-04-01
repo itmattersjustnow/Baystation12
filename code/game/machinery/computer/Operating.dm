@@ -25,11 +25,11 @@
 	if ( (get_dist(src, user) > 1 ) || (stat & (BROKEN|NOPOWER)) )
 		if (!istype(user, /mob/living/silicon))
 			user.unset_machine()
-			close_browser(user, "window=op")
+			user << browse(null, "window=op")
 			return
 
 	user.set_machine(src)
-	var/dat = "<HEAD><TITLE>Operating Computer</TITLE><META HTTP-EQUIV='Refresh' CONTENT='10'></HEAD><BODY>\n"
+	var/dat = "<meta charset=\"UTF-8\"><HEAD><TITLE>Operating Computer</TITLE><META HTTP-EQUIV='Refresh' CONTENT='10'></HEAD><BODY>\n"
 	dat += "<A HREF='?src=\ref[user];mach_close=op'>Close</A><br><br>" //| <A HREF='?src=\ref[user];update=1'>Update</A>"
 	if(src.table && (src.table.check_victim()))
 		src.victim = src.table.victim
@@ -45,7 +45,7 @@
 <BR>
 <B>No Patient Detected</B>
 "}
-	show_browser(user, dat, "window=op")
+	user << browse(dat, "window=op")
 	onclose(user, "op")
 
 /obj/machinery/computer/operating/Process()

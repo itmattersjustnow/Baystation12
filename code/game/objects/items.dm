@@ -11,6 +11,7 @@
 	var/burn_point = null
 	var/burning = null
 	var/hitsound = null
+	var/usesound = null // Like hitsound, but for when used properly and not to kill someone.
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
 	var/no_attack_log = 0			//If it's an item we don't want to log attack_logs with, set this to 1
 	pass_flags = PASS_FLAG_TABLE
@@ -107,12 +108,8 @@
 		m.drop_from_inventory(src)
 	var/obj/item/weapon/storage/storage = loc
 	if(istype(storage))
-		// some ui cleanup needs to be done
-		storage.on_item_pre_deletion(src) // must be done before deletion
-		. = ..()
-		storage.on_item_post_deletion(src) // must be done after deletion
-	else
-		return ..()
+		storage.on_item_deletion()
+	return ..()
 
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
@@ -239,8 +236,7 @@
 
 	if(user.put_in_active_hand(src))
 		if (isturf(old_loc))
-			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
-			ghost.animate_towards(user)
+			do_pickup_animation(user,old_loc)	//BastionStation edit - ports eris pickup animations
 		if(randpixel)
 			pixel_x = rand(-randpixel, randpixel)
 			pixel_y = rand(-randpixel/2, randpixel/2)
@@ -859,3 +855,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		set_icon_state(citem.item_icon_state)
 		item_state = null
 		icon_override = CUSTOM_ITEM_MOB
+
+/obj/item/proc/suicide_act(mob/user)
+	return

@@ -158,7 +158,7 @@
 					SKILL_HAULING = SKILL_ADEPT,
 					SKILL_COMBAT = SKILL_ADEPT,
 					SKILL_WEAPONS = SKILL_ADEPT,
-					SKILL_MEDICAL = SKILL_BASIC)	
+					SKILL_MEDICAL = SKILL_BASIC)
 
 /datum/job/submap/ascent/drone
 	title = "Ascent Drone"

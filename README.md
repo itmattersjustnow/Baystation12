@@ -1,14 +1,25 @@
-# baystation12
+# [RU]The Fluffy Frontier
 
-[Website](http://baystation12.net/) - [Code](http://github.com/Baystation12/Baystation12/) - [Discord](https://discord.gg/DrtRFxs) - [IRC](irc://irc.sorcery.net/#codershuttle)
+[Code of The Fluffy Frontier](https://github.com/Low3/The-Fluffy-Frontier) - [Code of Original BoH](https://github.com/BoHBranch/BoH-Bay) - [Discord](https://discord.gg/5GvhwtY)
+
+This is a fork of Baystation12's (And Bastion of Hestia's) code for BYOND on Space Station 13.
 
 ---
 
 ### CONTRIBUTING GUIDELINES
 
-**Please refrain from making non code related comments in pull requests on GitHub.** See the Code of Conduct on where you may provide feedback to users.
+**Please refrain from making non code related comments in pull requests on GitHub.** 
+-Basically:
 
-All users are expected to review [/docs/CODE_OF_CONDUCT.md](/docs/CODE_OF_CONDUCT.md) before interacting with the repository or other users.
+Don't be a dick.
+
+Make a logical argument.
+
+Maintainer has final say on code issues.
+
+
+Maintainers have the right to punish you for breaking these rules.
+
 
 ---
 

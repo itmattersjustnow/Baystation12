@@ -1539,8 +1539,9 @@
 /turf/simulated/floor/plating,
 /area/icarus/vessel)
 "eO" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
+	frequency = 1379;
 	id_tag = "bridgeport_pump"
 	},
 /turf/simulated/floor/plating,
@@ -1562,8 +1563,9 @@
 /turf/simulated/floor/plating,
 /area/icarus/vessel)
 "eR" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
+	frequency = 1331;
 	id_tag = "ninja_shuttle_pump"
 	},
 /turf/simulated/floor/plating,
@@ -1790,8 +1792,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
+	frequency = 1331;
 	id_tag = "calypso_shuttle_pump"
 	},
 /turf/simulated/floor/plating,

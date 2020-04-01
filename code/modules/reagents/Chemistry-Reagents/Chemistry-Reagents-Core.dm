@@ -81,8 +81,7 @@
 	name = "Water"
 	description = "A ubiquitous chemical substance composed of hydrogen and oxygen."
 	reagent_state = LIQUID
-	color = "#3073b6"
-	alpha = 120
+	color = "#0064c877"
 	scannable = 1
 	metabolism = REM * 10
 	taste_description = "water"

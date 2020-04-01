@@ -206,9 +206,6 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	// List of /datum/department types to instantiate at roundstart.
 	var/list/departments
 
-	// List of events specific to a map
-	var/list/map_event_container = list()
-
 /datum/map/New()
 	if(!map_levels)
 		map_levels = station_levels.Copy()
@@ -233,10 +230,6 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 /datum/map/proc/setup_map()
 	lobby_track = get_lobby_track()
 	world.update_status()
-	setup_events()
-
-/datum/map/proc/setup_events()
-	return
 
 /datum/map/proc/setup_job_lists()
 	return
@@ -384,7 +377,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 /datum/map/proc/show_titlescreen(client/C)
 	winset(C, "lobbybrowser", "is-disabled=false;is-visible=true")
-	
+
 	show_browser(C, current_lobby_screen, "file=titlescreen.png;display=0")
 	show_browser(C, file('html/lobby_titlescreen.html'), "window=lobbybrowser")
 

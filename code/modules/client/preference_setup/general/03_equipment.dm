@@ -5,15 +5,11 @@
 	var/decl/backpack_outfit/backpack
 	var/list/backpack_metadata
 
-	var/sensor_setting
-	var/sensors_locked
-
 /datum/category_item/player_setup_item/physical/equipment
 	name = "Clothing"
 	sort_order = 3
 
 	var/static/list/backpacks_by_name
-	var/list/sensorModes = list("Off", "Binary sensors", "Vitals tracker", "Tracking beacon")
 
 /datum/category_item/player_setup_item/physical/equipment/New()
 	..()
@@ -31,8 +27,6 @@
 	from_file(S["all_underwear_metadata"], pref.all_underwear_metadata)
 	from_file(S["backpack"], load_backbag)
 	from_file(S["backpack_metadata"], pref.backpack_metadata)
-	from_file(S["sensor_setting"], pref.sensor_setting)
-	from_file(S["sensors_locked"], pref.sensors_locked)
 
 	pref.backpack = backpacks_by_name[load_backbag] || get_default_outfit_backpack()
 
@@ -41,8 +35,6 @@
 	to_file(S["all_underwear_metadata"], pref.all_underwear_metadata)
 	to_file(S["backpack"], pref.backpack.name)
 	to_file(S["backpack_metadata"], pref.backpack_metadata)
-	to_file(S["sensor_setting"], pref.sensor_setting)
-	to_file(S["sensors_locked"], pref.sensors_locked)
 
 /datum/category_item/player_setup_item/physical/equipment/sanitize_character()
 	if(!istype(pref.all_underwear))
@@ -93,15 +85,10 @@
 				var/list/metadata = tweak_metadata["[tweak]"]
 				tweak_metadata["[tweak]"] = tweak.validate_metadata(metadata)
 
-	if(isnull(pref.sensor_setting))
-		pref.sensor_setting = SUIT_SENSOR_OFF
-
-	if(isnull(pref.sensors_locked))
-		pref.sensors_locked = FALSE
 
 /datum/category_item/player_setup_item/physical/equipment/content()
 	. = list()
-	. += "<b>Equipment:</b><br>"
+	. += "<b>Нижнее белье:</b><br>"
 	for(var/datum/category_group/underwear/UWC in GLOB.underwear.categories)
 		var/item_name = (pref.all_underwear && pref.all_underwear[UWC.name]) ? pref.all_underwear[UWC.name] : "None"
 		. += "[UWC.name]: <a href='?src=\ref[src];change_underwear=[UWC.name]'><b>[item_name]</b></a>"
@@ -112,12 +99,10 @@
 				. += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_underwear_metadata(UWC.name, gt))]</a>"
 
 		. += "<br>"
-	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[pref.backpack.name]</b></a>"
+	. += "Тип рюкзака: <a href='?src=\ref[src];change_backpack=1'><b>[pref.backpack.name]</b></a>"
 	for(var/datum/backpack_tweak/bt in pref.backpack.tweaks)
 		. += " <a href='?src=\ref[src];backpack=[pref.backpack.name];tweak=\ref[bt]'>[bt.get_ui_content(get_backpack_metadata(pref.backpack, bt))]</a>"
 	. += "<br>"
-	. += "Default Suit Sensor Setting: <a href='?src=\ref[src];change_sensor_setting=1'>[sensorModes[pref.sensor_setting + 1]]</a><br />"
-	. += "Suit Sensors Locked: <a href='?src=\ref[src];toggle_sensors_locked=1'>[pref.sensors_locked ? "Locked" : "Unlocked"]</a><br />"
 	return jointext(.,null)
 
 /datum/category_item/player_setup_item/physical/equipment/proc/get_underwear_metadata(var/underwear_category, var/datum/gear_tweak/gt)
@@ -157,7 +142,7 @@
 		var/datum/category_group/underwear/UWC = GLOB.underwear.categories_by_name[href_list["change_underwear"]]
 		if(!UWC)
 			return TOPIC_NOACTION
-		var/datum/category_item/underwear/selected_underwear = input(user, "Choose underwear:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.all_underwear[UWC.name]) as null|anything in UWC.items
+		var/datum/category_item/underwear/selected_underwear = input(user, "Выберите нижнее белье:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.all_underwear[UWC.name]) as null|anything in UWC.items
 		if(selected_underwear && CanUseTopic(user))
 			pref.all_underwear[UWC.name] = selected_underwear.name
 		return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -173,7 +158,7 @@
 			set_underwear_metadata(underwear, gt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 	else if(href_list["change_backpack"])
-		var/new_backpack = input(user, "Choose backpack style:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.backpack) as null|anything in backpacks_by_name
+		var/new_backpack = input(user, "Выберите стиль рюкзака:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.backpack) as null|anything in backpacks_by_name
 		if(!isnull(new_backpack) && CanUseTopic(user))
 			pref.backpack = backpacks_by_name[new_backpack]
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -189,13 +174,6 @@
 		if(new_metadata)
 			set_backpack_metadata(bo, bt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
-	else if(href_list["change_sensor_setting"])
-		var/switchMode = input("Select a sensor mode:", "Suit Sensor Mode", sensorModes[pref.sensor_setting + 1]) in sensorModes
-		pref.sensor_setting = sensorModes.Find(switchMode) - 1
-		return TOPIC_REFRESH
-	else if(href_list["toggle_sensors_locked"])
-		pref.sensors_locked = !pref.sensors_locked
-		return TOPIC_REFRESH
 
 	return ..()
 

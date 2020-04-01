@@ -4,21 +4,19 @@
 	department_flag = SUP
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Executive Officer"
+	supervisors = "the Head of Personnel"
 	economic_power = 5
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 27)
 	ideal_character_age = 35
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer
+	alt_titles = list( //Frontier add
+		"Quartermaster") //Frontier add end
+	outfit_type = /decl/hierarchy/outfit/job/cargo/qm //Frontier edit
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/fleet
+		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/cargo/qm //Frontier edit
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8
+		/datum/mil_rank/civ/contractor //Frontier edit
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_FINANCE     = SKILL_BASIC,
@@ -47,17 +45,13 @@
 	supervisors = "the Deck Chief and Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/tech
+	alt_titles = list( //Frontier add
+		"Cargo Technician") //Frontier add end
+	outfit_type = /decl/hierarchy/outfit/job/cargo/cargo_tech //Frontier edit
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/tech/fleet,
-		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/supply/contractor
+		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/cargo/cargo_tech //Frontier edit
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/civ/contractor
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
@@ -80,7 +74,7 @@
 	department_flag = SUP
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Deck Chief, the Corporate Liaison and the Executive Officer"
+	supervisors = "the Deck Chief, the Corporate Liaison and the Head of Personnel"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 25

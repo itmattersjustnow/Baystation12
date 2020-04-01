@@ -90,7 +90,7 @@
 	for(var/organ_name in H.species.has_organ)
 		if(!locate(H.species.has_organ[organ_name]) in H.internal_organs)
 			scan["missing_organs"] += organ_name
-	if(H.sdisabilities & BLINDED)
+	if(H.sdisabilities & BLIND)
 		scan["blind"] = TRUE
 	if(H.sdisabilities & NEARSIGHTED)
 		scan["nearsight"] = TRUE

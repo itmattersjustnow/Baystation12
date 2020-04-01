@@ -192,6 +192,10 @@
 	throwforce = 2
 	slot_flags = SLOT_EARS
 	var/volume_multiplier = 1
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_ears_resomi.dmi'
+		)
+
 
 /obj/item/clothing/ears/update_clothing_icon()
 	if (ismob(src.loc))
@@ -232,6 +236,7 @@ BLIND     // can't see anything
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_eyes_vox.dmi',
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_eyes_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_eyes_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_eyes_resomi.dmi',
 	)
 
 /obj/item/clothing/glasses/get_icon_state(mob/user_mob, slot)
@@ -268,6 +273,7 @@ BLIND     // can't see anything
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_hands_vox_armalis.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_hands_gas.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_hands_resomi.dmi',
 		)
 	blood_overlay_type = "bloodyhands"
 
@@ -382,6 +388,7 @@ BLIND     // can't see anything
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi',
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_head_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		)
 	blood_overlay_type = "helmetblood"
 
@@ -494,6 +501,7 @@ BLIND     // can't see anything
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi',
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_mask_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_mask_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_mask_resomi.dmi',
 		)
 
 	var/voicechange = 0
@@ -572,11 +580,12 @@ BLIND     // can't see anything
 	slot_flags = SLOT_FEET
 	permeability_coefficient = 0.50
 	force = 2
-	species_restricted = list("exclude", SPECIES_NABBER, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS)
+	species_restricted = list("exclude", SPECIES_NABBER, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, SPECIES_RESOMI)
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_feet_vox.dmi',
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_feet_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_feet_resomi.dmi',
 		)
 	blood_overlay_type = "shoeblood"
 	var/overshoes = 0
@@ -738,6 +747,7 @@ BLIND     // can't see anything
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_suit_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_suit_gas.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_suit_resomi.dmi',
 		SPECIES_MANTID_ALATE = 'icons/mob/species/mantid/onmob_suit_alate.dmi',
 		SPECIES_MANTID_GYNE = 'icons/mob/species/mantid/onmob_suit_gyne.dmi'
 		)
@@ -781,7 +791,7 @@ BLIND     // can't see anything
 	w_class = ITEM_SIZE_NORMAL
 	force = 0
 	var/has_sensor = SUIT_HAS_SENSORS //For the crew computer 2 = unable to change mode
-	var/sensor_mode = SUIT_SENSOR_OFF
+	var/sensor_mode = 0
 		/*
 		1 = Report living/dead
 		2 = Report detailed damages
@@ -795,6 +805,7 @@ BLIND     // can't see anything
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_under_vox_armalis.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_under_gas.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_under_resomi.dmi',
 		SPECIES_MANTID_ALATE = 'icons/mob/species/mantid/onmob_under_alate.dmi',
 		SPECIES_MANTID_GYNE = 'icons/mob/species/mantid/onmob_under_gyne.dmi'
 	)
@@ -920,13 +931,13 @@ BLIND     // can't see anything
 /obj/item/clothing/under/examine(mob/user)
 	. = ..()
 	switch(src.sensor_mode)
-		if(SUIT_SENSOR_OFF)
+		if(0)
 			to_chat(user, "Its sensors appear to be disabled.")
-		if(SUIT_SENSOR_BINARY)
+		if(1)
 			to_chat(user, "Its binary life sensors appear to be enabled.")
-		if(SUIT_SENSOR_VITAL)
+		if(2)
 			to_chat(user, "Its vital tracker appears to be enabled.")
-		if(SUIT_SENSOR_TRACKING)
+		if(3)
 			to_chat(user, "Its vital tracker and tracking beacon appear to be enabled.")
 
 /obj/item/clothing/under/proc/set_sensors(mob/user as mob)
@@ -949,17 +960,17 @@ BLIND     // can't see anything
 
 	if (src.loc == user)
 		switch(sensor_mode)
-			if(SUIT_SENSOR_OFF)
+			if(0)
 				user.visible_message("[user] adjusts the tracking sensor on \his [src.name].", "You disable your suit's remote sensing equipment.")
-			if(SUIT_SENSOR_BINARY)
+			if(1)
 				user.visible_message("[user] adjusts the tracking sensor on \his [src.name].", "Your suit will now report whether you are live or dead.")
-			if(SUIT_SENSOR_VITAL)
+			if(2)
 				user.visible_message("[user] adjusts the tracking sensor on \his [src.name].", "Your suit will now report your vital lifesigns.")
-			if(SUIT_SENSOR_TRACKING)
+			if(3)
 				user.visible_message("[user] adjusts the tracking sensor on \his [src.name].", "Your suit will now report your vital lifesigns as well as your coordinate position.")
 
 	else if (ismob(src.loc))
-		if(sensor_mode == SUIT_SENSOR_OFF)
+		if(sensor_mode == 0)
 			user.visible_message("<span class='warning'>[user] disables [src.loc]'s remote sensing equipment.</span>", "You disable [src.loc]'s remote sensing equipment.")
 		else
 			user.visible_message("[user] adjusts the tracking sensor on [src.loc]'s [src.name].", "You adjust [src.loc]'s sensors.")
@@ -984,6 +995,7 @@ BLIND     // can't see anything
 	set category = "Object"
 	set src in usr
 	set_sensors(usr)
+	..()
 
 /obj/item/clothing/under/verb/rollsuit()
 	set name = "Roll Down Jumpsuit"

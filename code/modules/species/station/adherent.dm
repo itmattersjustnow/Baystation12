@@ -46,7 +46,7 @@
 	heat_level_3 = SYNTH_HEAT_LEVEL_3
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_POISON | SPECIES_FLAG_NO_MINOR_CUT
-	spawn_flags =   SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags =   SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN// | SPECIES_IS_WHITELISTED
 
 	appearance_flags = HAS_EYE_COLOR | HAS_BASE_SKIN_COLOURS
 	blood_color = "#2de00d"
@@ -135,19 +135,12 @@
 	return slowdown
 
 /datum/species/adherent/handle_fall_special(var/mob/living/carbon/human/H, var/turf/landing)
-	var/float_is_usable = FALSE
-	if(H && H.stat == CONSCIOUS)
-		for(var/obj/item/organ/internal/powered/float/float in H.internal_organs)
-			if(float.is_usable())
-				float_is_usable = TRUE
-				break
-	if(float_is_usable)
+
+	if(can_overcome_gravity(H))
 		if(istype(landing, /turf/simulated/open))
 			H.visible_message("\The [H] descends from \the [landing].", "You descend regally.")
 		else
 			H.visible_message("\The [H] floats gracefully down from \the [landing].", "You land gently on \the [landing].")
-		return TRUE
-	return FALSE
 
 /datum/species/adherent/get_blood_name()
 	return "coolant"

@@ -26,6 +26,10 @@
 	boot_type =  /obj/item/clothing/shoes/magboots/rig/light
 	glove_type = /obj/item/clothing/gloves/rig/light
 
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_rig_back_resomi.dmi'
+		)
+
 /obj/item/clothing/suit/space/rig/light
 	name = "suit"
 	breach_threshold = 18 //comparable to voidsuits
@@ -133,7 +137,7 @@
 		if(!findtext(input, "the", 1, 4))
 			input = "\improper [input]"
 		SetName(input)
-		to_chat(M, "Suit naming successful!")
+		to_chat(M, "Suit naming succesful!")
 		verbs -= /obj/item/weapon/rig/light/ninja/verb/rename_suit
 		return 1
 
@@ -148,7 +152,7 @@
 	var/input = sanitizeSafe(input("Please describe your voidsuit in 128 letters or less.", "write description"), MAX_DESC_LEN)
 	if(src && input && !M.incapacitated() && in_range(M,src))
 		desc = input
-		to_chat(M, "Suit description successful!")
+		to_chat(M, "Suit description succesful!")
 		verbs -= /obj/item/weapon/rig/light/ninja/verb/rename_suit
 		return 1
 

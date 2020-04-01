@@ -150,6 +150,8 @@
 /datum/extension/interactive/ntos/proc/check_eye(var/mob/user)
 	if(active_program)
 		return active_program.check_eye(user)
+	else
+		return ..()
 
 /datum/extension/interactive/ntos/proc/process_updates()
 	if(update_progress < updates)

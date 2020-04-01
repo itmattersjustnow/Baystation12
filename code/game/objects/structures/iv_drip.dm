@@ -143,10 +143,10 @@
 	if(!attached)
 		return
 		
-	if(!CanPhysicallyInteractWith(usr, src))
-		to_chat(usr, SPAN_NOTICE("You're in no condition to do that!"))
+	if(!usr.Adjacent(attached))
+		to_chat(usr, "<span class='warning'>You are too far away from the [attached]!</span>")
 		return
-
+		
 	if(!usr.skill_check(SKILL_MEDICAL, SKILL_BASIC))
 		rip_out()
 	else

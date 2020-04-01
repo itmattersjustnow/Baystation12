@@ -1,17 +1,17 @@
-var/const/NETWORK_AQUILA      = "Aquila"
+var/const/NETWORK_AQUILA      = "NTSC Eagle"
 var/const/NETWORK_BRIDGE      = "Bridge"
-var/const/NETWORK_CALYPSO     = "Charon"
+var/const/NETWORK_CALYPSO     = "NTEV Falcon"
 var/const/NETWORK_EXPEDITION  = "Expedition"
 var/const/NETWORK_FIRST_DECK  = "First Deck"
 var/const/NETWORK_FOURTH_DECK = "Fourth Deck"
-var/const/NETWORK_POD         = "General Utility Pod"
+var/const/NETWORK_POD         = "NTRP Kestrel"
 var/const/NETWORK_SECOND_DECK = "Second Deck"
 var/const/NETWORK_SUPPLY      = "Supply"
 var/const/NETWORK_HANGAR      = "Hangar"
 var/const/NETWORK_EXPLO       = "Exploration"
 var/const/NETWORK_THIRD_DECK  = "Third Deck"
 var/const/NETWORK_FIFTH_DECK  = "Fifth Deck"
-var/const/NETWORK_NANOTRASEN  = "Petrov"
+var/const/NETWORK_NANOTRASEN  = "NTRL Owl"
 
 /datum/map/torch/get_network_access(var/network)
 	switch(network)
@@ -211,28 +211,4 @@ var/const/NETWORK_ENGINEERING_OUTPOST = "Engineering Outpost"
 		num2text(SUP_FREQ)   = list(access_cargo),
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
 		num2text(EXP_FREQ)   = list(access_explorer, access_rd)
-	)
-
-/decl/stock_part_preset/radio/receiver/vent_pump/guppy
-	frequency = 1431
-
-/decl/stock_part_preset/radio/event_transmitter/vent_pump/guppy
-	frequency = 1431
-
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/guppy
-	stock_part_presets = list(
-		/decl/stock_part_preset/radio/receiver/vent_pump/guppy = 1,
-		/decl/stock_part_preset/radio/event_transmitter/vent_pump/guppy = 1
-	)
-
-/decl/stock_part_preset/radio/receiver/vent_scrubber/guppy
-	frequency = 1431
-
-/decl/stock_part_preset/radio/event_transmitter/vent_scrubber/guppy
-	frequency = 1431
-
-/obj/machinery/atmospherics/unary/vent_scrubber/guppy
-	stock_part_presets = list(
-		/decl/stock_part_preset/radio/receiver/vent_scrubber/guppy = 1,
-		/decl/stock_part_preset/radio/event_transmitter/vent_scrubber/guppy = 1
 	)

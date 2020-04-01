@@ -2,7 +2,7 @@
 	name = "radio transmitter"
 	desc = "A radio transmitter designed for use with machines."
 	icon_state = "subspace_transmitter"
-	var/range = 60  // Limits transmit range
+	var/range       // If you want range-limited subtypes
 	var/latency = 2 // Delay between event and transmission; doesn't apply to transmit on tick
 	var/buffer
 
@@ -76,11 +76,6 @@
 	multitool_extension = /datum/extension/interactive/multitool/radio/event_transmitter
 	var/decl/public_access/public_variable/event
 	var/list/transmit_on_event
-
-/obj/item/weapon/stock_parts/radio/transmitter/on_event/is_valid_event(obj/machinery/machine, decl/public_access/variable)
-	if(istype(variable, /decl/public_access/public_method))
-		return LAZYACCESS(machine.public_methods, variable.type)
-	return ..()
 
 /obj/item/weapon/stock_parts/radio/transmitter/on_event/on_install(obj/machinery/machine)
 	..()

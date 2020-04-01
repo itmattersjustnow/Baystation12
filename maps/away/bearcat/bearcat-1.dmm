@@ -57,13 +57,15 @@
 /turf/simulated/floor/airless,
 /area/ship/scrap/escape_port)
 "aj" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1379;
 	id_tag = "cargo_pump"
 	},
 /turf/simulated/floor/usedup,
 /area/ship/scrap/cargo/lower)
 "ak" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1379;
 	id_tag = "cargo_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -2468,8 +2470,9 @@
 /turf/simulated/floor/usedup,
 /area/ship/scrap/maintenance/eva)
 "eC" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
+	frequency = 1379;
 	id_tag = "eva_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{

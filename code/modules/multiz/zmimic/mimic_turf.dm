@@ -59,8 +59,10 @@
 // Cleans up Z-mimic objects for this turf. You shouldn't call this directly 99% of the time.
 /turf/proc/cleanup_zmimic()
 	SSzcopy.openspace_turfs -= 1
-	// Don't remove ourselves from the queue, the subsystem will explode. We'll naturally fall out of the queue.
-	z_queued = 0
+	if (z_queued)
+		while (z_queued)
+			SSzcopy.queued_turfs -= src
+			z_queued -= 1
 
 	QDEL_NULL(shadower)
 

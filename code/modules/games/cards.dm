@@ -2,7 +2,7 @@
 	var/name = "playing card"
 	var/card_icon = "card_back"
 	var/back_icon = "card_back"
-	var/desc = "A regular old playing card."
+	var/desc = "regular old playing card."
 
 /datum/playingcard/proc/card_image(concealed, deck_icon)
 	return image(deck_icon, concealed ? back_icon : card_icon)
@@ -196,7 +196,7 @@
 
 	deal_at(usr, over)
 
-/obj/item/weapon/pack
+/obj/item/weapon/pack/
 	name = "card pack"
 	desc = "For those with disposible income."
 
@@ -205,12 +205,6 @@
 	w_class = ITEM_SIZE_TINY
 	var/list/cards = list()
 
-/obj/item/weapon/pack/Initialize()
-	. = ..()
-	SetupCards()
-
-/obj/item/weapon/pack/proc/SetupCards()
-	return
 
 /obj/item/weapon/pack/attack_self(var/mob/user)
 	user.visible_message("[user] rips open \the [src]!")
@@ -231,7 +225,7 @@
 	w_class = ITEM_SIZE_TINY
 
 	var/concealed = 0
-	var/list/datum/playingcard/cards = list()
+	var/list/cards = list()
 
 /obj/item/weapon/hand/attack_self(var/mob/user)
 	concealed = !concealed

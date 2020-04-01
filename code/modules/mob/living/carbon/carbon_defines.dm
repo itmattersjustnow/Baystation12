@@ -32,10 +32,21 @@
 	// organ-related variables, see organ.dm and human_organs.dm
 	var/list/internal_organs = list()
 	var/list/organs = list()
-	var/list/obj/item/organ/external/organs_by_name = list() // map organ names to organs
+	var/list/organs_by_name = list() // map organ names to organs
 	var/list/internal_organs_by_name = list() // so internal organs have less ickiness too
 
 	var/list/stasis_sources = list()
 	var/stasis_value
 
 	var/player_triggered_sleeping = 0
+
+
+
+
+
+
+/*VORE */
+	var/does_not_breathe = 0 //Used for specific mobs that can't take advantage of the species flags (changelings)
+
+
+

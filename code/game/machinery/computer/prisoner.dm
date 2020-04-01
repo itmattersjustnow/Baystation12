@@ -55,7 +55,7 @@
 				dat += "********************************<BR>"
 			dat += "<HR><A href='?src=\ref[src];lock=1'>Lock Console</A>"
 
-		show_browser(user, dat, "window=computer;size=400x500")
+		user << browse(dat, "window=computer;size=400x500")
 		onclose(user, "computer")
 		return
 

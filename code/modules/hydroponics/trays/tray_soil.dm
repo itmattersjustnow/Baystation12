@@ -59,7 +59,7 @@
 	if(living_observers_present(connected_zlevels))
 		return ..()
 
-/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/remove_dead(mob/user, silent)
+/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/remove_dead()
 	..()
 	qdel(src)
 

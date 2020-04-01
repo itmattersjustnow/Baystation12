@@ -50,11 +50,26 @@
 	containertype = /obj/structure/closet
 	containername = "lasertag Closet"
 
+/decl/hierarchy/supply_pack/nonessent/foamblasters
+	name = "Rec - Foamblasters Jorf"
+	contains = list(/obj/item/weapon/storage/box/large/foam_gun/supply,
+					/obj/item/weapon/storage/box/large/foam_gun/burst/supply,
+					/obj/item/weapon/storage/box/large/foam_gun/revolver/supply,
+					/obj/item/weapon/storage/box/foam_darts = 3)
+	cost = 25
+	containername = "foamblaster crate"
+
+/decl/hierarchy/supply_pack/nonessent/foamblaster_tampered
+	name = "Rec - Foamblaster Jorf Desperado Deluxe"
+	contains = list(/obj/item/weapon/storage/box/large/foam_gun/revolver/tampered = 3)
+	cost = 10
+	contraband = 1
+	containername = "foamblaster crate"
+
 /decl/hierarchy/supply_pack/nonessent/instruments
 	name = "Rec - Musical Instruments"
 	contains = list(/obj/item/device/synthesized_instrument/synthesizer,
 					/obj/item/device/synthesized_instrument/guitar/multi,
-					/obj/item/device/synthesized_instrument/guitar,
 					/obj/item/device/synthesized_instrument/trumpet)
 	cost = 40
 	containername = "musical instrument crate"

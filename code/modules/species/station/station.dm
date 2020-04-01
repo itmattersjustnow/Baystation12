@@ -9,7 +9,7 @@
 	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
 	worlds tumultous at best."
 	assisted_langs = list(LANGUAGE_NABBER)
-	min_age = 17
+	min_age = 18
 	max_age = 100
 	hidden_from_codex = FALSE
 	bandages_icon = 'icons/mob/bandage.dmi'
@@ -116,7 +116,7 @@
 	max_age = 90
 
 	burn_mod = 0.9
-	oxy_mod = 1.3
+	oxy_mod = 0.8 //(TFF/inf) Actually a coder of bs12 says that 1.3 due special breathing system, but he was unable to create so complex breath system, so....it fixed on inf, so...
 	flash_mod = 1.2
 	toxins_mod = 0.8
 	siemens_coefficient = 1.3
@@ -131,7 +131,7 @@
 	darksight_range = 4
 	darksight_tint = DARKTINT_MODERATE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN// | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8cd7a3"
@@ -233,7 +233,7 @@
 	hunger_factor = 3
 	thirst_factor = 0.01
 
-	min_age = 1
+	min_age = 18
 	max_age = 300
 
 	description = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
@@ -290,7 +290,7 @@
 
 	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_IS_PLANT | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SLIP
 	appearance_flags = 0
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_LACE// | SPECIES_IS_WHITELISTED
 
 	blood_color = "#004400"
 	flesh_color = "#907e4a"
@@ -353,7 +353,7 @@
 		if(101 to 200)	. = 12 // age bracket before this is 46 to 100 . = 8 making this +4
 		if(201 to 300)	. = 16 // + 8
 		else			. = ..()
-		
+
 // Dionaea spawned by hand or by joining will not have any
 // nymphs passed to them. This should take care of that.
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)

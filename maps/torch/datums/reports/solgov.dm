@@ -5,7 +5,7 @@
 
 /datum/computer_file/report/recipient/sol/audit
 	form_name = "SCG-REP-12"
-	title = "SEV Torch Department Audit"
+	title = "NTEV Blue Jay Department Audit"
 	available_on_ntnet = 1
 
 /datum/computer_file/report/recipient/sol/audit/generate_fields()

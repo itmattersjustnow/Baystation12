@@ -31,6 +31,11 @@
 	check_restraints = TRUE
 	emote_message_3p = "USER dances around happily."
 
+/decl/emote/visible/dance_f
+	key ="dance_f"
+	check_restraints = TRUE
+	emote_message_3p = "USER dances furiously!"
+
 /decl/emote/visible/roll
 	key ="roll"
 	check_restraints = TRUE
@@ -334,3 +339,8 @@
 /decl/emote/visible/tilt
 	key = "tilt"
 	emote_message_3p = "USER tilts USER_THEIR head."
+
+/decl/emote/visible/attention
+	key = "attention"
+	emote_message_3p = "USER snaps to attention!"
+	emote_message_3p_target = "USER snaps to attention at TARGET!"

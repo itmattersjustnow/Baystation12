@@ -30,7 +30,7 @@
 
 /obj/machinery/computer/air_control/Initialize()
 	. = ..()
-	set_frequency(frequency)
+	set_frequency(frequency)	
 
 obj/machinery/computer/air_control/Destroy()
 	if(radio_controller)
@@ -42,16 +42,16 @@ obj/machinery/computer/air_control/Destroy()
 	return TRUE
 
 /obj/machinery/computer/air_control/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)		
 	data["systemname"] = name
 	get_console_data()
 	if(!ui)
 		ui = new(user, src, ui_key, "atmosconsole.tmpl", data["systemname"], 800, 800)
-		ui.set_initial_data(data)
+		ui.set_initial_data(data)		
 		ui.open()
 		ui.set_auto_update(1)
 
-/obj/machinery/computer/air_control/proc/get_console_data()
+/obj/machinery/computer/air_control/proc/get_console_data()	
 	if(sensor_info)
 		var/list/temp = list()
 		if(input_tag || output_tag)
@@ -105,9 +105,10 @@ obj/machinery/computer/air_control/Destroy()
 	else if(!refreshing_output)
 		data["output_present"] = FALSE
 
-	data["out_pressure_mode"] = out_pressure_mode
+	data["out_pressure_mode"] = out_pressure_mode		
 
 	data["automation"] = automation
+	. = ..()
 
 /obj/machinery/computer/air_control/Process()
 	..()
@@ -131,7 +132,7 @@ obj/machinery/computer/air_control/Destroy()
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_ATMOSIA)
 
-/obj/machinery/computer/air_control/OnTopic(mob/user, href_list, datum/topic_state/state)
+/obj/machinery/computer/air_control/OnTopic(mob/user, href_list, datum/topic_state/state)		
 	if(..())
 		return TOPIC_HANDLED
 		
@@ -175,7 +176,7 @@ obj/machinery/computer/air_control/Destroy()
 	if(href_list["out_toggle_power"])
 		output_info = null
 		refreshing_output = TRUE
-		signal.data = list ("tag" = output_tag, "power_toggle" = 1, "status" = 1)
+		signal.data = list ("tag" = output_tag, "power_toggle" = 1)
 		. = 1
 
 	if(href_list["out_set_pressure"])
@@ -183,7 +184,7 @@ obj/machinery/computer/air_control/Destroy()
 		refreshing_output = TRUE
 		pressure_setting = input("How much pressure would you like to output?", "Set Pressure", pressure_setting) as num|null
 		pressure_setting = between(0, pressure_setting, MAX_PUMP_PRESSURE)
-		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting]", "status" = 1)
+		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting]")
 		. = 1
 	
 	if(href_list["s_out_set_pressure"])
@@ -191,20 +192,20 @@ obj/machinery/computer/air_control/Destroy()
 		refreshing_output = TRUE
 		pressure_setting = input("How much pressure would you like to maintain inside the core?", "Set Core Pressure", pressure_setting) as num|null
 		pressure_setting = between(0, pressure_setting, MAX_PUMP_PRESSURE)
-		signal.data = list ("tag" = output_tag, "set_external_pressure" = "[pressure_setting]", "checks" = 1, "status" = 1)
+		signal.data = list ("tag" = output_tag, "set_external_pressure" = "[pressure_setting]", "checks" = 1)
 		. = 1
 
 	if(href_list["s_set_default"])
 		output_info = null
 		refreshing_output = TRUE
-		signal.data = list("tag" = output_tag, "set_external_pressure" = "[pressure_setting]", "checks" = 1, "status" = 1)
+		signal.data = list("tag" = output_tag, "set_external_pressure" = "[pressure_setting]", "checks" = 1)
 		. = 1
 
 	if(href_list["out_set_max"])
 		output_info = null
 		refreshing_output = TRUE
 		pressure_setting = MAX_PUMP_PRESSURE
-		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting]", "status" = 1)
+		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting]")
 		. = 1
 
 	if(href_list["set_frequency"])
@@ -247,15 +248,14 @@ obj/machinery/computer/air_control/Destroy()
 		return TOPIC_REFRESH
 
 	if(href_list["set_screen"])
-		data["screen"] = text2num(href_list["set_screen"])
+		data["screen"] = text2num(href_list["set_screen"])		
 		return TOPIC_REFRESH
 	
 	if(!radio_connection)
 		return TOPIC_HANDLED
 
 	signal.data["sigtype"] = "command"
-	signal.data["status"] = TRUE
-	radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
+	radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)	
 
 /obj/machinery/computer/air_control/fuel_injection
 	icon = 'icons/obj/computer.dmi'
@@ -315,7 +315,7 @@ obj/machinery/computer/air_control/Destroy()
 
 		signal.data = list(
 			"tag" = device_tag,
-			"set_power" = injecting,
+			"power" = injecting,
 			"sigtype" = "command"
 		)
 

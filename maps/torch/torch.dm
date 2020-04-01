@@ -4,7 +4,6 @@
 	#include "torch_antagonism.dm"
 	#include "torch_areas.dm"
 	#include "torch_elevator.dm"
-	#include "torch_events.dm"
 	#include "torch_holodecks.dm"
 	#include "torch_lobby.dm"
 	#include "torch_machinery.dm"
@@ -14,6 +13,7 @@
 	#include "torch_presets.dm"
 	#include "torch_procs.dm"
 	#include "torch_ranks.dm"
+	#include "torch_ranks_tff.dm"
 	#include "torch_security_state.dm"
 	#include "torch_setup.dm"
 	#include "torch_shuttles.dm"
@@ -23,12 +23,6 @@
 
 	#include "datums/uniforms.dm"
 	#include "datums/uniforms_expedition.dm"
-	#include "datums/uniforms_fleet.dm"
-	#include "datums/game_modes/torch_traitor.dm"
-	#include "datums/game_modes/torch_revolution.dm"
-	#include "datums/game_modes/torch_siege.dm"
-	#include "datums/game_modes/torch_meteor.dm"
-	#include "datums/game_modes/torch_uprising.dm"
 	#include "datums/reports/command.dm"
 	#include "datums/reports/corporate.dm"
 	#include "datums/reports/exploration.dm"
@@ -42,6 +36,7 @@
 	#include "datums/supplypacks/security.dm"
 	#include "datums/supplypacks/science.dm"
 	#include "datums/department_exploration.dm"
+	#include "datums/game_modes/torch_revolution.dm"
 
 	#include "game/antagonist/outsider/deathsquad.dm"
 	#include "game/antagonist/outsider/ert.dm"
@@ -76,6 +71,7 @@
 	#include "items/clothing/terran-head.dm"
 	#include "items/clothing/terran-suit.dm"
 	#include "items/clothing/terran-under.dm"
+	#include "items/clothing/boh_accessory.dm"
 
 	#include "items/weapon/storage/wallets.dm"
 
@@ -91,6 +87,7 @@
 	#include "job/security_jobs.dm"
 	#include "job/service_jobs.dm"
 	#include "job/supply_jobs.dm"
+	#include "job/torch_jobs_tff.dm"
 
 	#include "job/outfits/torch_outfits.dm"
 	#include "job/outfits/command_outfits.dm"
@@ -104,6 +101,7 @@
 	#include "job/outfits/service_outfits.dm"
 	#include "job/outfits/supply_outfits.dm"
 	#include "job/outfits/unused_outfits.dm"
+	#include "job/outfits/unused_boh_outfits.dm"
 
 	#include "language/human/euro.dm"
 	#include "language/human/misc/spacer.dm"
@@ -129,14 +127,18 @@
 
 	#include "loadout/_defines.dm"
 	#include "loadout/loadout_accessories.dm"
+	#include "loadout/loadout_accessories_boh.dm"
 	#include "loadout/loadout_ec_skillbadges.dm"
 	#include "loadout/loadout_eyes.dm"
 	#include "loadout/loadout_gloves.dm"
 	#include "loadout/loadout_head.dm"
+	#include "loadout/loadout_head_boh.dm"
 	#include "loadout/loadout_shoes.dm"
 	#include "loadout/loadout_suit.dm"
 	#include "loadout/loadout_uniform.dm"
+	#include "loadout/loadout_uniform_boh.dm"
 	#include "loadout/loadout_xeno.dm"
+	#include "loadout/loadout_augments.dm"
 	#include "loadout/~defines.dm"
 
 	#include "torch1_deck5.dmm"
@@ -167,7 +169,6 @@
 	#include "../away/unishi/unishi.dm"
 	#include "../away/voxship/voxship.dm"
 	#include "../away/skrellscoutship/skrellscoutship.dm"
-	#include "../away/meatstation/meatstation.dm"
 
 	#include "../../code/datums/music_tracks/chasing_time.dm"
 

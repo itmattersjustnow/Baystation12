@@ -239,7 +239,7 @@
 	dat += "<BR><A href='?src=\ref[src];refresh=1'>Refresh</A>"
 	dat += "<BR><A href='?src=\ref[user];mach_close=mob[name]'>Close</A>"
 
-	show_browser(user, dat, text("window=mob[name];size=340x540"))
+	user << browse(dat, text("window=mob[name];size=340x540"))
 	onclose(user, "mob[name]")
 	return
 
@@ -280,7 +280,7 @@
 	else
 		return if_no_id
 
-//repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a separate proc as it'll be useful elsewhere
+//repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a seperate proc as it'll be useful elsewhere
 /mob/living/carbon/human/proc/get_visible_name()
 	var/face_name = get_face_name()
 	var/id_name = get_id_name("")
@@ -335,7 +335,7 @@
 	var/obj/item/organ/external/floor_organ
 
 	if(!lying)
-		var/list/obj/item/organ/external/standing = list()
+		var/obj/item/organ/external/list/standing = list()
 		for(var/limb_tag in list(BP_L_FOOT, BP_R_FOOT))
 			var/obj/item/organ/external/E = organs_by_name[limb_tag]
 			if(E && E.is_usable())
@@ -350,7 +350,7 @@
 	if(!floor_organ)
 		floor_organ = pick(organs)
 
-	var/list/obj/item/organ/external/to_shock = trace_shock(initial_organ, floor_organ)
+	var/obj/item/organ/external/list/to_shock = trace_shock(initial_organ, floor_organ)
 
 	if(to_shock && to_shock.len)
 		shock_damage /= to_shock.len
@@ -369,7 +369,7 @@
 	return total_damage
 
 /mob/living/carbon/human/proc/trace_shock(var/obj/item/organ/external/init, var/obj/item/organ/external/floor)
-	var/list/obj/item/organ/external/traced_organs = list(floor)
+	var/obj/item/organ/external/list/traced_organs = list(floor)
 
 	if(!init)
 		return
@@ -430,6 +430,9 @@
 		if(!handle_strip(href_list["item"],user,locate(href_list["holder"])))
 			show_inv(user)
 		return TOPIC_HANDLED
+
+	if(href_list["ooc_notes"])
+		src.Examine_OOC()
 
 	if (href_list["criminal"])
 		if(hasHUD(user, HUD_SECURITY))
@@ -1192,7 +1195,8 @@
 	// Rebuild the HUD and visual elements.
 	if(client)
 		Login()
-
+	if(config && config.use_cortical_stacks && client && client.prefs.has_cortical_stack)
+		create_stack()
 	full_prosthetic = null
 
 	var/update_lang
@@ -1317,15 +1321,17 @@
 		W.message = message
 		W.add_fingerprint(src)
 
+#define CAN_INJECT 1
+#define INJECTION_PORT 2
 /mob/living/carbon/human/can_inject(var/mob/user, var/target_zone)
 	var/obj/item/organ/external/affecting = get_organ(target_zone)
 
 	if(!affecting)
-		to_chat(user, SPAN_WARNING("\The [src] is missing that limb."))
+		to_chat(user, "<span class='warning'>They are missing that limb.</span>")
 		return 0
 
 	if(BP_IS_ROBOTIC(affecting))
-		to_chat(user, SPAN_WARNING("You cannot inject a robotic limb."))
+		to_chat(user, "<span class='warning'>That limb is robotic.</span>")
 		return 0
 
 	. = CAN_INJECT

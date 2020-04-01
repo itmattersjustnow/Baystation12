@@ -29,7 +29,7 @@ SUBSYSTEM_DEF(jobs)
 
 	// Create main map jobs.
 	primary_job_datums.Cut()
-	for(var/jobtype in (list(DEFAULT_JOB_TYPE) | GLOB.using_map.allowed_jobs))
+	for(var/jobtype in (list(/datum/job/assistant) | GLOB.using_map.allowed_jobs))
 		var/datum/job/job = get_by_path(jobtype)
 		if(!job)
 			job = new jobtype
@@ -141,7 +141,6 @@ SUBSYSTEM_DEF(jobs)
 	return titles_to_datums[rank]
 
 /datum/controller/subsystem/jobs/proc/get_by_path(var/path)
-	RETURN_TYPE(/datum/job)
 	return types_to_datums[path]
 
 /datum/controller/subsystem/jobs/proc/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/job)
@@ -364,7 +363,7 @@ SUBSYSTEM_DEF(jobs)
 	// For those who wanted to be assistant if their preferences were filled, here you go.
 	for(var/mob/new_player/player in unassigned_roundstart)
 		if(player.client.prefs.alternate_option == BE_ASSISTANT)
-			var/datum/job/ass = DEFAULT_JOB_TYPE
+			var/datum/job/ass = /datum/job/assistant
 			if((GLOB.using_map.flags & MAP_HAS_BRANCH) && player.client.prefs.branches[initial(ass.title)])
 				var/datum/mil_branch/branch = mil_branches.get_branch(player.client.prefs.branches[initial(ass.title)])
 				ass = branch.assistant_job
@@ -400,7 +399,7 @@ SUBSYSTEM_DEF(jobs)
 			if(G)
 				var/permitted = 0
 				if(G.allowed_branches)
-					if(H.char_branch && (H.char_branch.type in G.allowed_branches))
+					if(H.char_branch && H.char_branch.type in G.allowed_branches)
 						permitted = 1
 				else
 					permitted = 1
@@ -482,12 +481,6 @@ SUBSYSTEM_DEF(jobs)
 		job.equip(H, H.mind ? H.mind.role_alt_title : "", H.char_branch, H.char_rank)
 		job.apply_fingerprints(H)
 		spawn_in_storage = equip_custom_loadout(H, job)
-
-		var/obj/item/clothing/under/uniform = H.w_uniform
-		if(istype(uniform) && uniform.has_sensor)
-			uniform.sensor_mode = H.client.prefs.sensor_setting
-			if(H.client.prefs.sensors_locked)
-				uniform.has_sensor = SUIT_LOCKED_SENSORS
 	else
 		to_chat(H, "Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.")
 

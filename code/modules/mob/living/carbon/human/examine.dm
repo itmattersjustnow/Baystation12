@@ -50,9 +50,10 @@
 	if(!(skipjumpsuit && skipface))
 		var/species_name = "\improper "
 		if(is_synth && species.cyborg_noun)
-			species_name += "[species.cyborg_noun] [species.get_bodytype(src)]"
-		else
-			species_name += "[species.name]"
+			species_name += "[species.cyborg_noun] "
+		species_name += "[species.name]"
+		if(custom_species)						//BastionStation edit
+			species_name = "[custom_species]"	//BastionStation edit
 		msg += ", <b><font color='[species.get_flesh_colour(src)]'>\a [species_name]!</font></b>[(user.can_use_codex() && SScodex.get_codex_entry(get_codex_value())) ?  SPAN_NOTICE(" \[<a href='?src=\ref[SScodex];show_examined_info=\ref[src];show_to=\ref[user]'>?</a>\]") : ""]"
 
 	var/extra_species_text = species.get_additional_examine_text(src)
@@ -123,6 +124,10 @@
 	//ID
 	if(wear_id)
 		msg += "[T.He] [T.is] wearing [wear_id.get_examine_line()].\n"
+
+	//OOC Notes aka metadata
+	if(ooc_notes)
+		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
 
 	//handcuffed?
 	if(handcuffed)
@@ -319,7 +324,7 @@
 	msg += applying_pressure
 
 	if (pose)
-		if( findtext(pose,".",lentext(pose)) == 0 && findtext(pose,"!",lentext(pose)) == 0 && findtext(pose,"?",lentext(pose)) == 0 )
+		if( findtext(pose,".",length(pose)) == 0 && findtext(pose,"!",length(pose)) == 0 && findtext(pose,"?",length(pose)) == 0 )
 			pose = addtext(pose,".") //Makes sure all emotes end with a period.
 		msg += "[T.He] [pose]\n"
 
@@ -354,7 +359,7 @@
 	set category = "IC"
 
 	var/list/HTML = list()
-	HTML += "<body>"
+	HTML += "<meta charset=\"UTF-8\"><body>"
 	HTML += "<tt><center>"
 	HTML += "<b>Update Flavour Text</b> <hr />"
 	HTML += "<br></center>"
@@ -388,4 +393,4 @@
 	HTML += "<hr />"
 	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
-	show_browser(src, jointext(HTML,null), "window=flavor_changes;size=430x300")
+	src << browse(jointext(HTML,null), "window=flavor_changes;size=430x300")

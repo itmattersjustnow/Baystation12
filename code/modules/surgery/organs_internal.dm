@@ -172,7 +172,7 @@
 			return SURGERY_SKILLS_ROBOTIC_ON_MEAT
 	else
 		return ..()
-	
+
 /decl/surgery_step/internal/remove_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("\The [user] starts removing [target]'s [LAZYACCESS(target.surgeries_in_progress, target_zone)] with \the [tool].", \
@@ -224,7 +224,7 @@
 /decl/surgery_step/internal/replace_organ/get_skill_reqs(mob/living/user, mob/living/carbon/human/target, obj/item/tool)
 	var/obj/item/organ/internal/O = tool
 	var/obj/item/organ/external/affected = target.get_organ(user.zone_sel.selecting)
-	if(BP_IS_ROBOTIC(O) || istype(O, /obj/item/organ/internal/augment))
+	if(BP_IS_ROBOTIC(O))
 		if(BP_IS_ROBOTIC(affected))
 			return SURGERY_SKILLS_ROBOTIC
 		else
@@ -254,9 +254,9 @@
 				to_chat(user, SPAN_WARNING("\The [O.name] [o_is] in no state to be transplanted."))
 			else if(O.w_class > affected.cavity_max_w_class)
 				to_chat(user, SPAN_WARNING("\The [O.name] [o_is] too big for [affected.cavity_name] cavity!"))
-			else 
+			else
 				var/obj/item/organ/internal/I = target.internal_organs_by_name[O.organ_tag]
-				if(I && (I.parent_organ == affected.organ_tag))
+				if(I && (I.parent_organ == affected.organ_tag || istype(O, /obj/item/organ/internal/stack)))
 					to_chat(user, SPAN_WARNING("\The [target] already has [o_a][O.name]."))
 				else
 					. = TRUE
@@ -345,7 +345,7 @@
 		return FALSE
 
 	var/obj/item/organ/internal/I = target.internal_organs_by_name[organ_to_replace.organ_tag]
-	if(I && (I.parent_organ == affected.organ_tag))
+	if(I && (I.parent_organ == affected.organ_tag || istype(organ_to_replace, /obj/item/organ/internal/stack)))
 		to_chat(user, SPAN_WARNING("\The [target] already has \a [organ_to_replace]."))
 		return FALSE
 	return organ_to_replace
@@ -398,7 +398,7 @@
 	if(!istype(container) || !container.reagents.has_reagent(/datum/reagent/peridaxon) || !..())
 		return FALSE
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	var/list/obj/item/organ/internal/dead_organs = list()
+	var/obj/item/organ/internal/list/dead_organs = list()
 	for(var/obj/item/organ/internal/I in target.internal_organs)
 		if(I && !(I.status & ORGAN_CUT_AWAY) && (I.status & ORGAN_DEAD) && I.parent_organ == affected.organ_tag && !BP_IS_ROBOTIC(I))
 			dead_organs |= I

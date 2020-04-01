@@ -222,7 +222,7 @@
 	dir = 9
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino_dock_sensor";
 	pixel_x = -30;
 	pixel_y = -8
@@ -235,8 +235,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 2;
+	frequency = 1380;
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /obj/item/device/radio/intercom{
@@ -263,8 +264,9 @@
 /turf/simulated/floor/tiled,
 /area/casino/casino_bridge)
 "aN" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
+	frequency = 1381;
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -292,7 +294,7 @@
 "aU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_closed";
 	id_tag = "casino_dock_inner";
 	locked = 0;
@@ -355,7 +357,7 @@
 /area/space)
 "bc" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino_dock_airlock";
 	pixel_x = -24;
 	pixel_y = 6;
@@ -2488,7 +2490,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1439;
+	frequency = 1329;
 	master_tag = "casino_solar_airlock";
 	name = "exterior access button";
 	pixel_x = 28;
@@ -2514,7 +2516,7 @@
 /area/casino/casino_solar_control)
 "gz" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1439;
+	frequency = 1329;
 	id_tag = "casino_solar_airlock";
 	pixel_x = 24;
 	req_access = newlist();
@@ -2524,7 +2526,7 @@
 	tag_interior_door = "casino_solar_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1439;
+	frequency = 1329;
 	id_tag = "casino_solar_sensor";
 	pixel_x = 24;
 	pixel_y = 12
@@ -2541,6 +2543,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 2;
+	frequency = 1329;
 	id_tag = "casino_solar_pump"
 	},
 /turf/simulated/floor/plating,
@@ -2603,7 +2606,7 @@
 /area/space)
 "gL" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1439;
+	frequency = 1329;
 	icon_state = "door_locked";
 	id_tag = "solar_casino_inner";
 	locked = 1;
@@ -2660,7 +2663,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1439;
+	frequency = 1329;
 	master_tag = "casino_solar_airlock";
 	name = "interior access button";
 	pixel_x = 24;

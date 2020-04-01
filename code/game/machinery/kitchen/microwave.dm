@@ -297,7 +297,7 @@
 	return 1
 
 /obj/machinery/microwave/proc/has_extra_item()
-	for (var/obj/O in ingredients) // do not use src or src.contents unless you want to cook your own components
+	for (var/obj/O in src)
 		if (!istype(O,/obj/item/weapon/reagent_containers/food) && !istype(O, /obj/item/weapon/grown))
 			return 1
 	return 0

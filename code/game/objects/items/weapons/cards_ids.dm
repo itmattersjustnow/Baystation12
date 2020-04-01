@@ -163,6 +163,10 @@ var/const/NO_EMAG_ACT = -50
 	item_state = "card-id"
 	slot_flags = SLOT_ID
 
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_id_resomi.dmi'
+		)
+
 	var/list/access = list()
 	var/registered_name = "Unknown" // The name registered_name on the card
 	var/associated_account_number = 0
@@ -236,8 +240,8 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/id/proc/show(mob/user as mob)
 	if(front && side)
-		send_rsc(user, front, "front.png")
-		send_rsc(user, side, "side.png")
+		user << browse_rsc(front, "front.png")
+		user << browse_rsc(side, "side.png")
 	var/datum/browser/popup = new(user, "idcard", name, 600, 250)
 	popup.set_content(dat())
 	popup.set_title_image(usr.browse_rsc_icon(src.icon, src.icon_state))
@@ -550,7 +554,7 @@ var/const/NO_EMAG_ACT = -50
 /obj/item/weapon/card/id/civilian
 	name = "identification card"
 	desc = "A card issued to civilian staff."
-	job_access_type = DEFAULT_JOB_TYPE
+	job_access_type = /datum/job/assistant
 	detail_color = COLOR_CIVIE_GREEN
 
 /obj/item/weapon/card/id/civilian/bartender

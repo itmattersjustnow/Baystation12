@@ -1,4 +1,4 @@
-/var/server_name = "Baystation 12"
+/var/server_name = "The Fluffy Frontier"
 
 /var/game_id = null
 /hook/global_init/proc/generate_gameid()
@@ -89,12 +89,14 @@
 		log = runtime_log // Note that, as you can see, this is misnamed: this simply moves world.log into the runtime log file.
 
 	if(byond_version < RECOMMENDED_VERSION)
-		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
+		world.log << "Your server's byond version does not meet the recommended requirements for this server. Please update BYOND"
 
 	callHook("startup")
 	//Emergency Fix
 	load_mods()
 	//end-emergency fix
+
+	TgsNew(minimum_required_security_level = TGS_SECURITY_TRUSTED)
 
 	. = ..()
 
@@ -104,6 +106,8 @@
 #endif
 	Master.Initialize(10, FALSE)
 
+	TgsInitializationComplete()
+
 #undef RECOMMENDED_VERSION
 
 var/world_topic_spam_protect_ip = "0.0.0.0"
@@ -111,6 +115,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	diary << "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]"
+
+	TGS_TOPIC
 
 	if (T == "ping")
 		var/x = 1
@@ -190,8 +196,6 @@ var/world_topic_spam_protect_time = world.timeofday
 
 		if(revdata.revision)
 			L["revision"] = revdata.revision
-			L["branch"] = revdata.branch
-			L["date"] = revdata.date
 		else
 			L["revision"] = "unknown"
 
@@ -462,6 +466,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 		*/
 
+	TgsReboot()
+
 	Master.Shutdown()
 
 	if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
@@ -472,6 +478,9 @@ var/world_topic_spam_protect_time = world.timeofday
 		text2file("foo", "reboot_called")
 		to_world("<span class=danger>World reboot waiting for external scripts. Please be patient.</span>")
 		return
+
+	if(TgsAvailable())
+		TgsEndProcess()
 
 	..(reason)
 
@@ -546,9 +555,9 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://forums.baystation12.net/\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discordapp.com/invite/5GvhwtY/\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -607,9 +616,9 @@ var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
 	if(!setup_database_connection())
-		to_world_log("Your server failed to establish a connection with the feedback database.")
+		world.log << "Your server failed to establish a connection with the feedback database."
 	else
-		to_world_log("Feedback database connection established.")
+		world.log << "Feedback database connection established."
 	return 1
 
 proc/setup_database_connection()
@@ -632,7 +641,8 @@ proc/setup_database_connection()
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		world.log << dbcon.ErrorMsg()
+
 	return .
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
@@ -648,9 +658,9 @@ proc/establish_db_connection()
 
 /hook/startup/proc/connectOldDB()
 	if(!setup_old_database_connection())
-		to_world_log("Your server failed to establish a connection with the SQL database.")
+		world.log << "Your server failed to establish a connection with the SQL database."
 	else
-		to_world_log("SQL database connection established.")
+		world.log << "SQL database connection established."
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
@@ -674,7 +684,7 @@ proc/setup_old_database_connection()
 		failed_old_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 	else
 		failed_old_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		world.log << dbcon.ErrorMsg()
 
 	return .
 

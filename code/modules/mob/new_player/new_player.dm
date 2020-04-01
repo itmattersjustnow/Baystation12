@@ -28,7 +28,7 @@
 		return // Not ready yet.
 	var/output = list()
 	output += "<div align='center'>"
-	output += "<i>[GLOB.using_map.get_map_info()]</i>"
+//	output += "<i>[GLOB.using_map.get_map_info()]</i>"
 	output +="<hr>"
 	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A> "
 
@@ -66,7 +66,7 @@
 
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome to [GLOB.using_map.full_name]", 560, 280, src)
+	panel = new(src, "Welcome","Welcome to [GLOB.using_map.full_name]", 320, 160, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(JOINTEXT(output))
 	panel.open()
@@ -203,7 +203,7 @@
 			if("nostats")
 				option = "NOSTATS"
 			if("later")
-				show_browser(usr, null,"window=privacypoll")
+				usr << browse(null,"window=privacypoll")
 				return
 			if("abstain")
 				option = "ABSTAIN"
@@ -216,7 +216,7 @@
 			var/DBQuery/query_insert = dbcon.NewQuery(sql)
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
-			show_browser(usr, null,"window=privacypoll")
+			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])
 		if(client)
@@ -436,7 +436,7 @@
 		additional_dat += "<br>"
 		dat = additional_dat + dat
 	dat = header + dat
-	show_browser(src, jointext(dat, null), "window=latechoices;size=450x640;can_close=1")
+	src << browse(jointext(dat, null), "window=latechoices;size=450x640;can_close=1")
 
 /mob/new_player/proc/create_character(var/turf/spawn_turf)
 	spawning = 1
@@ -499,18 +499,22 @@
 		new_character.dna.SetSEState(GLOB.GLASSESBLOCK,1,0)
 		new_character.disabilities |= NEARSIGHTED
 
+	if(config && config.use_cortical_stacks && client && client.prefs.has_cortical_stack /*&& new_character.should_have_organ(BP_BRAIN)*/)
+		new_character.create_stack()
+
 	// Do the initial caching of the player's body icons.
 	new_character.force_update_limbs()
 	new_character.update_eyes()
 	new_character.regenerate_icons()
 
 	new_character.key = key		//Manually transfer the key to log them in
+
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
 	var/dat = "<div align='center'>"
 	dat += html_crew_manifest(OOC = 1)
-	//show_browser(src, dat, "window=manifest;size=370x420;can_close=1")
+	//src << browse(dat, "window=manifest;size=370x420;can_close=1")
 	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
 	popup.set_content(dat)
 	popup.open()
@@ -519,7 +523,7 @@
 	return 0
 
 /mob/new_player/proc/close_spawn_windows()
-	close_browser(src, "window=latechoices") //closes late choices window
+	src << browse(null, "window=latechoices") //closes late choices window
 	panel.close()
 
 /mob/new_player/proc/check_species_allowed(datum/species/S, var/show_alert=1)

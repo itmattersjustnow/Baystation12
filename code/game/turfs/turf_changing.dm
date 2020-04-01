@@ -1,9 +1,6 @@
 /turf/proc/ReplaceWithLattice(var/material)
-	var base_turf = get_base_turf_by_area(src);
-	if(type != base_turf)
-		src.ChangeTurf(get_base_turf_by_area(src))
-	if(!locate(/obj/structure/lattice) in src)
-		new /obj/structure/lattice(src, material)
+	src.ChangeTurf(get_base_turf_by_area(src))
+	new /obj/structure/lattice( locate(src.x, src.y, src.z), material )
 
 // Removes all signs of lattice on the pos of the turf -Donkieyo
 /turf/proc/RemoveLattice()
@@ -13,8 +10,9 @@
 // Called after turf replaces old one
 /turf/proc/post_change()
 	levelupdate()
-	if (above)
-		above.update_mimic()
+	var/turf/simulated/open/T = GetAbove(src)
+	if(istype(T))
+		T.update_icon()
 
 //Creates a new turf
 /turf/proc/ChangeTurf(var/turf/N, var/tell_universe = TRUE, var/force_lighting_update = FALSE, var/keep_air = FALSE)

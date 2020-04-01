@@ -29,7 +29,6 @@
 		if(!user.unEquip(W, src))
 			return
 		do_insert_ai(user, W)
-		return TRUE
 	if(isScrewdriver(W))
 		to_chat(user, "You manually remove \the [stored_card] from \the [src].")
 		do_eject_ai(user)
@@ -76,3 +75,9 @@
 		loc.verbs += /obj/item/weapon/stock_parts/computer/ai_slot/verb/eject_ai
 
 	update_power_usage()
+
+/obj/item/weapon/stock_parts/computer/ai_slot/attackby(obj/item/weapon/aicard/card, mob/living/user)
+	if(!istype(card))
+		return
+	do_insert_ai(card, user)
+	return TRUE

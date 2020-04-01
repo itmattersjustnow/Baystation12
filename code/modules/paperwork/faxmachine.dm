@@ -37,7 +37,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 			return
 		scan = O
 		to_chat(user, "<span class='notice'>You insert \the [O] into \the [src].</span>")
-	else 
+	else
 		..()
 
 /obj/machinery/photocopier/faxmachine/interface_interact(mob/user)
@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/interact(mob/user)
 	user.set_machine(src)
 
-	var/dat = "Fax Machine<BR>"
+	var/dat = "<meta charset=\"UTF-8\">Fax Machine<BR>"
 
 	var/scan_name
 	if(scan)
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 		if(copyitem)
 			dat += "<a href ='byond://?src=\ref[src];remove=1'>Remove Item</a><br>"
 
-	show_browser(user, dat, "window=copier")
+	user << browse(dat, "window=copier")
 	onclose(user, "copier")
 	return
 
