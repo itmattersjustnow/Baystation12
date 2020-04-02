@@ -16,7 +16,7 @@
 	name = "Ectothermy"
 	desc = "You have diminished means of internal thermoregulation, forcing you to rely on external heat to stay alive."
 	cost = 0
-	var_changes = list("body_temperature" = null, "cold_discomfort_level" = 292)
+	var_changes = list("body_temperature" = 285, "cold_discomfort_level" = 292)
 	excludes = list(/datum/trait/hot_blooded)
 
 /datum/trait/hot_blooded
@@ -36,7 +36,7 @@
 	name = "Faster Metabolism"
 	desc = "Your metabolism rate is absurdly high, causing you to get hungry and process chemicals at twice the normal rate."
 	cost = 0
-	var_changes = list("hunger_factor" = DEFAULT_HUNGER_FACTOR * 2, "metabolism_mod" = 2)
+	var_changes = list("hunger_factor" = DEFAULT_HUNGER_FACTOR * 2.5, "metabolism_mod" = 2)
 	excludes = list(/datum/trait/slow_meta)
 
 /datum/trait/slow_meta
@@ -45,3 +45,15 @@
 	cost = 0
 	var_changes = list("hunger_factor" = DEFAULT_HUNGER_FACTOR * 0.5, "metabolism_mod" = 0.5)
 	excludes = list(/datum/trait/fast_meta)
+
+/datum/trait/carnivore
+	name = "Carnivore"
+	desc = "For one reason or another, you're only capable of eating meat. Vegetables won't kill you, but they won't help you either."
+	cost = 0
+	var_changes = list(reagent_tag = IS_CARNIVORE)
+
+/datum/trait/herbivore
+	name = "Herbivore"
+	desc = "You're only able to eat plants. Eating meat and other animal protein will poison you."
+	cost = 0
+	var_changes = list(reagent_tag = IS_HERBIVORE)
