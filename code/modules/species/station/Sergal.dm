@@ -29,7 +29,7 @@
 	min_age = 18
 	max_age = 100
 
-	description = "PLACEHOLDER: A Sergal is a race of shark-like headed people from the world of Vilous universe. They are living in the planet Tal for now, although their distant ancestors originated from the planet Eltus."
+	description = "Sergals are a race of furry shark-like headed creatures from the planet Tal in the Vilous system. They are one of two intelligent races living in the system, the other being Nevreans. They are split into four main races being the Northern, Southern, Eastern, and Western sergals. Humanity encountered Sergals when the SEV Pathfinder discovered the planet Tal, but sergals did not join the intergalactic community until late 2558 due to The Vilous Incident. The Vilous system has been under SCGDF occupation ever since, and has only recently been officially annexed into SolGov's influence."
 
 	cold_level_1 = 260 //Default 260 - Lower is better
 	cold_level_2 = 200 //Default 200

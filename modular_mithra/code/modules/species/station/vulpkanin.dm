@@ -14,7 +14,7 @@
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/claws)
 
-	description = "Fox-wolf-dog-things! This is just a placeholder description!"
+	description = "Vulpkanin or 'Vulpa' is a species of sharp-witted canid bipeds residing on the planet Altam just barely within the binary Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominate their lifestyles to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
