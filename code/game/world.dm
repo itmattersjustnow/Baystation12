@@ -1,4 +1,4 @@
-/var/server_name = "The Fluffy Frontier"
+/var/server_name = "Donarrex Project"
 
 /var/game_id = null
 /hook/global_init/proc/generate_gameid()
