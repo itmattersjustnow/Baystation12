@@ -4353,13 +4353,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/fourthdeck/fore)
-"os" = (
-/obj/structure/sign/solgov{
-	pixel_x = 32;
-	pixel_y = -32
-	},
-/turf/space,
-/area/space)
 "ot" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
@@ -6119,16 +6112,6 @@
 	dir = 1;
 	id_tag = "nuke_shuttle_dock_pump"
 	},
-/obj/structure/sign/double/solgovflag/left{
-	pixel_y = -32
-	},
-/turf/simulated/floor,
-/area/hallway/primary/fourthdeck/fore)
-"tO" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/sign/double/solgovflag/right{
-	pixel_y = -32
-	},
 /turf/simulated/floor,
 /area/hallway/primary/fourthdeck/fore)
 "tP" = (
@@ -7064,13 +7047,6 @@
 /area/maintenance/waterstore)
 "ww" = (
 /obj/effect/shuttle_landmark/merc/dock,
-/turf/space,
-/area/space)
-"wx" = (
-/obj/structure/sign/solgov{
-	pixel_x = 32;
-	pixel_y = 32
-	},
 /turf/space,
 /area/space)
 "wy" = (
@@ -11847,10 +11823,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/fore)
-"Nv" = (
-/obj/structure/sign/solgov,
-/turf/simulated/wall/r_wall/hull,
-/area/hallway/primary/fourthdeck/fore)
 "Nw" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -12796,10 +12768,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fourthdeck/starboard)
-"Qd" = (
-/obj/structure/sign/solgov,
-/turf/simulated/wall/r_wall/hull,
-/area/hallway/primary/fourthdeck/aft)
 "Qe" = (
 /obj/effect/floor_decal/corner/brown/mono,
 /obj/structure/closet/secure_closet/decktech,
@@ -25453,13 +25421,13 @@ aa
 aa
 aa
 aa
-os
 aa
 aa
 aa
 aa
 aa
-wx
+aa
+aa
 aa
 aa
 aa
@@ -26063,7 +26031,7 @@ ng
 WZ
 qQ
 sl
-tO
+tQ
 WZ
 ng
 ng
@@ -28470,7 +28438,7 @@ aa
 aa
 aa
 aa
-Nv
+WZ
 WZ
 cv
 ek
@@ -28502,7 +28470,7 @@ FZ
 ek
 YK
 WZ
-Nv
+WZ
 aa
 aa
 aa
@@ -40583,7 +40551,7 @@ aa
 aa
 aa
 aa
-Qd
+LA
 LA
 LA
 LA
@@ -40629,7 +40597,7 @@ JO
 LA
 LA
 LA
-Qd
+LA
 aa
 aa
 aa
@@ -41189,7 +41157,7 @@ aa
 aa
 aa
 aa
-Qd
+LA
 LA
 LA
 LA
@@ -41235,7 +41203,7 @@ JR
 LA
 LA
 LA
-Qd
+LA
 aa
 aa
 aa
