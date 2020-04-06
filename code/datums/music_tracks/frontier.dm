@@ -66,3 +66,10 @@
 	song = 'sound/music/frontier/shootingstars.ogg'
 	license = /decl/license/cc_by_nc_4_0
 	url = "https://soundcloud.com/bagraiders/shooting-stars-original"
+
+/music_track/guardians
+	artist = "Leslie Fish"
+	title = "Guardians"
+	song = 'sound/music/frontier/guardians.ogg'
+	license = /decl/license/grandfathered
+	url = "https://www.youtube.com/watch?v=UqU7W8LdRd4"
