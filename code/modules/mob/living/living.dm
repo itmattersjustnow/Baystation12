@@ -562,7 +562,7 @@ default behaviour is:
 	if(!can_pull())
 		stop_pulling()
 		return
-	
+
 	if (!isliving(pulling))
 		step(pulling, get_dir(pulling.loc, old_loc))
 	else
@@ -582,6 +582,20 @@ default behaviour is:
 			if(t)
 				M.start_pulling(t)
 
+	handle_dir_after_pull()
+
+/mob/living/proc/handle_dir_after_pull()
+	if(pulling)
+		if(isobj(pulling))
+			var/obj/O = pulling
+			if(O.w_class >= ITEM_SIZE_HUGE || O.density)
+				return set_dir(get_dir(src, pulling))
+		if(isliving(pulling))
+			var/mob/living/L = pulling
+			// If pulled mob was bigger than us, we morelike will turn
+			// I made additional check in case if someone want a hand walk
+			if(L.mob_size > mob_size || L.lying || a_intent != I_HELP)
+				return set_dir(get_dir(src, pulling))
 
 /mob/living/proc/handle_pull_damage(mob/living/puller)
 	var/area/A = get_area(src)
