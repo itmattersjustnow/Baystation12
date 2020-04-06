@@ -118,7 +118,8 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Goodbye Moonmen" = /music_track/goodbyemoonmen,
 	"Ocean Man" = /music_track/oceanman,
 	"Rocket Rider's Prayer" = /music_track/rocketridersprayer,
-	"Shooting Stars" = /music_track/shootingstars //Frontier add end
+	"Shooting Stars" = /music_track/shootingstars,
+	"Guardians" = /music_track/guardians //Frontier add end
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

@@ -31,5 +31,6 @@
 		/music_track/goodbyemoonmen,
 		/music_track/oceanman,
 		/music_track/rocketridersprayer,
-		/music_track/shootingstars //Frontier add end
+		/music_track/shootingstars,
+		/music_track/guardians //Frontier add end
 	)
