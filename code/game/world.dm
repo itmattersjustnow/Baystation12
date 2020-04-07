@@ -1,4 +1,4 @@
-/var/server_name = "Donarrex Project"
+/var/server_name = "Donnarex Project"
 
 /var/game_id = null
 /hook/global_init/proc/generate_gameid()
@@ -64,7 +64,7 @@
 
 	return match
 
-#define RECOMMENDED_VERSION 512
+#define RECOMMENDED_VERSION 513
 /world/New()
 
 	enable_debugger()
