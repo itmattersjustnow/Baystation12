@@ -1,27 +1,27 @@
 
 /datum/computer_file/report/recipient/medical
-	logo = "\[solcrest\]"
-	form_name = "SCG-MED-00"
+	logo = "\[bluelogo\]"
+	form_name = "NT-MED-00"
 
 /datum/computer_file/report/recipient/medical/checkup
-	form_name = "SCG-MED-013b"
-	title = "Regular Health Checkup Checklist"
+	form_name = "NT-MED-013b"
+	title = "Контрольный Список Медицинского Осмотра"
 	available_on_ntnet = 1
 
 /datum/computer_file/report/recipient/medical/checkup/generate_fields()
-	add_field(/datum/report_field/text_label/instruction, "You would need following equipment for this: stethoscope, health analyzer, penlight.")
-	add_field(/datum/report_field/people/from_manifest, "Patient")
-	add_field(/datum/report_field/date, "Date")
-	add_field(/datum/report_field/time, "Time")
-	add_field(/datum/report_field/simple_text, "Take pulse", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Check blood pressure", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Listen for heart noises", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Listen for lung noises", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask if they exercise", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask if they smoke, and how much per day", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Check eye reaction to penlight", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask about any recent radiation exposure", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask about any recent sickness", "NOT CHECKED")
-	add_field(/datum/report_field/pencode_text, "Other Notes")
-	add_field(/datum/report_field/signature, "Doctor's Signature")
+	add_field(/datum/report_field/text_label/instruction, "Для проведения регулярного медицинского осмотра вам понадобится следующее оборудование: стетоскоп, анализатор здоровья, фонарик.")
+	add_field(/datum/report_field/people/from_manifest, "Пациент")
+	add_field(/datum/report_field/date, "Дата")
+	add_field(/datum/report_field/time, "Время")
+	add_field(/datum/report_field/simple_text, "Проверить пульс", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить кровяное давление", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить наличие шумов в сердце", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить наличие шумов в легких", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, занимается ли пациент спортом", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, курит ли пациент; если да, как часто", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить реакцию зрачков на свет", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, не подвергался ли пациент недавно радиационному облучению", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента о недавно перенесенных болезнях", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/pencode_text, "Другие заметки")
+	add_field(/datum/report_field/signature, "Подпись врача")
 	set_access(access_edit = access_medical_equip)
