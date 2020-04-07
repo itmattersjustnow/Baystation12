@@ -20,9 +20,8 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 1;
-	frequency = 1383;
 	id_tag = "bearcat_shuttle_pump_out_internal"
 	},
 /turf/simulated/floor/plating,
@@ -5359,9 +5358,8 @@
 /turf/simulated/floor/plating,
 /area/ship/scrap/hidden)
 "zb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8;
-	frequency = 1383;
 	id_tag = "bearcat_shuttle_pump_out_external"
 	},
 /obj/structure/handrai{
@@ -6823,8 +6821,7 @@
 /turf/simulated/floor/plating,
 /area/ship/scrap/maintenance/power)
 "Zb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1383;
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	id_tag = "bearcat_shuttle_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
