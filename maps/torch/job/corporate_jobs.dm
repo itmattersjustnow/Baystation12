@@ -44,7 +44,7 @@
 	department_flag = SPT
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Heads of Staff"
+	supervisors = "the Workplace Liaison"
 	selection_color = "#3d3d7f"
 	economic_power = 12
 	minimal_player_age = 7
@@ -71,17 +71,17 @@
 						access_cargo, access_solgov_crew, access_hangar,
 						access_nanotrasen, access_commissary, access_petrov,
 						access_sec_guard)
-//	defer_roundstart_spawn = TRUE
-/*
+	defer_roundstart_spawn = TRUE
+
 /datum/job/bodyguard/is_position_available()
 	if(..())
 		for(var/mob/M in GLOB.player_list)
 			if(M.client && M.mind && M.mind.assigned_role == "Workplace Liaison")
 				return TRUE
 	return FALSE
-*/
+
 /datum/job/bodyguard/get_description_blurb()
-	return "You are the Loss Prevention Associate. You are an employee of NT, specifically the Surveyor Corps branch, and your job is to prevent the loss of the Heads of Staff's lives - even at the cost of your own. Good luck."
+	return "You are the Loss Prevention Associate. You are an employee of NT, specifically the Surveyor Corps branch, and your job is to prevent the loss of the Liason's life - even at the cost of your own. Good luck."
 
 /datum/job/bodyguard/post_equip_rank(var/mob/person, var/alt_title)
 	var/my_title = "\a ["\improper [(person.mind ? (person.mind.role_alt_title ? person.mind.role_alt_title : person.mind.assigned_role) : "Loss Prevention Associate")]"]"
