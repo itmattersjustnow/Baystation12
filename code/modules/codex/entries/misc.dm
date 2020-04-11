@@ -12,6 +12,10 @@
 	associated_paths = list(/obj/item/clothing/shoes/laceup/sneakies)
 	lore_text =  "Originally designed to confuse Terran troops on the swamp moon of Nabier XI, where they were proven somewhat effective. Not bad on a space vessel, either."
 
+/datum/codex_entry/gaia_conflict
+	associated_paths = list(/obj/item/clothing/head/soft/solgov/veteranhat)
+	lore_text =  "The Gaia Conflict was a conflict between the Sol Central Government and the Gilgamesh Colonial Confederation. The conflict lasted from the 16th of January, 2545 until the 11th of October, 2550 and ended in a Pyrrhic victory for Sol. Today, Gaia is a neutral planet and marks the DMZ between Sol and the GCC, with detachments from both the Confederation and Sol militaries stationed in the system."
+
 /datum/codex_entry/moneygun
 	associated_paths = list(/obj/item/weapon/gun/launcher/money)
 	mechanics_text = "Load money into the cannon by picking it up with the gun, or feeding it directly by hand. Use in your hand to configure how much money you want to fire per shot."
