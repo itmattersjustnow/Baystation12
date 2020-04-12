@@ -16,10 +16,10 @@
 
 /datum/species/unathi
 	autohiss_basic_map = list(
-			"s" = list("ss", "sss", "ssss")
+			"c" = list("cc", "ccc", "c-c")
 		)
 	autohiss_extra_map = list(
-			"x" = list("ks", "kss", "ksss")
+			"ш" = list("шш", "шшш", "ш-ш")
 		)
 	autohiss_exempt = list(
 					LANGUAGE_UNATHI_SINTA,
@@ -44,7 +44,7 @@
 		var/min_index = 10000 // if the message is longer than this, the autohiss is the least of your problems
 		var/min_char = null
 		for(var/char in map)
-			var/i = findtext(message, char)
+			var/i = findtext_char(message, char)
 			if(!i) // no more of this character anywhere in the string, don't even bother searching next time
 				map -= char
 			else if(i < min_index)
@@ -53,8 +53,8 @@
 		if(!min_char) // we didn't find any of the mapping characters
 			. += message
 			break
-		. += copytext(message, 1, min_index)
-		if(copytext(message, min_index, min_index+1) == uppertext(min_char))
+		. += copytext_char(message, 1, min_index)
+		if(copytext_char(message, min_index, min_index+1) == uppertext(min_char))
 			switch(text2ascii(message, min_index+1))
 				if(65 to 90) // A-Z, uppercase; uppercase R/S followed by another uppercase letter, uppercase the entire replacement string
 					. += uppertext(pick(map[min_char]))
@@ -62,6 +62,7 @@
 					. += capitalize(pick(map[min_char]))
 		else
 			. += pick(map[min_char])
-		message = copytext(message, min_index + 1)
+
+		message = copytext_char(message, min_index + 1)
 
 	return jointext(., null)
