@@ -96,6 +96,8 @@ h1.alert, h2.alert		{color: #000000;}
 /* Languages */
 
 .alien					{color: #543354;}
+.tajaran				{color: #803b56;}
+.akhani					{color: #AC398C;}
 .skrell					{color: #00ced1;}
 .soghun					{color: #228b22;}
 .yeosa					{color: #218b89;}

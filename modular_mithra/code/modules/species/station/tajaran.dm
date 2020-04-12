@@ -6,14 +6,27 @@
 	husk_icon = 'modular_mithra/icons/mob/human_races/species/tajaran/husk.dmi'
 	preview_icon = 'modular_mithra/icons/mob/human_races/species/tajaran/preview.dmi'
 	modular_tail = 'modular_mithra/icons/mob/human_races/species/tajaran/tail.dmi'
+	tail_animation = 'modular_mithra/icons/mob/human_races/species/tajaran/tail.dmi'
 	tail = "tajtail"
+	default_h_style = "Tajaran Ears"
 	default_ears = /datum/sprite_accessory/ears/kittyhc
-	limb_blend = ICON_MULTIPLY
-	tail_blend = ICON_MULTIPLY
+//	limb_blend = ICON_MULTIPLY
+//	tail_blend = ICON_MULTIPLY
 	hidden_from_codex = FALSE
-
-
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/claws)
+	darksight_range = 8
+	darksight_tint = DARKTINT_GOOD
+	slowdown = -0.5
+	brute_mod = 1.15
+	burn_mod =  1.15
+	flash_mod = 1.4
+	gluttonous = GLUT_TINY
+	health_hud_intensity = 1.75
+
+	min_age = 19
+	max_age = 140
+
+	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
 	description = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -21,14 +34,40 @@
 	governments, something that permeates even to today's times. They prefer colder, tundra-like climates, much like their \
 	home worlds and speak a variety of languages, especially Siik and Akhani."
 
-	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	cold_level_1 = 200 //Default 260
+	cold_level_2 = 140 //Default 200
+	cold_level_3 = 80  //Default 120
 
+	heat_level_1 = 330 //Default 360
+	heat_level_2 = 380 //Default 400
+	heat_level_3 = 800 //Default 1000
+
+	primitive_form = "Farwa"
+
+	spawn_flags = SPECIES_CAN_JOIN
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	flesh_color = "#afa59e"
+	base_color = "#333333"
+	blood_color = "#862a51"
+	reagent_tag = IS_TAJARA
+/*
+	heat_discomfort_level = 292
+	heat_discomfort_strings = list(
+		"Your fur prickles in the heat.",
+		"You feel uncomfortably warm.",
+		"Your overheated skin itches."
+		)
+	cold_discomfort_level = 275
+*/
 	sexybits_location = BP_GROIN
 
 
 	available_cultural_info = list( //I can do ANYTHING! Placeholder until the loreboys come and figure out what Tajara do
 		TAG_CULTURE = list(
+			CULTURE_HHARAR,
+			CULTURE_NJARIR_AKHAN,
+			CULTURE_ZHAN_KHAZAN,
 			CULTURE_HUMAN,
 			CULTURE_HUMAN_VATGROWN,
 			CULTURE_HUMAN_MARTIAN,
@@ -45,5 +84,34 @@
 			CULTURE_HUMAN_SPAFRO,
 			CULTURE_HUMAN_CONFED,
 			CULTURE_HUMAN_OTHER,
+		),
+		TAG_HOMEWORLD = list(
+			HOME_SYSTEM_MERALAR,
+			HOME_SYSTEM_MARS,
+			HOME_SYSTEM_EARTH,
+			HOME_SYSTEM_LUNA,
+			HOME_SYSTEM_VENUS,
+			HOME_SYSTEM_CERES,
+			HOME_SYSTEM_PLUTO,
+			HOME_SYSTEM_TAU_CETI,
+			HOME_SYSTEM_HELIOS,
+			HOME_SYSTEM_TERRA,
+			HOME_SYSTEM_TERSTEN,
+			HOME_SYSTEM_LORRIMAN,
+			HOME_SYSTEM_CINU,
+			HOME_SYSTEM_YUKLID,
+			HOME_SYSTEM_LORDANIA,
+			HOME_SYSTEM_KINGSTON,
+			HOME_SYSTEM_GAIA,
+			HOME_SYSTEM_MAGNITKA,
+			HOME_SYSTEM_OTHER
+		),
+		TAG_RELIGION = list(
+			RELIGION_TAJRKII,
+			RELIGION_OTHER,
+			RELIGION_AGNOSTICISM,
+			RELIGION_DEISM,
+			RELIGION_ATHEISM,
+			RELIGION_SPIRITUALISM,
 		)
 	)

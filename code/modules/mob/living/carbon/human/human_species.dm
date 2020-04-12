@@ -51,6 +51,10 @@
 	h_style = "Unathi Horns"
 	..(new_loc, SPECIES_UNATHI)
 
+/mob/living/carbon/human/tajaran/New(var/new_loc)
+	h_style = "Tajaran Ears"
+	..(new_loc, SPECIES_TAJ)
+
 /mob/living/carbon/human/vox/New(var/new_loc)
 	h_style = "Long Vox Quills"
 	..(new_loc, SPECIES_VOX)
