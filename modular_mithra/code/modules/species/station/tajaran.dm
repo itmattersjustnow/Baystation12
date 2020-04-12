@@ -23,8 +23,8 @@
 	gluttonous = GLUT_TINY
 	health_hud_intensity = 1.75
 
-	min_age = 19
-	max_age = 140
+	min_age = 18
+	max_age = 80
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
