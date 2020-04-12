@@ -15,7 +15,7 @@
 		else
 			var/language_type = pick(/datum/language/human,/datum/language/diona,/datum/language/siik_maas,/datum/language/unathi)
 			var/datum/language/L = new language_type()
-			var/team = pick("Brickburn Galaxy Trekers","Mars Rovers", "Qerrbalak Saints", "Moghes Rockets", "Ahdomai Lightening")
+			var/team = pick("Brickburn Galaxy Trekers","Mars Rovers", "Qerrbalak Saints", "Moghes Rockets", "Meralar Lightening")
 			P.name = "[L.get_random_name(pick(MALE,FEMALE))], [game_year - rand(0,50)] [team]"
 			P.card_icon = "spaceball_standard"
 			P.desc = "A Spaceball playing card."
