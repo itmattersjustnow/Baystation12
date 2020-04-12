@@ -1,0 +1,6 @@
+/decl/cultural_info/location/tajaran
+	name = HOME_SYSTEM_MERALAR
+	distance = "31 light years"
+	description = "'Banded Pearl' in Old Selem. The home planet of the Tajarans in the Rarkajar system, a terrestrial oxygen planet on the outer edge of the Goldilocks Zone, leading to lower surface temperatures. It is rich on resources to the point where it is theorized that the planet was originally two and they smashed/merged together. Supporting this theory, Meralar possesses a planetary ring of four to five layers, with no moon. The Meralar day is about 43 hours long. The planet is sort of chilly. There's lots of ocean, and a 'tropical' belt that's roughly terran temperate. This belt covers a band of the south of the northern continent, and the northern coast of the southern continent (and a few islands and atolls, of course). Between the two is the only always-liquid portion of the planet's oceans, and it is heavily trafficked by traders and fishing ships. There is also an eastern continent that is relatively unexplored due to hostile natives. Much of the northern and southern continents have subarctic climates, and there are large polar ice caps at both poles."
+	economic_power = 1.0
+	ruling_body = "Tajaran Governments"

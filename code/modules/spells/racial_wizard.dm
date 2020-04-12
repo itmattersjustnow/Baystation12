@@ -12,6 +12,7 @@
 	var/list/potentials = list(
 		SPECIES_HUMAN = /obj/item/weapon/storage/bag/cash/infinite,
 		SPECIES_VOX = /spell/targeted/shapeshift/true_form,
+		SPECIES_TAJ = /spell/messa_shroud,
 		SPECIES_UNATHI = /spell/moghes_blessing,
 		SPECIES_RESOMI = /spell/aoe_turf/conjure/summon/resomi,
 		SPECIES_DIONA = /spell/aoe_turf/conjure/grove/gestalt,
@@ -99,6 +100,24 @@
 
 	spawn(duration)
 		qdel(O)
+
+//Tajaran
+/spell/mephir_shroud
+	name = "Mephir's Shroud"
+	desc = "This spell causes darkness at the point of the caster for a duration of time."
+
+	school = "racial"
+	spell_flags = 0
+	invocation_type = SpI_EMOTE
+	invocation = "mutters a small prayer, the light around them darkening."
+	charge_max = 300 //30 seconds
+
+	range = 5
+	duration = 150
+
+	cast_sound = 'sound/effects/bamf.ogg'
+
+	hud_state = "wiz_tajaran"
 
 //VOX
 /spell/targeted/shapeshift/true_form

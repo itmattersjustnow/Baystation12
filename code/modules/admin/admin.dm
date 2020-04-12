@@ -195,6 +195,7 @@ var/global/floorIsLava = 0
 				\[ Xenos: <A href='?src=\ref[src];simplemake=larva;mob=\ref[M]'>Larva</A>
 				\[ Crew: <A href='?src=\ref[src];simplemake=human;mob=\ref[M]'>Human</A>
 				<A href='?src=\ref[src];simplemake=human;species=Unathi;mob=\ref[M]'>Unathi</A>
+				<A href='?src=\ref[src];simplemake=human;species=Tajaran;mob=\ref[M]'>Tajaran</A>
 				<A href='?src=\ref[src];simplemake=human;species=Skrell;mob=\ref[M]'>Skrell</A>
 				<A href='?src=\ref[src];simplemake=human;species=Vox;mob=\ref[M]'>Vox</A> \] | \[
 				<A href='?src=\ref[src];simplemake=nymph;mob=\ref[M]'>Nymph</A>
@@ -1020,7 +1021,7 @@ var/global/floorIsLava = 0
 	set desc = "Spawn every possible custom closet. Do not do this on live."
 	set category = "Debug"
 
-	if(!check_rights(R_SPAWN))	
+	if(!check_rights(R_SPAWN))
 		return
 
 	if((input(usr, "Are you sure you want to spawn all these closets?", "So Many Closets") as null|anything in list("No", "Yes")) == "Yes")

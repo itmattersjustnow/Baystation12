@@ -46,6 +46,7 @@
 #define HOME_SYSTEM_STATELESS  "Stateless"
 #define HOME_SYSTEM_OTHER      "Other System"
 #define HOME_SYSTEM_DEEP_SPACE "Deep Space"
+#define HOME_SYSTEM_MERALAR "Meralar"
 
 #define CULTURE_OTHER          "Other Culture"
 #define CULTURE_HUMAN          "Humankind"
@@ -71,6 +72,9 @@
 #define CULTURE_STOK           "Stok Business"
 #define CULTURE_ALIUM          "Mysterious Aliens"
 #define CULTURE_CULTIST        "Blood Cult"
+#define CULTURE_HHARAR       "Hharar, Tajaran"
+#define CULTURE_NJARIR_AKHAN       "Njarir'Akhan, Tajaran"
+#define CULTURE_ZHAN_KHAZAN        "Zhan-Khazan, Tajaran"
 #define RELIGION_OTHER         "Other Religion"
 #define RELIGION_JUDAISM       "Judaism"
 #define RELIGION_HINDUISM      "Hinduism"
@@ -87,6 +91,7 @@
 #define RELIGION_SPIRITUALISM  "Spiritualism"
 #define RELIGION_SHINTO        "Shinto"
 #define RELIGION_TAOISM        "Taoism"
+#define RELIGION_TAJRKII        "Tajr'kii Rarkajar"
 
 // Skrellian cultures.
 #define CULTURE_SKRELL_QERR     "Qerr-Katish"

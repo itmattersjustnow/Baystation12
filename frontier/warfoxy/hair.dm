@@ -48,6 +48,10 @@
 	name = "Unathi Side Frills"
 	icon_state = "unathi_sidefrills"
 
+/datum/sprite_accessory/hair/ff/taj_ears //By AshtonFox
+	name = "Tajaran Ears"
+	icon_state = "ears_plain"
+
 /datum/sprite_accessory/hair/ff/taj_ears_clean
 	name = "Tajara Clean"
 	icon_state = "hair_clean"

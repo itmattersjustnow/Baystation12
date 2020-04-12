@@ -13,7 +13,9 @@
 		LANGUAGE_UNATHI_SINTA     = TRUE,
 		LANGUAGE_SKRELLIAN        = TRUE,
 		LANGUAGE_GUTTER           = TRUE,
-		LANGUAGE_SPACER           = TRUE
+		LANGUAGE_SPACER           = TRUE,
+		LANGUAGE_SIIK_MAAS        = TRUE,
+		LANGUAGE_AKHANI          	= TRUE
 		)
 	skills = list(
 		SKILL_BUREAUCRACY         = SKILL_PROF,

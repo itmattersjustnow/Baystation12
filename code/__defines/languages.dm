@@ -24,6 +24,8 @@
 #define LANGUAGE_NABBER            "Serpentid"
 #define LANGUAGE_SERGAL            "Sagaru"
 #define LANGUAGE_RESOMI            "Schechi"
+#define LANGUAGE_SIIK_MAAS            "Siik'maas"
+#define LANGUAGE_AKHANI            "Akhani"
 
 //Antag
 #define LANGUAGE_CULT              "Cult"
