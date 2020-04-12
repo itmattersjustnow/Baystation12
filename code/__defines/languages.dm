@@ -26,6 +26,7 @@
 #define LANGUAGE_RESOMI            "Schechi"
 #define LANGUAGE_SIIK_MAAS            "Siik'maas"
 #define LANGUAGE_AKHANI            "Akhani"
+#define LANGUAGE_VULP            "Canilunzt"
 
 //Antag
 #define LANGUAGE_CULT              "Cult"
