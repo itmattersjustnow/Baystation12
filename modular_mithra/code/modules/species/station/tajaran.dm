@@ -51,7 +51,7 @@
 	base_color = "#333333"
 	blood_color = "#862a51"
 	reagent_tag = IS_TAJARA
-/*
+
 	heat_discomfort_level = 292
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -59,7 +59,7 @@
 		"Your overheated skin itches."
 		)
 	cold_discomfort_level = 275
-*/
+
 	sexybits_location = BP_GROIN
 
 
