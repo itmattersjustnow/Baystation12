@@ -15,7 +15,8 @@
 		LANGUAGE_GUTTER           = TRUE,
 		LANGUAGE_SPACER           = TRUE,
 		LANGUAGE_SIIK_MAAS        = TRUE,
-		LANGUAGE_AKHANI           = TRUE
+		LANGUAGE_AKHANI           = TRUE,
+		LANGUAGE_VULP             = TRUE
 		)
 	skills = list(
 		SKILL_BUREAUCRACY         = SKILL_PROF,
