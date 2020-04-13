@@ -163,7 +163,7 @@ SUBSYSTEM_DEF(jobs)
 /datum/controller/subsystem/jobs/proc/check_latejoin_blockers(var/mob/new_player/joining, var/datum/job/job)
 	if(!check_general_join_blockers(joining, job))
 		return FALSE
-	if(job.minimum_character_age && (joining.client.prefs.age < job.minimum_character_age))
+	if(job.minimum_character_age && (joining.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 		to_chat(joining, "<span class='warning'>Your character's in-game age is too low for this job.</span>")
 		return FALSE
 	if(!job.player_old_enough(joining.client))
@@ -221,7 +221,7 @@ SUBSYSTEM_DEF(jobs)
 			continue
 		if(!job.player_old_enough(player.client))
 			continue
-		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
+		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 			continue
 		if(flag && !(flag in player.client.prefs.be_special_role))
 			continue
@@ -233,7 +233,7 @@ SUBSYSTEM_DEF(jobs)
 	for(var/datum/job/job in shuffle(primary_job_datums))
 		if(!job)
 			continue
-		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
+		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 			continue
 		if(istype(job, get_by_title(GLOB.using_map.default_assistant_title))) // We don't want to give him assistant, that's boring!
 			continue
@@ -266,7 +266,7 @@ SUBSYSTEM_DEF(jobs)
 				// Log-out during round-start? What a bad boy, no head position for you!
 				if(!V.client) continue
 				var/age = V.client.prefs.age
-				if(age < job.minimum_character_age) // Nope.
+				if((age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs) // Nope.
 					continue
 				switch(age)
 					if(job.minimum_character_age to (job.minimum_character_age+10))
