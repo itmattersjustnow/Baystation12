@@ -151,7 +151,6 @@
 	if(dna.species == "Human") //no more xenos losing ears/tentacles
 		h_style = pick("Bedhead", "Bedhead 2", "Bedhead 3")
 	worn_underwear.Cut()
-	bad_external_organs.Cut()
 	regenerate_icons()
 
 
