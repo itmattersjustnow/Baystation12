@@ -40,7 +40,7 @@
 	pda_type = /obj/item/modular_computer/pda/engineering
 
 /decl/hierarchy/outfit/job/torch/crew/engineering/roboticist
-	name = OUTFIT_JOB_NAME("Roboticist - Torch")
+	name = OUTFIT_JOB_NAME("Roboticist - Contractor")
 	uniform = /obj/item/clothing/under/rank/roboticist
 	shoes = /obj/item/clothing/shoes/black
 	id_type = /obj/item/weapon/card/id/torch/contractor/engineering/roboticist
