@@ -70,6 +70,8 @@
 /obj/structure/closet/secure_closet/cos/WillContain()
 	return list(
 		/obj/item/clothing/suit/armor/pcarrier/medium/command/security,
+		/obj/item/clothing/suit/armor/hos/jensen,
+		/obj/item/clothing/suit/armor/hos,
 		/obj/item/clothing/head/helmet/solgov/command,
 		/obj/item/device/radio/headset/heads/cos,
 		/obj/item/device/radio/headset/heads/cos/alt,
