@@ -9,5 +9,5 @@
 
 datum/gear/utility/crayonmre
 	display_name = "Crayon MRE"
-	cost = 26
+	cost = 15
 	path = /obj/item/weapon/storage/mre/menu11
