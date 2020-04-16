@@ -433,6 +433,8 @@ proc/TextPreview(var/string,var/len=40)
 	t = replacetext(t, "\[fleetlogo\]", "<img src = fleetlogo.png>")
 	t = replacetext(t, "\[sfplogo\]", "<img src = sfplogo.png>")
 	t = replacetext(t, "\[editorbr\]", "")
+	t = replacetext(t, "\[img\]","<img src=\"")
+	t = replacetext(t, "\[/img\]", "\" />")
 	return t
 
 //pencode translation to html for tags exclusive to digital files (currently email, nanoword, report editor fields,
