@@ -16,7 +16,7 @@
 
 /datum/species/unathi
 	autohiss_basic_map = list(
-			"c" = list("cc", "ccc", "c-c")
+			"с" = list("сс", "ссс", "с-с")
 		)
 	autohiss_extra_map = list(
 			"ш" = list("шш", "шшш", "ш-ш")
