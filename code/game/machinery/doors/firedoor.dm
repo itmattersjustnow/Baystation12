@@ -148,10 +148,12 @@
 	"\The [src]", "Yes, [density ? "open" : "close"]", "No")
 	if(answer == "No")
 		return
+		/* нахуй это
 	var/mob/living/carbon/human/H = locate() in get_turf(src)
 	if(H)
 		user.visible_message("Someone is blocking the [src]")
 		return
+		*/
 	if(user.incapacitated() || (get_dist(src, user) > 1  && !issilicon(user)))
 		to_chat(user, "Sorry, you must remain able bodied and close to \the [src] in order to use it.")
 		return
@@ -348,11 +350,12 @@
 	return
 
 /obj/machinery/door/firedoor/close()
+	/* нахуй это
 	// if there are humans on the tile, don't close
 	var/mob/living/carbon/human/H = locate() in get_turf(src)
 	if(H)
 		return
-
+	*/
 	latetoggle()
 	return ..()
 
