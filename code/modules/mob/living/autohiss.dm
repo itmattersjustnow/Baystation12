@@ -35,6 +35,17 @@
 					LANGUAGE_AKHANI
 	)
 
+/datum/species/resomi
+	autohiss_basic_map = list(
+			"р" = list("л")
+		)
+	autohiss_extra_map = list(
+			"ч" = list("сь")
+		)
+	autohiss_exempt = list(
+					LANGUAGE_RESOMI
+	)
+
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)
 	if(!autohiss_basic_map)
 		return message
