@@ -244,7 +244,6 @@ BLIND     // can't see anything
 		return item_state_slots[slot]
 	else
 		return icon_state
-	return ..()
 
 /obj/item/clothing/glasses/update_clothing_icon()
 	if (ismob(src.loc))
@@ -628,7 +627,6 @@ BLIND     // can't see anything
 	else
 		add_hidden(I, user)
 		return
-	..()
 
 /obj/item/clothing/shoes/proc/add_cuffs(var/obj/item/weapon/handcuffs/cuffs, var/mob/user)
 	if (!can_add_cuffs)
