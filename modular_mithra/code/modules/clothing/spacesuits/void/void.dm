@@ -13,7 +13,10 @@
 		SPECIES_SERGAL = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_NORTHERN = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_EASTERN = 'icons/mob/onmob/onmob_head.dmi',
-		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_head.dmi'
+		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_head.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_head_resomi.dmi',
+		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi'
 		)
 	sprite_sheets_obj |= list(
 		SPECIES_AKULA = 'icons/obj/clothing/obj_head.dmi',
@@ -24,7 +27,10 @@
 		SPECIES_SERGAL = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_NORTHERN = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_EASTERN = 'icons/mob/onmob/onmob_head.dmi',
-		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_head.dmi'
+		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_head.dmi',
+		SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_head_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/obj/clothing/species/resomi/obj_head_resomi.dmi',
+		SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_head_skrell.dmi'
 		)
 
 /obj/item/clothing/suit/space/void/Initialize()
@@ -38,7 +44,10 @@
 		SPECIES_SERGAL = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_NORTHERN = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_EASTERN = 'icons/mob/onmob/onmob_suit.dmi',
-		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_suit.dmi'
+		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_suit.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_suit_skrell.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_AKULA = 'icons/obj/clothing/obj_suit.dmi',
@@ -49,7 +58,10 @@
 		SPECIES_SERGAL = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_NORTHERN = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_EASTERN = 'icons/mob/onmob/onmob_suit.dmi',
-		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_suit.dmi'
+		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_suit.dmi',
+		SPECIES_RESOMI = 'frontier/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi',
+		SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_suit_unathi.dmi',
+		SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_suit_skrell.dmi'
 		)
 
 /* SHIT DOESNT WORK FOR WHATEVER REASON ITS CURSED
