@@ -6,7 +6,7 @@
 	. = ..()
 	sprite_sheets |= list(
 		SPECIES_AKULA = 'icons/mob/onmob/onmob_head.dmi',
-		SPECIES_VULP = 'icons/mob/onmob/onmob_head.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulpkanin.dmi',
 		SPECIES_VASS = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_head_helmet_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/mob/onmob/onmob_head.dmi',
@@ -20,7 +20,7 @@
 		)
 	sprite_sheets_obj |= list(
 		SPECIES_AKULA = 'icons/obj/clothing/obj_head.dmi',
-		SPECIES_VULP = 'icons/obj/clothing/obj_head.dmi',
+		SPECIES_VULP = 'icons/obj/clothing/species/vulpkanin/obj_head_vulpkanin.dmi',
 		SPECIES_VASS = 'icons/obj/clothing/obj_head.dmi',
 		SPECIES_TAJ = 'icons/obj/clothing/species/tajaran/obj_head_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/obj/clothing/obj_head.dmi',
@@ -37,7 +37,7 @@
 	. = ..()
 	sprite_sheets = list(
 		SPECIES_AKULA = 'icons/mob/onmob/onmob_suit.dmi',
-		SPECIES_VULP = 'icons/mob/onmob/onmob_suit.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_suit_vulpkanin.dmi',
 		SPECIES_VASS = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_suit_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/mob/onmob/onmob_suit.dmi',
@@ -51,7 +51,7 @@
 		)
 	sprite_sheets_obj = list(
 		SPECIES_AKULA = 'icons/obj/clothing/obj_suit.dmi',
-		SPECIES_VULP = 'icons/obj/clothing/obj_suit.dmi',
+		SPECIES_VULP = 'icons/obj/clothing/species/vulpkanin/obj_suit_vulpkanin.dmi',
 		SPECIES_VASS = 'icons/obj/clothing/obj_suit.dmi',
 		SPECIES_TAJ = 'icons/obj/clothing/species/tajaran/obj_suit_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/obj/clothing/obj_suit.dmi',
