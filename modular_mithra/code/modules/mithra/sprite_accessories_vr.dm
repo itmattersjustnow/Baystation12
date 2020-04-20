@@ -1507,7 +1507,7 @@
     icon_state = "raccoon_tail"
     do_colouration = 0
     color_blend_mode = ICON_MULTIPLY
-
+/*
 /datum/sprite_accessory/tail/m_tail_synthliz_BEHIND
 	name = "Synthetic Lizard tail"
 	desc = ""
@@ -1522,3 +1522,4 @@
 	ani_state = "m_tailwag_synthliz_BEHIND"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+*/
