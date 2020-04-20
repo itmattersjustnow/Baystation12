@@ -31,21 +31,6 @@
 
 // Ears avaliable to anyone
 
-/datum/sprite_accessory/ears/bunny_white
-	name = "bunny, white"
-	desc = ""
-	icon_state = "bunny"
-
-/datum/sprite_accessory/ears/bear_brown
-	name = "bear, brown"
-	desc = ""
-	icon_state = "bear-brown"
-
-/datum/sprite_accessory/ears/bear_panda
-	name = "bear, panda"
-	desc = ""
-	icon_state = "panda"
-
 /datum/sprite_accessory/ears/bee
 	name = "bee antennae"
 	desc = ""
@@ -55,6 +40,29 @@
 	name = "antennae, colorable"
 	desc = ""
 	icon_state = "antennae"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/m_ipc_antenna_synth_horns_ADJ
+	name = "Synth horns"
+	desc = ""
+	icon_state = "m_ipc_antenna_synth_horns_ADJ"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "m_ipc_antenna_synth_hornslight_ADJ"
+
+/datum/sprite_accessory/ears/m_ipc_antenna_synth_thick_ADJ
+	name = "Synth horns thick"
+	desc = ""
+	icon_state = "m_ipc_antenna_synth_thick_ADJ"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "m_ipc_antenna_synth_thicklight_ADJ"
+
+/datum/sprite_accessory/ears/m_ipc_antenna_synth_curled_ADJ
+	name = "Synth horns curly"
+	desc = ""
+	icon_state = "m_ipc_antenna_synth_curled_ADJ"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -653,11 +661,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "stripeytail_mark"
 
-/datum/sprite_accessory/tail/stripeytail_brown
-	name = "stripey taj, brown"
-	desc = ""
-	icon_state = "stripeytail-brown"
-
 /datum/sprite_accessory/tail/chameleon
 	name = "Chameleon, colorable"
 	desc = ""
@@ -670,11 +673,6 @@
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
-
-/datum/sprite_accessory/tail/bear_brown
-	name = "bear, brown"
-	desc = ""
-	icon_state = "bear-brown"
 
 /datum/sprite_accessory/tail/bear
 	name = "bear, colorable"
@@ -689,26 +687,6 @@
 	icon_state = "dragon"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/tail/wolf_grey
-	name = "wolf, grey"
-	desc = ""
-	icon_state = "wolf-grey"
-
-/datum/sprite_accessory/tail/wolf_green
-	name = "wolf, green"
-	desc = ""
-	icon_state = "wolf-green"
-
-/datum/sprite_accessory/tail/wisewolf
-	name = "wolf, wise"
-	desc = ""
-	icon_state = "wolf-wise"
-
-/datum/sprite_accessory/tail/blackwolf
-	name = "wolf, black"
-	desc = ""
-	icon_state = "wolf"
 
 /datum/sprite_accessory/tail/wolf
 	name = "wolf, colorable"
@@ -1522,3 +1500,18 @@
     icon_state = "raccoon_tail"
     do_colouration = 0
     color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/m_tail_synthliz_BEHIND
+	name = "Synthetic Lizard tail"
+	desc = ""
+	icon_state = "m_tail_synthliz_BEHIND"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/m_tail_synthliz_BEHIND
+	name = "Synthetic Lizard tail (Animated)"
+	desc = ""
+	icon_state = "m_tail_synthliz_BEHIND"
+	ani_state = "m_tailwag_synthliz_BEHIND"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
