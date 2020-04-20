@@ -2,6 +2,7 @@
 	var/datum/mob_lite/last_attacker_ = null
 	var/datum/mob_lite/last_attacked_ = null
 	var/mob/attack_logs_ = list()
+	/mob/var/dialogue_log = list()
 
 /proc/log_and_message_admins(var/message as text, var/mob/user = usr, var/turf/location)
 	var/turf/T = location ? location : (user ? get_turf(user) : null)
