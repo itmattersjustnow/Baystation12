@@ -156,7 +156,7 @@
 		)
 	)
 
-/datum/species/custom/get_bodytype()
+/datum/species/custom/get_bodytype(var/mob/living/carbon/human/H)
 	var/datum/species/real = all_species[base_species]
 	return real.name
 
@@ -253,6 +253,3 @@
 		H.internals.icon_state = "internal1"
 	*/
 	return ..()
-
-/datum/species/custom/get_bodytype(var/mob/living/carbon/human/H)
-	return SPECIES_HUMAN

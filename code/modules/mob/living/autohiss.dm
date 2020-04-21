@@ -16,7 +16,7 @@
 
 /datum/species/unathi
 	autohiss_basic_map = list(
-			"c" = list("cc", "ccc", "c-c")
+			"с" = list("сс", "ссс", "с-с")
 		)
 	autohiss_extra_map = list(
 			"ш" = list("шш", "шшш", "ш-ш")
@@ -33,6 +33,17 @@
 	autohiss_exempt = list(
 					LANGUAGE_SIIK_MAAS,
 					LANGUAGE_AKHANI
+	)
+
+/datum/species/resomi
+	autohiss_basic_map = list(
+			"р" = list("л")
+		)
+	autohiss_extra_map = list(
+			"ч" = list("сь")
+		)
+	autohiss_exempt = list(
+					LANGUAGE_RESOMI
 	)
 
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)

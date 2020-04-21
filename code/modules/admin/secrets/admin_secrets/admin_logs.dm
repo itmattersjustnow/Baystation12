@@ -10,4 +10,10 @@
 		dat += "<li>[l]</li>"
 	if(!GLOB.admin_log.len)
 		dat += "No-one has done anything this round!"
-	show_browser(user, dat, "window=admin_log")
+
+
+	var/datum/browser/popup = new(user, "adminlogs", "[src]", 550, 650, src)
+	popup.set_content(jointext(dat,null))
+	popup.open()
+
+	onclose(user, "adminlogs")

@@ -921,8 +921,6 @@
 			return global.wing_styles_list;
 		if("wireColours")
 			return global.wireColours;
-		if("world_topic_spam_protect_ip")
-			return global.world_topic_spam_protect_ip;
 		if("world_topic_spam_protect_time")
 			return global.world_topic_spam_protect_time;
 		if("world_uplinks")
@@ -1858,8 +1856,6 @@
 			global.wing_styles_list=newval;
 		if("wireColours")
 			global.wireColours=newval;
-		if("world_topic_spam_protect_ip")
-			global.world_topic_spam_protect_ip=newval;
 		if("world_topic_spam_protect_time")
 			global.world_topic_spam_protect_time=newval;
 		if("world_uplinks")
@@ -2334,7 +2330,6 @@
 	"wing_icon_cache",
 	"wing_styles_list",
 	"wireColours",
-	"world_topic_spam_protect_ip",
 	"world_topic_spam_protect_time",
 	"world_uplinks",
 	"worths",
