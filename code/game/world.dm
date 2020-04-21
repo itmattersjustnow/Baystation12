@@ -364,7 +364,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 		var/rank = "Discord Admin"
 		var/message =	"<font color='red'>[rank] PM from <b>[input["admin"]]</b>: (input["response"])]</font>"
-		var/amessage =  "<font color='blue'>[rank] PM from [input["admin"]] to <b>[key_name(C)]</b> : (input["response"])</font>"
+		var/amessage =  "<font color='blue'>[rank] PM from [input["admin"]] to <b>[key_name(C)]</b> : [input["response"]]</font>"
 		webhook_send_ahelp("[input["admin"]] -> [req_ckey]", (input["response"]))
 
 		C.received_irc_pm = world.time
