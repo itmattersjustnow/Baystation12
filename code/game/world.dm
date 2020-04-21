@@ -333,7 +333,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			return
 		if(!config.vars["ooc_allowed"]&&!input["isadmin"])
 			return "globally muted"
-		var/sent_message = "[create_text_tag("DISCORD OOC:")] <EM>[ckey]:</EM> <span class='message'>[message]</span>"
+		var/sent_message = "[create_text_tag("DOOC:")] <EM>[ckey]:</EM> <span class='message'>[message]</span>"
 		for(var/client/target in GLOB.clients)
 			if(!target)
 				continue //sanity
