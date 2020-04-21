@@ -12,12 +12,12 @@
 	desc = "A specialized hardsuit rig control module issued to command staff of the Expeditionary Corps and their peers."
 	icon_state = "command_rig"
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES, 
-		bullet = ARMOR_BALLISTIC_SMALL, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_SMALL, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
 	online_slowdown = 0.50
@@ -43,22 +43,22 @@
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 	camera = /obj/machinery/camera/network/command
-	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //no available icons for aliens
+	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC,SPECIES_HUMAN2) //no available icons for aliens
 
 /obj/item/clothing/suit/space/rig/command
 	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
-	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC,SPECIES_HUMAN2)
 
 /obj/item/clothing/shoes/magboots/rig/command
 	icon = 'maps/torch/icons/obj/obj_feet_solgov.dmi'
 	item_icons = list(slot_shoes_str = 'maps/torch/icons/mob/onmob_feet_solgov.dmi')
-	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC,SPECIES_HUMAN2)
 
 /obj/item/clothing/gloves/rig/command
 	icon = 'maps/torch/icons/obj/obj_hands_solgov.dmi'
 	item_icons = list(slot_gloves_str = 'maps/torch/icons/mob/onmob_hands_solgov.dmi')
-	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC,SPECIES_HUMAN2)
 
 
 /obj/item/weapon/rig/command/equipped
@@ -77,12 +77,12 @@
 	desc = "A specialized hardsuit rig control module issued to high ranking officers of the Expeditionary Corps and their peers."
 	icon_state = "command_XO_rig"
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES, 
-		bullet = ARMOR_BALLISTIC_SMALL, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_SMALL, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
 
@@ -117,12 +117,12 @@
 	desc = "A specialized hardsuit rig control module issued to commanding officers of the Expeditionary Corps."
 	icon_state = "command_CO_rig"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_PISTOL, 
-		laser = ARMOR_LASER_SMALL, 
-		energy = ARMOR_ENERGY_SMALL, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_PISTOL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
 
@@ -200,12 +200,12 @@
 	desc = "A specialized hardsuit rig control module issued to ranking security officers of the Expeditionary Corps and their peers."
 	icon_state = "command_sec_rig"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_PISTOL, 
-		laser = ARMOR_LASER_SMALL, 
-		energy = ARMOR_ENERGY_SMALL, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_PISTOL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
 
@@ -246,12 +246,12 @@
 	desc = "A specialized hardsuit rig control module issued to ranking research officers of the Expeditionary Corps."
 	icon_state = "command_sci_rig"
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES, 
-		bullet = ARMOR_BALLISTIC_SMALL, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_STRONG, 
-		bomb = ARMOR_BOMB_RESISTANT, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_STRONG,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
 
@@ -306,12 +306,12 @@
 	desc = "Expeditionary Corps' Exoplanet Exploration Armored Unit, A-Unit for short. Built for more hostile (and hungry) environments, it features additional armor and powered exoskeleton."
 	icon_state = "command_exp_rig"
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR, 
-		bullet = ARMOR_BALLISTIC_SMALL, 
-		laser = ARMOR_LASER_SMALL, 
-		energy = ARMOR_ENERGY_RESISTANT, 
-		bomb = ARMOR_BOMB_MINOR, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_MINOR,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
 

@@ -20,7 +20,7 @@
 	siemens_coefficient = 0.4
 
 	//Species-specific stuff.
-	species_restricted = list(SPECIES_HUMAN, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_IPC, SPECIES_HUMAN2)
 	/*sprite_sheets = list( moved to modular mithra
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_head_resomi.dmi',
@@ -54,7 +54,7 @@
 	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
 	siemens_coefficient = 0.4
 
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_IPC, SPECIES_HUMAN2)
 /*	sprite_sheets = list( moved to modular mithra
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_suit_resomi.dmi',
