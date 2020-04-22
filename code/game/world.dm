@@ -106,6 +106,7 @@
 
 #undef RECOMMENDED_VERSION
 
+var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
@@ -209,7 +210,6 @@ var/world_topic_spam_protect_time = world.timeofday
 	* * * * * * * */
 
 	if(copytext(T,1,14) == "placepermaban")
-		var/input[] = params2list(T)
 		if(!config.ban_comms_password)
 			return "Not enabled"
 		if(input["bankey"] != config.ban_comms_password)
