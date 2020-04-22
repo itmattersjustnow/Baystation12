@@ -260,3 +260,9 @@
 	collars["pink collar"] = /obj/item/clothing/accessory/collar/pink
 	collars["holo collar"] = /obj/item/clothing/accessory/collar/holo
 	gear_tweaks += new/datum/gear_tweak/path(collars)
+
+/datum/gear/passport
+	display_name = "passports selection"
+	description = "A selection of passports."
+	path = /obj/item/weapon/passport
+	flags = GEAR_HAS_SUBTYPE_SELECTION
