@@ -12,7 +12,6 @@
 	economic_power = 8
 	alt_titles = list(
 		"Surgeon",
-		"Resident",
 		"Coroner"
 		)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
@@ -31,6 +30,42 @@
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
 	skill_points = 20
+
+	access = list(access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
+			            access_crematorium, access_chemistry, access_surgery,
+			            access_medical_equip, access_solgov_crew, access_senmed)
+
+	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
+							 /datum/computer_file/program/camera_monitor)
+
+/datum/job/junior_doctor
+	title = "Medical Resident"
+	department = "Medical"
+	department_flag = MED
+	minimal_player_age = 2
+	minimum_character_age = list(SPECIES_HUMAN = 24)
+	ideal_character_age = 45
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "Physicians and the Chief Medical Officer"
+	selection_color = "#013d3b"
+	economic_power = 6
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
+	allowed_branches = list(
+		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/senior
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/civ/contractor
+	)
+	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	                    SKILL_MEDICAL     = SKILL_EXPERT,
+	                    SKILL_ANATOMY     = SKILL_EXPERT,
+	                    SKILL_CHEMISTRY   = SKILL_BASIC)
+
+	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
+	                    SKILL_ANATOMY     = SKILL_MAX,
+	                    SKILL_CHEMISTRY   = SKILL_MAX)
+	skill_points = 16
 
 	access = list(access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
 			            access_crematorium, access_chemistry, access_surgery,
