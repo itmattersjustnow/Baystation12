@@ -2271,7 +2271,6 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/captainmess)
 "hm" = (
-/obj/item/weapon/tableflag,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -4635,7 +4634,6 @@
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/solgov_law,
 /obj/item/weapon/book/manual/sol_sop,
-/obj/item/weapon/book/manual/military_law,
 /obj/item/weapon/book/manual/nt_regs,
 /turf/simulated/floor/wood,
 /area/command/captainmess)
