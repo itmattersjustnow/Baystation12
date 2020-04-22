@@ -52,13 +52,9 @@
 	economic_power = 6
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
 	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/medical/senior/fleet,
 		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/senior
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o1,
-		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/civ/contractor
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
