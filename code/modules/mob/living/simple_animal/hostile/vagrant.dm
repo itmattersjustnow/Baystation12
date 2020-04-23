@@ -93,24 +93,19 @@
 		set_light(0.2, 0.1, 3)
 		move_to_delay = 2
 
+//This line ensures there's always a reasonable chance of grabbing, while still
+//Factoring in health
 /mob/living/simple_animal/hostile/vagrant/AttackingTarget()
 	. = ..()
-	if(ishuman(.))
-		var/mob/living/carbon/human/H = .
-		if(gripping == H)
-			H.Weaken(1)
-			H.Stun(1)
-			return
-		//This line ensures there's always a reasonable chance of grabbing, while still
-		//Factoring in health
-		if(!gripping && (cloaked || prob(health + ((maxHealth - health) * 2))))
-			gripping = H
-			cloaked = 0
-			update_icon()
-			H.Weaken(1)
-			H.Stun(1)
-			H.visible_message("<span class='danger'>\the [src] latches onto \the [H], pulsating!</span>")
-			src.forceMove(gripping.loc)
+	var/mob/living/carbon/human/H = .
+	if(ishuman(.) && !gripping && (cloaked || prob(health + ((maxHealth - health) * 2))))
+		gripping = H
+		cloaked = 0
+		update_icon()
+		H.Weaken(1)
+		H.Stun(1)
+		H.visible_message("<span class='danger'>\the [src] latches onto \the [H], pulsating!</span>")
+		src.forceMove(gripping.loc)
 
 /mob/living/simple_animal/hostile/vagrant/swarm/Initialize()
 	. = ..()
