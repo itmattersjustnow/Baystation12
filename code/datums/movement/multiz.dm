@@ -1,5 +1,6 @@
 /datum/movement_handler/mob/multiz/DoMove(var/direction, var/mob/mover, var/is_external)
 	if(!(direction & (UP|DOWN)))
+
 		return MOVEMENT_PROCEED
 
 	var/turf/destination = (direction == UP) ? GetAbove(mob) : GetBelow(mob)
@@ -35,6 +36,7 @@
 //For ghosts and such
 /datum/movement_handler/mob/multiz_connected/DoMove(var/direction, var/mob/mover, var/is_external)
 	if(!(direction & (UP|DOWN)))
+
 		return MOVEMENT_PROCEED
 
 	var/turf/destination = (direction == UP) ? GetAbove(mob) : GetBelow(mob)
@@ -42,9 +44,4 @@
 		to_chat(mob, "<span class='notice'>There is nothing of interest in this direction.</span>")
 		return MOVEMENT_HANDLED
 
-	return MOVEMENT_PROCEED
-
-/datum/movement_handler/deny_multiz/DoMove(var/direction, var/mob/mover, var/is_external)
-	if(direction & (UP|DOWN))
-		return MOVEMENT_HANDLED
 	return MOVEMENT_PROCEED
