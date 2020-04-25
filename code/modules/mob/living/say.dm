@@ -295,7 +295,10 @@ proc/get_radio_key_from_channel(var/channel)
 	var/list/speech_bubble_recipients = list()
 	for(var/mob/M in listening)
 		if(M)
-			M.hear_say(message, verb, speaking, alt_name, italics, src, speech_sound, sound_vol)
+			if(isghost(M) && whispering)
+				return
+			else
+				M.hear_say(message, verb, speaking, alt_name, italics, src, speech_sound, sound_vol)
 			if(M.client)
 				speech_bubble_recipients += M.client
 
