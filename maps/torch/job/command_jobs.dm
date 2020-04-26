@@ -1,6 +1,6 @@
 /datum/job/captain
 	title = "Captain"
-	supervisors = "Central Command and the Sol Code of Military Justice"
+	supervisors = "Central Command"
 	minimal_player_age = 14
 	economic_power = 15
 	minimum_character_age = list(SPECIES_HUMAN = 40, SPECIES_UNATHI = 40, SPECIES_SERGAL = 40, SPECIES_NORTHERN = 40, SPECIES_EASTERN = 40, SPECIES_SKRELL = 40, SPECIES_PROMETHEAN = 40, SPECIES_YEOSA = 40, SPECIES_VULP = 40, SPECIES_VASS = 40, SPECIES_TAJ = 40, SPECIES_CUSTOM = 40, SPECIES_AKULA = 40)
