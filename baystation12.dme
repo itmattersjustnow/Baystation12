@@ -3233,6 +3233,8 @@
 #include "frontier\code\modules\organs\external\robolimbs.dm"
 #include "frontier\code\modules\organs\external\species\resomi.dm"
 #include "frontier\code\modules\organs\internal\species\resomi.dm"
+#include "frontier\code\modules\reagents\Chemistry-Reagents-Frontier.dm"
+#include "frontier\code\modules\reagents\reagent_dispenser.dm"
 #include "frontier\code\modules\species\species.dm"
 #include "frontier\code\modules\species\station\resomi.dm"
 #include "frontier\code\modules\sprite_accessories\accessory_resomi.dm"
