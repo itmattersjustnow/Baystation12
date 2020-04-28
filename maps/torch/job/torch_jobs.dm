@@ -26,7 +26,7 @@
 		/datum/species/vulpkanin= list(HUMAN_ONLY_JOBS, /datum/job/representative),
 		/datum/species/customhuman= list(HUMAN_ONLY_JOBS, /datum/job/representative),
 		/datum/species/custom= list(HUMAN_ONLY_JOBS, /datum/job/representative),
-		//datum/species/tesh= list(HUMAN_ONLY_JOBS),
+		/datum/species/resomi= list(HUMAN_ONLY_JOBS, /datum/job/representative)
 	)
 #undef HUMAN_ONLY_JOBS
 
