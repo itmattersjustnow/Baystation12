@@ -75,7 +75,7 @@
 	"}
 
 /obj/item/weapon/folder/envelope/captain
-	desc = "A thick envelope. The NTF crest is stamped in the corner, along with 'TOP SECRET - BLUE JAUY UMBRA'."
+	desc = "A thick envelope. The NT crest is stamped in the corner, along with 'TOP SECRET - BLUE JAY UMBRA'."
 
 /obj/item/weapon/folder/envelope/captain/Initialize()
 	..()
@@ -85,16 +85,16 @@
 	..()
 	var/obj/effect/overmap/visitable/torch = map_sectors["[1]"]
 	var/memo = {"
-	<tt><center><b><font color='red'>SECRET - CODE WORDS: BLUE JAY</font></b>
-	<h3>NANOTRASEN FLEET COMMAND</h3>
+	<tt><center><b><font color='red'>СЕКРЕТНО - КОДОВЫЕ СЛОВА: СИНЯЯ СОЙКА</font></b>
+	<h3>ЦЕНТРАЛЬНОЕ КОМАНДОВАНИЕ НАНОТРЕЙЗЕН</h3>
 	<img src = ntlogo.png>
 	</center>
-	<b>FROM:</b> ADM William Lau<br>
-	<b>TO:</b> Commanding Officer of NTEV Blue Jay<br>
-	<b>SUBJECT:</b> Standing Orders<br>
+	<b>ОТ:</b> Адмирал Уильям Лау<br>
+	<b>КОМУ:</b> Капитану ИСНТ Синяя Сойка<br>
+	<b>ТЕМА:</b> Регламент<br>
 	<hr>
-	Captain.<br>
-	Your orders are to visit the following star systems. Keep in mind that your supplies are limited; ration exploration time accordingly.
+	Капитан.<br>
+	Вам приказано посетить следующие звездные системы. Имейте в виду, что ваши ресурсы ограничены; расходуйте время надлежащим образом.
 	<li>[generate_system_name()]</li>
 	<li>[generate_system_name()]</li>
 	<li>[generate_system_name()]</li>
@@ -105,47 +105,48 @@
 	<li>[generate_system_name()]</li>
 	<li>[generate_system_name()]</li>
 	<br>
-	Priority targets are artifacts of uncontacted alien species and signal sources of unknown origin.<br>
-	None of these systems are claimed by any entity recognized by the SCG, so you have full salvage rights on any derelicts discovered.<br>
-	Investigate and mark any prospective colony worlds as per usual procedures.<br>
-	There is no NT presence in that area. In case of distress calls, you will be the only vessel available; do not ignore them. We cannot afford any more PR backlash.<br>
-	The current docking code is: [torch.docking_codes]<br>
-	Report all findings via bluespace comm buoys during inter-system jumps.<br>
+	Приоритетными целями являются артефакты неизвестных ранее чужеродных видов и источники сигналов неизвестного происхождения.<br>
+	Ни на одну из этих систем не претендует ни одна организация, признанная ПСС, поэтому вы имеете полное право на утилизацию любых обнаруженных обломков.<br>
+	Исследуйте и отмечайте любые пригодные для колонизации миры в соответствии с обычными процедурами.<br>
+	В перечисленных системах не присутствуют корабли ПСС или флота НТ. В случае получения сигналов бедствия, вы, вероятно, будете единственным судном, которое сможет отреагировать; не игнорируйте их. Мы не должны ставить под сомнение Корпоративную репутацию.<br>
+	Текущие коды стыковки: [torch.docking_codes]<br>
+	Перед совершением межсистемных прыжков, докладывайте Центральному Командованию обо всех находках.<br>
 
-	<i>ADM Lau.</i></tt>
-	<i>This paper has been stamped with the stamp of NTF Command.</i>
+	<i>Адмирал Лау.</i></tt>
+	<i>This paper has been stamped with the stamp of Central Command.</i>
 	"}
 	new/obj/item/weapon/paper(src, memo, "Standing Orders")
 	new/obj/item/weapon/paper/umbra(src)
 
 /obj/item/weapon/folder/envelope/rep
-	desc = "A thick envelope. The SCG crest is stamped in the corner, along with 'TOP SECRET - UMBRA'."
+	desc = "A thick envelope. The NT crest is stamped in the corner, along with 'TOP SECRET - UMBRA'."
 
 /obj/item/weapon/folder/envelope/rep/Initialize()
 	. = ..()
 	new/obj/item/weapon/paper/umbra(src)
 
 /obj/item/weapon/paper/umbra
-	name = "UMBRA Protocol"
+	name = "SILENCE Protocol"
 	info = {"
-	<tt><center><b><font color='red'>TOP SECRET - CODE WORDS: BLUE JAY UMBRA</font></b>
-	<h3>OFFICE OF THE SECRETARY GENERAL OF THE NANOTRASEN PRIVATE FLEET</h3>
-	<img src = ntlogo.png
+	<tt><center><b><font color='red'>СОВЕРШЕННО СЕКРЕТНО - КЛЮЧЕВЫЕ СЛОВА: СИНЯЯ СОЙКА, SILENCE</font></b>
+	<h3>АДМИНИСТРАТИВНАЯ СТАНЦИЯ НАНОТРЕЙЗЕН ВИКТОР</h3>
+	<img src = ntlogo.png>
 	</center>
-	<b>FROM:</b> Johnathan Smitherson, Special Aide of the Secretary General<br>
-	<b>TO:</b> Commanding Officer of the NTEV Blue Jay<br>
-	<b>CC:</b> Special Representative aboard the NTEV Blue Jay<br>
-	<b>SUBJECT:</b> UMBRA protocol<br>
+	<b>ОТ:</b> Марк Уотни, Исполнительный директор АСНТ Виктор<br>
+	<b>КОМУ:</b> Капитану ИСНТ Синяя Сойка<br>
+	<b>ПОЛУЧАТЕЛЬ КОПИИ:</b> Агент Внутренних Дел на борту ИСНТ Синяя Сойка<br>
+	<b>ТЕМА:</b> Протокол SILECNE<br>
 	<hr>
-	This is a small addendum to the usual operating procedures. Unlike the rest of SOP, this is not left to the Commanding Officer's discretion and is mandatory. As unconventional as this is, we felt it is essential for smooth operation of this mission.<br>
-	Procedure can be initiated only by transmission from NT Surveyor Corps Command via secure channel. The sender may not introduce themselves, but you shouldn't have trouble confirming the transmission source, I believe.<br>
-	The signal to initiate the procedure are codewords 'GOOD NIGHT WORLD' used in this order as one phrase. You do not need to send acknowledgement.
-	<li>Information about this expedition's findings is to be treated as secret and vital to NTF security, and is protected under codeword UMBRA. Crew aboard the NTEV Blue Jay are allowed access to this information on a need-to-know basis.</li>
-	<li>The secrecy of this information is to be applied retroactively. Any non-cleared personnel who were exposed to such information are to be secured and transferred to DIA on arrival at home port.</li>
-	<li>Any devices capable of transmitting or receiving data at interstellar range are to be confiscated from private possession.</li>
-	<li>Disregard any systems remaining in your flight plan and set course for Sol, Neptune orbit. You will be contacted upon your arrival. Do not make stops in ports on the way unless absolutely necessary.</li>
+	Это небольшое дополнение к процедурам. В отличии от прочих частей СП, эта не носит рекомендательный характер и обязательна к исполнению Капитаном. Данное дополнение является необходимым для успешной и бесперебойной работы миссии.<br>
+	Процедура может быть инициирована ислючительно передачей команды с АСНТ "Виктор" по защищённому каналу. Отправитель, возможно, не будет указан, но у вас не должно возникнуть проблем с определением источника передачи.<br>
+	Сигналом для инициирования протокола является кодовая фраза 'GOOD NIGHT WORLD', используемая в таком порядке слов и не раздельно. Вам не нужно отправлять подтверждение получения.
+	<li>Информация о результатах текущей экспедиции должна рассматриваться как секретная и жизненно важная для безопасности НаноТрейзен. Данные должны быть помечены грифом 'Секретно - SILENСЕ'. Экипажу на борту ИСНТ Синяя Сойка разрешён доступ к этой информации по мере необходимости.</li>
+	<li>Секретность этой информации имеет обратную силу. Любые неавторизованные лица, или неавторизованный персонал, получивший доступ к секретной информации, должен быть заключён под стражу и передан департаменту защиты активов на АСНТ Виктор по прибитии.</li>
+	<li>Любые устройства способные передавать или получать информацию между звёздными системами, должны быть конфискованы из личного пользования.</li>
+	<li>При инициировании протокола следует: установить курс на Административную Станцию НаноТрейзен 'Виктор', расположенную в системе Звезда Виктора; следовать установленным курсом к АСНТ Виктор, планом полёта пренебречь; не совершать остановок в портах, помимо случаев крайней необходимости.</li>
+	<li>Введите представителя ЦПСС на борту в курс дела, если это потребуется.</li>
 	<br>
-	While drastic, I assure you this is a simple precaution, lest any issues. Just keep the option open, and carry on with your normal duties.
-	<i>Regards, John.</i></tt>
-	<i>This paper has been stamped with the stamp of Office of the General Secretary of NTF.</i>
+	Хотя это и радикальная мера, я уверяю вас, что это мера предосторожности во избежание проблем. Продолжайте выполнять свои должостные обязанности, оставляя возможность для подобного исхода событий.
+	<i>С уважением, Марк.</i></tt>
+	<i>This paper has been stamped with the stamp of Central Command.</i>
 	"}
