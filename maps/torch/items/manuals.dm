@@ -83,7 +83,7 @@
 
 /obj/item/weapon/folder/envelope/captain/LateInitialize()
 	..()
-	var/obj/effect/overmap/visitable/torch = map_sectors["[z]"]
+	var/obj/effect/overmap/visitable/torch = map_sectors["[1]"]
 	var/memo = {"
 	<tt><center><b><font color='red'>SECRET - CODE WORDS: BLUE JAY</font></b>
 	<h3>NANOTRASEN FLEET COMMAND</h3>
