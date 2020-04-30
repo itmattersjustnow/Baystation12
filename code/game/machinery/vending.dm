@@ -1124,6 +1124,7 @@
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/syndicola = 50,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/syndicolax = 30,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/artbru = 20,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/revo = 20,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/square/boda = 20,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/square/bodaplus = 20)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up = 300) // TODO Russian cola can

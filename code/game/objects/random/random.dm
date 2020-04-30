@@ -1339,7 +1339,8 @@ var/list/random_useful_
 	return list(/obj/machinery/vending/weeb,
 				/obj/machinery/vending/sol,
 				/obj/machinery/vending/snix,
-				/obj/machinery/vending/soda
+				/obj/machinery/vending/soda,
+				/obj/structure/reagent_dispensers/revokeg //To make it spawn at least somewhere, but not just every single round
 				)
 
 /obj/random/single/playing_cards
