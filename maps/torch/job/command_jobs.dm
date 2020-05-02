@@ -294,7 +294,60 @@
 	software_on_spawn = list(/datum/computer_file/program/reports)
 
 /datum/job/representative/get_description_blurb()
-	return "You are the Sol Gov Representative. You are a civilian assigned as both a diplomatic liaison for first contact and foreign affair situations on board. You are also responsible for monitoring for any serious missteps of justice, sol law or other ethical or legal issues aboard and informing and advising the Captain of them. You are a mid-level bureaucrat. You liaise between the crew and corporate interests on board. Send faxes back to Sol on mission progress and important events."
+	return "You are the Sol Gov Representative. You are a civilian assigned as both a diplomatic liaison for first contact and foreign affair situations on board. You are also responsible for monitoring for any serious missteps of justice, sol law or other ethical or legal issues aboard and informing and advising the Captain of them. You are a mid-level bureaucrat. You liaise between the SCG and corporate interests on board. Send faxes back to Sol on mission progress and important events."
+
+/datum/job/representative/post_equip_rank(var/mob/person, var/alt_title)
+	var/my_title = "\a ["\improper [(person.mind ? (person.mind.role_alt_title ? person.mind.role_alt_title : person.mind.assigned_role) : "SFP Agent")]"]"
+	for(var/mob/M in GLOB.player_list)
+		if(M.client && M.mind)
+			if(M.mind.assigned_role == "SFP Agent")
+				to_chat(M, SPAN_NOTICE("<b>Your direct supervisor, [my_title] named [person.real_name], is present on [GLOB.using_map.full_name].</b>"))
+	..()
+
+/datum/job/bodyguard
+	title = "SFP Agent"
+	department = "Support"
+	department_flag = SPT
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the SolGov Representative and the Sol Central Government"
+	selection_color = "#3d3d7f"
+	economic_power = 12
+	minimal_player_age = 7
+	minimum_character_age = list(SPECIES_HUMAN = 19)
+	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/corporate_bodyguard
+	allowed_branches = list(/datum/mil_branch/solgov)
+	allowed_ranks = list(/datum/mil_rank/sol/agent)
+	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+		                   SKILL_EVA         = SKILL_BASIC,
+		                   SKILL_COMBAT      = SKILL_BASIC,
+		                   SKILL_WEAPONS     = SKILL_ADEPT,
+		                   SKILL_FORENSICS   = SKILL_BASIC)
+	max_skill = list(   SKILL_COMBAT      = SKILL_MAX,
+		                   SKILL_WEAPONS     = SKILL_MAX,
+		                   SKILL_FORENSICS   = SKILL_MAX)
+	skill_points = 20
+	access = list(access_representative, access_security, access_medical,
+			            access_bridge, access_cargo, access_solgov_crew, access_hangar, access_sec_guard)
+	//defer_roundstart_spawn = TRUE
+/*
+/datum/job/bodyguard/is_position_available()
+	if(..())
+		for(var/mob/M in GLOB.player_list)
+			if(M.client && M.mind && M.mind.assigned_role == "SolGov Representative")
+				return TRUE
+	return FALSE
+*/
+/datum/job/bodyguard/get_description_blurb()
+	return "You are the SFP Agent. You are an employee of Sol Federal Police, and your job is to prevent the loss of the Representative's life - even at the cost of your own, and with the full force of the SCG Law applied to those who encroach on it. Good luck."
+
+/datum/job/bodyguard/post_equip_rank(var/mob/person, var/alt_title)
+	var/my_title = "\a ["\improper [(person.mind ? (person.mind.role_alt_title ? person.mind.role_alt_title : person.mind.assigned_role) : "SFP Agent")]"]"
+	for(var/mob/M in GLOB.player_list)
+		if(M.client && M.mind)
+			if(M.mind.assigned_role == "SolGov Representative")
+				to_chat(M, SPAN_NOTICE("<b>Your bodyguard, [my_title] named [person.real_name], is present on [GLOB.using_map.full_name].</b>"))
+	..()
 
 /*
 /datum/job/sea

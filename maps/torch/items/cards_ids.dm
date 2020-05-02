@@ -132,6 +132,9 @@
 	job_access_type = /datum/job/representative
 	detail_color = COLOR_COMMAND_BLUE
 
+/obj/item/weapon/card/id/torch/crew/representative/bodyguard
+	job_access_type = /datum/job/bodyguard
+
 /obj/item/weapon/card/id/torch/crew/bridgeofficer
 	job_access_type = /datum/job/bridgeofficer
 	detail_color = COLOR_COMMAND_BLUE
