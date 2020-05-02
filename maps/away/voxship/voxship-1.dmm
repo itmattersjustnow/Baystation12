@@ -1308,9 +1308,12 @@
 /area/voxship/base)
 "dC" = (
 /obj/machinery/computer/mining{
-	req_access = newlist()
+	pixel_y = 30
 	},
-/turf/simulated/wall/iron,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "dE" = (
 /obj/effect/shuttle_landmark/vox_base/hangar/vox_shuttle,
@@ -1984,19 +1987,18 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "ft" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "fu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/machinery/computer/mining,
-/obj/structure/catwalk,
-/turf/simulated/wall/iron,
+/obj/machinery/computer/mining{
+	pixel_y = -30
+	},
+/turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "fv" = (
 /obj/item/weapon/storage/toolbox/syndicate,
@@ -2071,17 +2073,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
 	level = 2
-	},
-/turf/simulated/floor/tiled/techmaint/vox,
-/area/voxship/base)
-"fG" = (
-/obj/item/stack/material/rods,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	level = 2
-	},
-/obj/structure/window/reinforced{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
@@ -2207,6 +2198,12 @@
 /obj/structure/inflatable/door,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/space)
+"HJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/wall/iron,
+/area/voxship/base)
 "Wm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /turf/simulated/floor/plating/vox,
@@ -7457,12 +7454,12 @@ cu
 ca
 bc
 aV
-aV
-eQ
+ec
+HJ
 dC
 fD
 fu
-fG
+aQ
 db
 db
 db
