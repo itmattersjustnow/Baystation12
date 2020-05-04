@@ -25,7 +25,7 @@ Civilian
 	title = "Passenger"
 	total_positions = 12
 	spawn_positions = 12
-	supervisors = "the Executive Officer"
+	supervisors = "the Head of Personnel"
 	economic_power = 6
 	announced = FALSE
 	alt_titles = list(

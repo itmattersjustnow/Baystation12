@@ -71,7 +71,7 @@
 /datum/job/bartender
 	department = "Service"
 	department_flag = SRV
-	supervisors = "the Head of Personnel and the Corporate Liaison"
+	supervisors = "the Head of Personnel"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 30
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/bartender

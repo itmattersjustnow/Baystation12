@@ -27,7 +27,7 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/captain/get_description_blurb()
-	return "You are the Captain. You are the top dog. You are an experienced professional officer in control of an entire ship, and ultimately responsible for all that happens onboard. Your job is to make sure [GLOB.using_map.full_name] fulfils its space exploration mission. Delegate to your Head of Personnel, your department heads, and your Senior Enlisted Advisor to effectively manage the ship, and listen to and trust their expertise."
+	return "You are the Captain. You are the top dog. You are an experienced professional in control of an entire ship, and ultimately responsible for all that happens onboard. Your job is to make sure [GLOB.using_map.full_name] fulfils its space exploration mission. Delegate to your Head of Personnel and your department heads to effectively manage the ship, and listen to and trust their expertise."
 
 /datum/job/captain/post_equip_rank(var/mob/person, var/alt_title)
 	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume=20)
@@ -89,11 +89,11 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hop/get_description_blurb()
-	return "You are the Head of Personnel. You are an experienced senior officer, second in command of the ship, and are responsible for the smooth operation of the ship under your Captain. In his absence, you are expected to take his place. Your primary duty is directly managing department heads and all those outside a department heading. You are also responsible for the contractors and passengers aboard the ship. Consider the Senior Enlisted Advisor and Bridge Officers tools at your disposal."
+	return "You are the Head of Personnel. You are second in command of the ship, and are responsible for the smooth operation of the ship under your Captain. In his absence, you are expected to take his place. Your primary duty is directly managing the Service department heads and all those outside a department heading. You also manage the Supply department, through the Deck Chief. You are also responsible for passengers aboard the ship. In addition, you oversee the personal accounts of the crew, including their money and access. Consider Bridge Officers tools at your disposal."
 
 /datum/job/rd
 	title = "Research Director"
-	supervisors = "the Captain"
+	supervisors = "the Captain or the Head of Personnel"
 	economic_power = 20
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35, SPECIES_UNATHI = 35, SPECIES_SERGAL = 35, SPECIES_NORTHERN = 35, SPECIES_EASTERN = 35, SPECIES_SKRELL = 35, SPECIES_PROMETHEAN = 35, SPECIES_YEOSA = 35, SPECIES_VASS = 35, SPECIES_TAJ = 35, SPECIES_CUSTOM = 35, SPECIES_AKULA = 35)
@@ -136,11 +136,11 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/rd/get_description_blurb()
-	return "You are the Research Director. You are responsible for the research department. You handle the science aspects of the project and liase with the corporate interests of the Expeditionary Corps Organisation. Make sure science gets done, do some yourself, and get your scientists on away missions to find things to benefit the project. Advise the Captain on science matters."
+	return "You are the Research Director. You are responsible for the research department. You handle the science aspects of the project. Make sure science gets done, do some yourself, and get your scientists on away missions to find things to benefit the project. Advise the Captain on science matters."
 
 /datum/job/cmo
 	title = "Chief Medical Officer"
-	supervisors = "the Captain and the Head of Personnel"
+	supervisors = "the Captain or the Head of Personnel"
 	economic_power = 10
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35,SPECIES_UNATHI = 35,SPECIES_SERGAL = 35, SPECIES_NORTHERN = 35, SPECIES_EASTERN = 35, SPECIES_SKRELL = 35, SPECIES_PROMETHEAN = 35, SPECIES_YEOSA = 35, SPECIES_VASS = 35, SPECIES_TAJ = 35, SPECIES_CUSTOM = 35, SPECIES_AKULA = 35)
@@ -179,7 +179,7 @@
 
 /datum/job/chief_engineer
 	title = "Chief Engineer"
-	supervisors = "the Captain and the Head of Personnel"
+	supervisors = "the Captain or the Head of Personnel"
 	economic_power = 9
 	minimum_character_age = list(SPECIES_HUMAN = 27, SPECIES_UNATHI = 27, SPECIES_SERGAL = 27, SPECIES_NORTHERN = 27, SPECIES_EASTERN = 27, SPECIES_SKRELL = 27, SPECIES_PROMETHEAN = 27, SPECIES_YEOSA = 27, SPECIES_VASS = 27, SPECIES_TAJ = 27, SPECIES_CUSTOM = 27, SPECIES_AKULA = 27)
 	ideal_character_age = 40
@@ -232,7 +232,7 @@
 
 /datum/job/hos
 	title = "Head of Security"
-	supervisors = "the Captain and the Head of Personnel"
+	supervisors = "the Captain or the Head of Personnel"
 	economic_power = 8
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 25,SPECIES_UNATHI = 25,SPECIES_SERGAL = 25, SPECIES_NORTHERN = 25, SPECIES_EASTERN = 25, SPECIES_SKRELL = 25, SPECIES_PROMETHEAN = 25, SPECIES_YEOSA = 25, SPECIES_VASS = 25, SPECIES_TAJ = 25, SPECIES_CUSTOM = 25, SPECIES_AKULA = 25)
@@ -268,7 +268,7 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hos/get_description_blurb()
-	return "You are the Head of Security. You manage ship security. The Masters at Arms and the Security Officers, as well as the Brig Chief and the Forensic Technician. You keep the vessel safe. You handle both internal and external security matters. You are the law. You are subordinate to the Captain and the HoP. You are expected to know the SCMJ and Sol law and Alert Procedure to a very high degree along with general regulations."
+	return "You are the Head of Security. You manage ship security. The ecurity Officers, as well as the Warden and the Forensic Technician. You keep the vessel safe. You handle both internal and external security matters. You are the law. You are subordinate to the Captain or the HoP. You are expected to know the Sol law and Alert Procedure to a very high degree along with general regulations."
 
 /datum/job/representative
 	title = "SolGov Representative"
@@ -439,4 +439,4 @@
 							 /datum/computer_file/program/deck_management)
 
 /datum/job/bridgeofficer/get_description_blurb()
-	return "You are a Bridge Officer. You are a very junior officer. You do not give orders of your own. You are subordinate to all of command. You handle matters on the bridge and report directly to the Captain and HoP. You take the Blue Jay's helm and pilot the Eagle if needed. You monitor bridge computer programs and communications and report relevant information to command."
+	return "You are a Bridge Officer. You are a command staff's assistant. You do not give orders of your own. You are subordinate to all of command. You handle matters on the bridge and report directly to the Captain and HoP. You take the Blue Jay's helm and pilot the Eagle if needed. You monitor bridge computer programs and communications and report relevant information to command."

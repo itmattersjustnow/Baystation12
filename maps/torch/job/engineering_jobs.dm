@@ -43,13 +43,13 @@
 							 /datum/computer_file/program/shields_monitor)
 
 /datum/job/senior_engineer/get_description_blurb()
-	return "You are the Senior Engineer. You are a veteran SNCO. You are subordinate to the Chief Engineer though you may have many years more experience than them and your subordinates are the rest of engineering. You should be an expert in practically every engineering area and familiar and possess leadership skills. Coordinate the team and ensure the smooth running of the department along with the Chief Engineer."
+	return "You are the Senior Engineer. You are subordinate to the Chief Engineer though you may have many years more experience than them and your subordinates are the rest of engineering. You should be an expert in practically every engineering area and familiar and possess leadership skills. Coordinate the team and ensure the smooth running of the department along with the Chief Engineer."
 
 /datum/job/engineer
 	title = "Engineer"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Chief Engineer"
+	supervisors = "the Chief Engineer and the Senior Engineer"
 	economic_power = 5
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 19)
@@ -157,7 +157,7 @@
 	spawn_positions = 2
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	supervisors = "the Chief Engineer."
+	supervisors = "the Chief Engineer"
 	selection_color = "#5b4d20"
 	economic_power = 6
 	alt_titles = list(
