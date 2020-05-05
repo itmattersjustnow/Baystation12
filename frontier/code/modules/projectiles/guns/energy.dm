@@ -10,7 +10,7 @@
     else
         switch(cell_type)
             if (/obj/item/weapon/cell/device/weapon/normal)
-                to_chat(user, "This weapon uses a normal-size energy cell as a power source.")
+                to_chat(user, "This weapon uses a normal-sized energy cell as a power source.")
             if (/obj/item/weapon/cell/device/weapon/small)
                 to_chat(user, "This weapon uses a small energy cell as a power source.")
             if (/obj/item/weapon/cell/device/weapon/big)
