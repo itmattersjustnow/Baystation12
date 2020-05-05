@@ -13,7 +13,6 @@
 		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
 		SPECIES_EASTERN = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
-		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_head.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi'
@@ -27,7 +26,6 @@
 		SPECIES_SERGAL = 'icons/obj/clothing/species/sergal/obj_head_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/obj/clothing/species/sergal/obj_head_sergal.dmi',
 		SPECIES_EASTERN = 'icons/obj/clothing/species/sergal/obj_head_sergal.dmi',
-		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_head.dmi',
 		SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_head_unathi.dmi',
 		SPECIES_RESOMI = 'frontier/icons/obj/clothing/species/resomi/obj_head_resomi.dmi',
 		SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_head_skrell.dmi'
@@ -44,7 +42,6 @@
 		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
 		SPECIES_EASTERN = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
-		SPECIES_HUMAN2 = 'icons/mob/onmob/onmob_suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_suit_resomi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_suit_skrell.dmi'
@@ -58,7 +55,6 @@
 		SPECIES_SERGAL = 'icons/obj/clothing/species/sergal/obj_suit_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/obj/clothing/species/sergal/obj_suit_sergal.dmi',
 		SPECIES_EASTERN = 'icons/obj/clothing/species/sergal/obj_suit_sergal.dmi',
-		SPECIES_HUMAN2 = 'icons/obj/clothing/obj_suit.dmi',
 		SPECIES_RESOMI = 'frontier/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi',
 		SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_suit_unathi.dmi',
 		SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_suit_skrell.dmi'
