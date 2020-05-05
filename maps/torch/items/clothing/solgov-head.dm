@@ -443,8 +443,8 @@
 		)
 
 /obj/item/clothing/head/helmet/space/void/pilot/sol
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
-	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_head_solgov.dmi'
+	item_icons = list(slot_head_str = 'frontier/maps/torch/icons/mob/onmob_head_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
