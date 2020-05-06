@@ -65,6 +65,7 @@
 		use(1)
 
 	M.updatehealth()
+
 /obj/item/stack/medical/bruise_pack
 	name = "roll of gauze"
 	singular_name = "gauze length"
@@ -72,6 +73,7 @@
 	icon_state = "brutepack"
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 5
+	no_variants = FALSE
 	apply_sounds = list('sound/effects/rip1.ogg','sound/effects/rip2.ogg')
 	amount = 10
 
@@ -130,7 +132,9 @@
 	heal_burn = 1
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 4
+	no_variants = FALSE
 	apply_sounds = list('sound/effects/ointment.ogg')
+	amount = 10
 
 /obj/item/stack/medical/ointment/attack(var/mob/living/carbon/M, var/mob/user)
 	if(..())
@@ -146,12 +150,12 @@
 		else
 			user.visible_message(SPAN_NOTICE("\The [user] starts salving wounds on [M]'s [affecting.name]."), \
 					             SPAN_NOTICE("You start salving the wounds on [M]'s [affecting.name].") )
-			playsound(src, pick(apply_sounds), 25)
 			if(!do_mob(user, M, 10))
 				to_chat(user, SPAN_NOTICE("You must stand still to salve wounds."))
 				return 1
 			user.visible_message(SPAN_NOTICE("[user] salved wounds on [M]'s [affecting.name]."), \
 			                         SPAN_NOTICE("You salved wounds on [M]'s [affecting.name].") )
+			playsound(src, pick(apply_sounds), 25)
 			use(1)
 			affecting.salve()
 			affecting.disinfect()
@@ -161,9 +165,10 @@
 	singular_name = "advanced trauma kit"
 	desc = "An advanced trauma kit for severe injuries."
 	icon_state = "traumakit"
-	heal_brute = 0
+	heal_brute = 1 //Donnarex Edit
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 12
+	no_variants = FALSE
 	apply_sounds = list('sound/effects/rip1.ogg','sound/effects/rip2.ogg','sound/effects/tape.ogg')
 	amount = 10
 
@@ -203,6 +208,7 @@
 				W.disinfect()
 				W.heal_damage(heal_brute)
 				used++
+				update_icon() // Donnarex Edit - Support for stack icons
 			affecting.update_damages()
 			if(used == amount)
 				if(affecting.is_bandaged())
@@ -220,8 +226,9 @@
 	heal_burn = 5
 	origin_tech = list(TECH_BIO = 1)
 	animal_heal = 7
+	no_variants = FALSE
 	apply_sounds = list('sound/effects/ointment.ogg')
-
+	amount = 10
 
 /obj/item/stack/medical/advanced/ointment/attack(var/mob/living/carbon/M, var/mob/user)
 	if(..())
@@ -237,7 +244,6 @@
 		else
 			user.visible_message(SPAN_NOTICE("\The [user] starts salving wounds on [M]'s [affecting.name]."), \
 					             SPAN_NOTICE("You start salving the wounds on [M]'s [affecting.name].") )
-			playsound(src, pick(apply_sounds), 25)
 			if(!do_mob(user, M, 10))
 				to_chat(user, SPAN_NOTICE("You must stand still to salve wounds."))
 				return 1
@@ -247,6 +253,8 @@
 			use(1)
 			affecting.salve()
 			affecting.disinfect()
+			playsound(src, pick(apply_sounds), 25)
+			update_icon() // Donnarex Edit - Support for stack icons
 
 /obj/item/stack/medical/splint
 	name = "medical splints"
@@ -256,7 +264,7 @@
 	amount = 5
 	max_amount = 5
 	animal_heal = 0
-	var/list/splintable_organs = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT)	//List of organs you can splint, natch.
+	var/list/splintable_organs = list(BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_GROIN, BP_CHEST)	//List of organs you can splint, natch.
 
 /obj/item/stack/medical/splint/check_limb_state(var/mob/user, var/obj/item/organ/external/limb)
 	if(BP_IS_ROBOTIC(limb))
@@ -350,12 +358,12 @@
 		user.visible_message(
 			SPAN_NOTICE("\The [user] starts patching fractures on \the [M]'s [affecting.name]."), \
 			SPAN_NOTICE("You start patching fractures on \the [M]'s [affecting.name].") )
-		playsound(src, pick(apply_sounds), 25)
 		if(!do_mob(user, M, 10))
 			to_chat(user, SPAN_NOTICE("You must stand still to patch fractures."))
 			return 1
 		user.visible_message( \
 			SPAN_NOTICE("\The [user] patches the fractures on \the [M]'s [affecting.name] with resin."), \
 			SPAN_NOTICE("You patch fractures on \the [M]'s [affecting.name] with resin."))
+		playsound(src, pick(apply_sounds), 25)
 		affecting.heal_damage(heal_brute, heal_burn, robo_repair = TRUE)
 		use(1)
