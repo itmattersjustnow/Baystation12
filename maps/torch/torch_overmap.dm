@@ -1,6 +1,6 @@
 /obj/effect/overmap/visitable/ship/torch
 	name = "NTEV Blue Jay"
-	desc = "A bluespace-capable corvette bearing markings of the NanoTrasen Surveyor Corps."
+	desc = "A frankensteined HNS Mako-class corvette, broadcasting NT codes and the designation \"NTEV Blue Jay, HSC-4-13-X\"."
 	fore_dir = WEST
 	vessel_mass = 100000
 	burn_delay = 2 SECONDS
@@ -70,7 +70,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/exploration_shuttle
 	name = "NTEV Falcon"
-	desc = "A medium-sized long-range shuttle. It bears markings of the NanoTrasen Surveyor Corps."
+	desc = "An SSE-U11 long range shuttle, broadcasting NT codes and the callsign \"BlueJay-2 Falcon\"."
 	shuttle = "NTEV Falcon"
 	max_speed = 1/(2 SECONDS)
 	burn_delay = 1 SECONDS
@@ -81,7 +81,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/aquila
 	name = "NTSC Eagle"
-	desc = "A vessel escort gunship. It bears markings of the NanoTrasen Surveyor Corps."
+	desc = "A PM-24 modular transport, broadcasting NT codes and the callsign \"BlueJay-1 Eagle\"."
 	shuttle = "NTSC Eagle"
 	vessel_mass = 20000
 	max_speed = 1/(1 SECONDS)
@@ -91,7 +91,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/guppy
 	name = "NTRP Kestrel"
-	desc = "A small recovery pod. It's capable of limited independant space travel. It's marked as 'NTRP Kestrel'."
+	desc = "An SSE-U3 utility pod, broadcasting NT codes and the callsign \"BlueJay-3 Kestrel\"."
 	shuttle = "NTRP Kestrel"
 	max_speed = 1/(3 SECONDS)
 	burn_delay = 2 SECONDS

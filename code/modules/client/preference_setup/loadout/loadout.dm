@@ -355,7 +355,7 @@ var/list/gear_datums = list()
 	var/doubleup = FALSE //Do we have two? Used for muscule augments right now, but should work for anything assuming the augment does onInstall()
 
 /datum/gear/New()
-	if(FLAGS_EQUALS(flags, GEAR_HAS_TYPE_SELECTION|GEAR_HAS_SUBTYPE_SELECTION))
+	if(HAS_FLAGS(flags, GEAR_HAS_TYPE_SELECTION|GEAR_HAS_SUBTYPE_SELECTION))
 		CRASH("May not have both type and subtype selection tweaks")
 	if(!description)
 		var/obj/O = path
