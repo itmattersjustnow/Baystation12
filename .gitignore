@@ -48,3 +48,7 @@ lib/*.so
 # python
 *.pyc
 __pycache__
+
+# ignore prmirror stuff
+merge-upstream-pull-request.sh
+PRMirror-master/*
