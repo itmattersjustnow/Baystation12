@@ -3,7 +3,7 @@
 # CREDITS
 [Code of The Donnarex Project](https://github.com/AshtonFox/Donnarex) - [Code of The Fluffy Frontier](https://github.com/Low3/The-Fluffy-Frontier) - [Code of The Original BoH](https://github.com/BoHBranch/BoH-Bay) - [Code of Baystation12](https://github.com/Baystation12/Baystation12)
 
-[Discord](https://discord.gg/GyjNW7Q)
+[Discord](https://discord.gg/MQDs753)
 
 This is a fork of Baystation12's (And Bastion of Hestia's) code for BYOND on Space Station 13. Previously used on The Fluffy Frontier server, it was then replaced with another build and left idle. This splice was created to keep the build up-to-date, mainly counting on the Baystation12 repository and also on the BoH Branch.
 
