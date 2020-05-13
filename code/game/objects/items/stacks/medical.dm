@@ -12,6 +12,27 @@
 	var/heal_burn = 0
 	var/animal_heal = 3
 	var/apply_sounds
+	var/no_variants = TRUE // Determines whether the item should update it's sprites based on amount.
+
+/obj/item/stack/medical/update_icon()
+	if(no_variants)
+		icon_state = initial(icon_state)
+	else
+		if(amount <= (max_amount * (1/3)))
+			icon_state = initial(icon_state)
+		else if (amount <= (max_amount * (2/3)))
+			icon_state = "[initial(icon_state)]_2"
+		else
+			icon_state = "[initial(icon_state)]_3"
+		item_state = initial(icon_state)
+
+/obj/item/stack/medical/New(var/loc, var/amount=null)
+	if (!stacktype)
+		stacktype = type
+	if (amount >= 1)
+		src.amount = amount
+		update_icon()
+	..()
 
 /obj/item/stack/medical/proc/check_limb_state(var/mob/user, var/obj/item/organ/external/limb)
 	. = FALSE
