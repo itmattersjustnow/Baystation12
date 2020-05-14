@@ -190,13 +190,13 @@
 	icon_state = "blade"
 	active_icon = "blade"	//It's all energy, so it should always be visible.
 	lighting_color = COLOR_SABER_GREEN
-	force = 40 //Normal attacks deal very high damage - about the same as wielded fire axe
+	active_force = 40 //Normal attacks deal very high damage - about the same as wielded fire axe
 	active = 1
 	armor_penetration = 100
 	sharp = 1
 	edge = 1
 	anchored = 1    // Never spawned outside of inventory, should be fine.
-	throwforce = 1  //Throwing or dropping the item deletes it.
+	active_throwforce = 1  //Throwing or dropping the item deletes it.
 	throw_speed = 1
 	throw_range = 1
 	w_class = ITEM_SIZE_TINY //technically it's just energy or something, I dunno
@@ -210,8 +210,6 @@
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
-	force = 40 // Needs a duplicate because it's spawning with null values of these vars for some reason
-	throwforce = 1 // ***
 
 /obj/item/weapon/melee/energy/blade/Initialize()
 	. = ..()
