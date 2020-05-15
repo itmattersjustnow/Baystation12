@@ -1011,7 +1011,7 @@
 // Security
 
 /area/security/bo
-	name = "\improper Security - Brig Chief"
+	name = "\improper Security - Warden"
 	icon_state = "Warden"
 	req_access = list(access_armory)
 

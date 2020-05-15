@@ -25,7 +25,7 @@
 	)
 
 /obj/structure/closet/secure_closet/liaison
-	name = "\improper corporate liaison's locker"
+	name = "\improper internal affairs agent's locker"
 	req_access = list(access_liaison)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/corporate/liaison
 
