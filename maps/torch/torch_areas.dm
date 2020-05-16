@@ -597,7 +597,7 @@
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/command/captainmess
-	name = "Officer's Mess"
+	name = "Mess Hall Downstairs"
 	icon_state = "bar"
 	sound_env = MEDIUM_SOFTFLOOR
 

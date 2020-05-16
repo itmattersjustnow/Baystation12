@@ -1477,7 +1477,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/fourth_deck{
-	c_tag = "Mess Hall - Officer's Mess";
+	c_tag = "Mess Hall - Downstairs";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -2252,7 +2252,7 @@
 /area/shuttle/escape_pod7/station)
 "hl" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Officer's Mess Maintenance"
+	name = "Mess Hall Downstairs Maintenance"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
