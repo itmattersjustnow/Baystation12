@@ -3225,6 +3225,7 @@
 #include "frontier\code\modules\culture_descriptor\culture\cultures_resomi.dm"
 #include "frontier\code\modules\culture_descriptor\location\locations_resomi.dm"
 #include "frontier\code\modules\culture_descriptor\religion\religion_resomi.dm"
+#include "frontier\code\modules\emoji\emoji_parse.dm"
 #include "frontier\code\modules\emotes\definitions\_species.dm"
 #include "frontier\code\modules\emotes\definitions\audible.dm"
 #include "frontier\code\modules\mob\holder.dm"
