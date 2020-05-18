@@ -432,9 +432,9 @@
 		'html/spell-check.png',
 		'html/wrench-screwdriver.png',
 		'html/changelog.css',
-		'html/changelog.html'
+		'html/changelog_drex.html'
 		)
-	show_browser(src, 'html/changelog.html', "window=changes;size=675x650")
+	show_browser(src, 'html/changelog_drex.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
 		SScharacter_setup.queue_preferences_save(prefs)
