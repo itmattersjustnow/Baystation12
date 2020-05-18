@@ -53,3 +53,4 @@ __pycache__
 icons/mob/custom_items_mob.dmi
 icons/obj/custom_items_obj.dmi
 html/changelogs/generateblank.sh
+tools/GenerateChangelog/makeChangelog.bat
