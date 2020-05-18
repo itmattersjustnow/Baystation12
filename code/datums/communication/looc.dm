@@ -26,7 +26,7 @@
 	for(var/listener in listening_hosts)
 		var/mob/listening_mob = listener
 		var/client/t = listening_mob.get_client()
-		if(!t)
+		if((!t) || t.is_key_ignored(C.key))
 			continue
 		listening_clients |= t
 		var/received_message = t.receive_looc(C, key, message, listening_mob.looc_prefix())
