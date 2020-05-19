@@ -338,7 +338,7 @@
 	buckle_movable = FALSE
 
 /obj/structure/bed/chair/wood/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/stack) || istype(W, /obj/item/weapon/wirecutters))
+	if(istype(W,/obj/item/stack) || istype(W, /obj/item/weapon/wirecutters) || holographic)
 		return
 	..()
 
