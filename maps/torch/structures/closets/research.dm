@@ -29,6 +29,8 @@
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
 		/obj/item/device/radio/headset/heads/torchntdirector,
+		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/under/rank/research_director,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/clothing/mask/gas,
 		/obj/item/device/flash,

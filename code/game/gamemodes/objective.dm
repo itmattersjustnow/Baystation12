@@ -365,9 +365,9 @@ var/global/list/all_objectives = list()
 			target_amount = 4
 			loot = "four emitters"
 		if(4)
-			target = /obj/machinery/nuclearbomb
-			target_amount = 1
-			loot = "a nuclear bomb"
+			target = /obj/item/weapon/nuclear_cylinder
+			target_amount = 3
+			loot = "three nuclear cylinders"
 		if(5)
 			target = /obj/item/weapon/gun
 			target_amount = 6

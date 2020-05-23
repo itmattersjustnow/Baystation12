@@ -43,6 +43,7 @@
 		/obj/item/clothing/head/bio_hood/scientist = 2,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/under/rank/research_director,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/device/radio/headset/heads/rd,
 		/obj/item/clothing/mask/gas,
