@@ -87,7 +87,7 @@
 		return TOPIC_REFRESH
 
 	else if (href_list["set_email_pass"])
-		var/value = input(user, "Enter email password:", "Email Password", pref.email_pass) as text
+		var/value = input(user, "Введите пароль E-mail:", "Пароль E-mail", pref.email_pass) as text
 		if (isnull(value) || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if (value != "")
@@ -101,7 +101,7 @@
 		return TOPIC_REFRESH
 
 	else if (href_list["set_email_addr"])
-		var/value = input(user, "Enter email username:", "Email Address", pref.email_addr) as text
+		var/value = input(user, "Введите адрес E-mail:", "Адрес E-mail", pref.email_addr) as text
 		if (isnull(value) || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if (value != "")
