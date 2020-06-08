@@ -28,7 +28,7 @@
 	)
 
 /obj/structure/closet/secure_closet/CO
-	name = "commanding officer's locker"
+	name = "captain's locker"
 	req_access = list(access_captain)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/co
 
@@ -37,22 +37,34 @@
 		/obj/item/device/radio/headset/heads/torchexec,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/device/radio/headset/heads/torchexec/alt,
+		/obj/item/clothing/suit/captunic,
+		/obj/item/clothing/suit/captunic/capjacket,
+		/obj/item/clothing/head/caphat/cap,
+		/obj/item/clothing/under/rank/captain,
+		/obj/item/clothing/suit/armor/vest/nt,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/clothing/under/dress/dress_cap,
+		/obj/item/clothing/head/caphat/formal,
+		/obj/item/clothing/under/captainformal,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
 		/obj/item/weapon/gun/energy/confuseray,
+		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/storage/box/ids,
 		/obj/item/weapon/material/clipboard,
 		/obj/item/device/holowarrant,
 		/obj/item/weapon/folder/blue,
 		/obj/item/weapon/material/knife/folding/swiss/officer,
+		/obj/item/gunbox/officer,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/captain, /obj/item/weapon/storage/backpack/satchel/cap)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag/captain, /obj/item/weapon/storage/backpack/messenger/com))
 	)
 
 /obj/structure/closet/secure_closet/XO
-	name = "executive officer's locker"
+	name = "head of personnel's locker"
 	req_access = list(access_hop)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/xo
 
@@ -60,10 +72,17 @@
 	return list(
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/device/radio/headset/heads/torchexec,
+		/obj/item/clothing/under/rank/head_of_personnel,
+		/obj/item/clothing/under/dress/dress_hop,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/clothing/head/caphat/hop,
+		/obj/item/clothing/suit/armor/vest/nt,
+		/obj/item/clothing/head/helmet,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
 		/obj/item/weapon/gun/energy/confuseray,
+		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/storage/box/headset,
 		/obj/item/device/radio/headset/heads/torchexec/alt,
@@ -101,6 +120,7 @@
 		/obj/item/device/holowarrant,
 		/obj/item/weapon/folder/blue,
 		/obj/item/weapon/material/knife/folding/swiss/officer,
+		/obj/item/gunbox,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack, /obj/item/weapon/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack/dufflebag, /obj/item/weapon/storage/backpack/messenger))
 	)

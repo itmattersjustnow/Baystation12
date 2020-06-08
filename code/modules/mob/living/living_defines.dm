@@ -50,3 +50,5 @@
 	var/list/obj/aura/auras = null //Basically a catch-all aura/force-field thing.
 
 	var/last_resist = 0
+
+	var/ooc_notes = null

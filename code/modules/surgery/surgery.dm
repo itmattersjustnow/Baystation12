@@ -181,6 +181,13 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 		to_chat(user, SPAN_WARNING("You can't operate on this area while surgery is already in progress."))
 		return TRUE
 
+	// Check for robot grippers that do not themselves contain a tool
+	if(istype(src,/obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = src
+		if(!istype(G.wrapped,/obj/item/weapon))
+			src = G.wrapped
+			return FALSE
+
 	// What surgeries does our tool/target enable?
 	var/list/possible_surgeries
 	var/list/all_surgeries = decls_repository.get_decls_of_subtype(/decl/surgery_step)
@@ -214,7 +221,9 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 			return TRUE
 
 	// Otherwise we can make a start on surgery!
-	else if(istype(M) && !QDELETED(M) && user.a_intent != I_HURT && user.get_active_hand() == src)
+	else if(istype(M) && !QDELETED(M) && user.a_intent != I_HURT)
+		if(istype(user, /mob/living/carbon) && user.get_active_hand() != src)
+			return FALSE
 		// Double-check this in case it changed between initial check and now.
 		if(zone in M.surgeries_in_progress)
 			to_chat(user, SPAN_WARNING("You can't operate on this area while surgery is already in progress."))
@@ -241,6 +250,8 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 	return FALSE
 
 /obj/item/proc/handle_post_surgery()
+	var/obj/item/weapon/gripper/G = src
+	G.wrapped = null
 	return
 
 /obj/item/stack/handle_post_surgery()

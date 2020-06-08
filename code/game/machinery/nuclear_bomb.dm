@@ -155,7 +155,7 @@ var/bomb_set
 		extended = 1
 		if(!src.lighthack)
 			flick("lock", src)
-			update_icon()	
+			update_icon()
 
 /obj/machinery/nuclearbomb/interface_interact(mob/user as mob)
 	if(extended && !panel_open)
@@ -398,7 +398,8 @@ var/bomb_set
 		/obj/item/weapon/disk/nuclear,
 		/obj/item/weapon/pinpointer,
 		/obj/item/weapon/folder/envelope/nuke_instructions,
-		/obj/item/modular_computer/laptop/preset/custom_loadout/cheap/
+		/obj/item/modular_computer/laptop/preset/custom_loadout/cheap/,
+		/obj/item/weapon/folder/envelope/captain
 	)
 
 /obj/item/weapon/storage/secure/briefcase/nukedisk/examine(mob/user)
@@ -412,27 +413,27 @@ var/bomb_set
 /obj/item/weapon/folder/envelope/nuke_instructions/Initialize()
 	. = ..()
 	var/obj/item/weapon/paper/R = new(src)
-	R.set_content("<center><img src=sollogo.png><br><br>\
-	<b>Warning: Classified<br>[GLOB.using_map.station_name] Self-Destruct System - Instructions</b></center><br><br>\
-	In the event of a Delta-level emergency, this document will guide you through the activation of the vessel's \
-	on-board nuclear self-destruct system. Please read carefully.<br><br>\
-	1) (Optional) Announce the imminent activation to any surviving crew members, and begin evacuation procedures.<br>\
-	2) Notify two heads of staff, both with ID cards with access to the ship's Keycard Authentication Devices.<br>\
-	3) Proceed to the self-destruct chamber, located on Deck One by the stairwell.<br>\
-	4) Unbolt the door and enter the chamber.<br>\
-	5) Both heads of staff should stand in front of their own Keycard Authentication Devices. On the KAD interface, select \
-	Grant Nuclear Authentication Code. Both heads of staff should then swipe their ID cards simultaneously.<br>\
-	6) The KAD will now display the Authentication Code. Memorize this code.<br>\
-	7) Insert the nuclear authentication disk into the self-destruct terminal.<br>\
-	8) Enter the code into the self-destruct terminal.<br>\
-	9) Authentication procedures are now complete. Open the two cabinets containing the nuclear cylinders. They are \
-	located on the back wall of the chamber.<br>\
-	10) Place the cylinders upon the six nuclear cylinder inserters.<br>\
-	11) Activate the inserters. The cylinders will be pulled down into the self-destruct system.<br>\
-	12) Return to the terminal. Enter the desired countdown time.<br>\
-	13) When ready, disable the safety switch.<br>\
-	14) Start the countdown.<br><br>\
-	This concludes the instructions.", "vessel self-destruct instructions")
+	R.set_content("<center><img src=ntlogo.png><br><br>\
+	<b>Предупреждение: ЗАСЕКРЕЧЕНО<br>[GLOB.using_map.station_name] Система Самоуничтожения - Инструкции</b></center><br><br>\
+	В случае аварийной ситуации уровня Дельта этот документ поможет вам активировать бортовую \
+	ядерную систему самоуничтожения. Пожалуйста, прочтите его внимательно.<br><br>\
+	1) (Необязательно) Объявите о предстоящей активации всем оставшимся в живых членам экипажа и начинайте эвакуацию.<br>\
+	2) Сообщите об активации двум членам командного состава, имеющим идентификационные карты с доступом к бортовым устройствам аутентификации.<br>\
+	3) Пройдите в камеру самоуничтожения, расположенную на первой палубе рядом с лестничной клеткой.<br>\
+	4) Разблокируйте шлюз и войдите в камеру.<br>\
+	5) Двое членов командного состава должны стоять перед бортовыми устройствами аутентификации. Должны использоваться два разных устройства. В интерфейсе БУА выберите пункт \
+	Предоставить Код Ядерной Аутентификации. Затем оба члена командного состава должны одновременно своими идентификационными картами по устройству-считывателю.<br>\
+	6) БУА отобразит Код. Запомните его.<br>\
+	7) Вставьте диск ядерной аутентификации в терминал самоуничтожения.<br>\
+	8) Введите код в терминал самоуничтожения.<br>\
+	9) Процедура аутентификации завершена. Откройте раздатчик ядерных цилиндров. Он \
+	расположен за терминалом самоуничтожения.<br>\
+	10) Поместите цилиндры на шесть вставок ядерных цилиндров.<br>\
+	11) Активируйте вставки. Цилиндры будут опущены в систему самоуничтожения.<br>\
+	12) Вернитесь к терминалу. Введите желаемое время обратного отсчета.<br>\
+	13) По готовности отключите предохранитель.<br>\
+	14) Начните обратный отсчет.<br><br>\
+	На этом инструкции заканчиваются.", "vessel self-destruct instructions")
 
 	//stamp the paper
 	var/image/stampoverlay = image('icons/obj/bureaucracy.dmi')

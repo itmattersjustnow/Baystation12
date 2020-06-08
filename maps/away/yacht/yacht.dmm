@@ -1162,7 +1162,7 @@
 /obj/machinery/meter,
 /obj/machinery/light/small{
 	dir = 8;
-	
+
 	},
 /turf/simulated/floor/plating,
 /area/yacht/engine)

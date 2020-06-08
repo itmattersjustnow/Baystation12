@@ -104,7 +104,24 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"80s All Over Again" = /music_track/eighties,
 	"Wild Encounters" = /music_track/wildencounters,
 	"Torn" = /music_track/torn,
-	"Nebula" = /music_track/nebula
+	"Nebula" = /music_track/nebula,
+	"Into Hyperspace" = /music_track/astrometrics,
+	"I Have Heard of a Place" = /music_track/astrometrics/a_place,
+	"Take Us To The Nearest Starbase" = /music_track/astrometrics/engage,
+	"Lonely Satellite" = /music_track/lonely_satellite,
+	"Carmen Miranda's Ghost" = /music_track/carmenmirandasghost, //Frontier add start
+	"Thunderbirds" = /music_track/thunderbirds,
+	"Dawson's Christian" = /music_track/dawsonschristian,
+	"Flying High" = /music_track/flyinghigh,
+	"Fly Me To The Moon (Cover)" = /music_track/flytothemoon,
+	"Pjanno" = /music_track/gaytony,
+	"Goodbye Moonmen" = /music_track/goodbyemoonmen,
+	"Ocean Man" = /music_track/oceanman,
+	"Rocket Rider's Prayer" = /music_track/rocketridersprayer,
+	"Shooting Stars" = /music_track/shootingstars,
+	"Guardians" = /music_track/guardians
+	"Title Theme" = /music_track/titletheme
+	"Cleavage" = /music_track/cleavage //Frontier add end
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

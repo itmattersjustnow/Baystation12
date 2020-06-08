@@ -55,9 +55,9 @@
 		return
 
 	. = medical_scan_results(scan_subject, verbose, user.get_skill_value(SKILL_MEDICAL))
-	to_chat(user, "<hr>")
+	to_chat(user, "<span class='info'>*---------*</span>")
 	to_chat(user, .)
-	to_chat(user, "<hr>")
+	to_chat(user, "<span class='info'>*---------*</span><br>")
 
 /proc/medical_scan_results(var/mob/living/carbon/human/H, var/verbose, var/skill_level = SKILL_DEFAULT)
 	. = list()
@@ -110,6 +110,8 @@
 	else
 		brain_result = "<span class='scan_danger'>ERROR - Nonstandard biology</span>"
 	dat += "Brain activity: [brain_result]."
+	if (H.internal_organs_by_name[BP_STACK])
+		dat += "<span class='scan_notice'>Subject has a neural lace implant.</span>"
 
 	if(H.stat == DEAD || (H.status_flags & FAKEDEATH))
 		dat += "<span class='scan_warning'>[b]Time of Death:[endb] [time2text(worldtime2stationtime(H.timeofdeath), "hh:mm")]</span>"

@@ -2,8 +2,8 @@
 
 /obj/item/weapon/card/id/torch
 	name = "identification card"
-	desc = "An identification card issued to personnel aboard the SEV Torch."
-	job_access_type = DEFAULT_JOB_TYPE
+	desc = "An identification card issued to personnel aboard the NTEV Blue Jay."
+	job_access_type = /datum/job/assistant
 
 /obj/item/weapon/card/id/torch/silver
 	desc = "A silver identification card belonging to heads of staff."
@@ -13,7 +13,7 @@
 	color = "#ccecff"
 
 /obj/item/weapon/card/id/torch/gold
-	desc = "A golden identification card belonging to the Commanding Officer."
+	desc = "A golden identification card belonging to the Captain."
 	item_state = "gold_id"
 	job_access_type = /datum/job/captain
 	color = "#d4c780"
@@ -21,15 +21,15 @@
 
 // SolGov Crew and Contractors
 /obj/item/weapon/card/id/torch/crew
-	desc = "An identification card issued to SolGov crewmembers aboard the SEV Torch."
+	desc = "An identification card issued to crewmembers aboard the NTEV Blue Jay."
 	color = "#d3e3e1"
 	job_access_type = /datum/job/crew
 	color = "#ccecff"
 
 
 /obj/item/weapon/card/id/torch/contractor
-	desc = "An identification card issued to private contractors aboard the SEV Torch."
-	job_access_type = DEFAULT_JOB_TYPE
+	desc = "An identification card issued to private contractors aboard the NTEV Blue Jay."
+	job_access_type = /datum/job/assistant
 	color = COLOR_GRAY80
 
 
@@ -108,7 +108,7 @@
 	detail_color = COLOR_BROWN
 
 /obj/item/weapon/card/id/torch/crew/service //unused
-	job_access_type = DEFAULT_JOB_TYPE
+	job_access_type = /datum/job/assistant
 	detail_color = COLOR_CIVIE_GREEN
 
 /obj/item/weapon/card/id/torch/crew/service/janitor
@@ -121,7 +121,7 @@
 	job_access_type = /datum/job/chaplain
 
 /obj/item/weapon/card/id/torch/contractor/service //unused
-	job_access_type = DEFAULT_JOB_TYPE
+	job_access_type = /datum/job/assistant
 	detail_color = COLOR_CIVIE_GREEN
 
 /obj/item/weapon/card/id/torch/contractor/service/bartender
@@ -132,10 +132,8 @@
 	job_access_type = /datum/job/representative
 	detail_color = COLOR_COMMAND_BLUE
 
-/obj/item/weapon/card/id/torch/crew/sea
-	job_access_type = /datum/job/sea
-	detail_color = COLOR_COMMAND_BLUE
-	extra_details = list("onegoldstripe")
+/obj/item/weapon/card/id/torch/crew/representative/bodyguard
+	job_access_type = /datum/job/bodyguard
 
 /obj/item/weapon/card/id/torch/crew/bridgeofficer
 	job_access_type = /datum/job/bridgeofficer
@@ -161,7 +159,7 @@
 	color = COLOR_WHITE
 
 /obj/item/weapon/card/id/torch/crew/research
-	desc = "A card issued to science personnel aboard the SEV Torch."
+	desc = "A card issued to science personnel aboard the NTEV Blue Jay."
 	job_access_type = /datum/job/scientist_assistant
 	detail_color = COLOR_RESEARCH
 
@@ -175,12 +173,12 @@
 //NanoTrasen and Passengers
 
 /obj/item/weapon/card/id/torch/passenger
-	desc = "A card issued to passengers aboard the SEV Torch."
-	job_access_type = DEFAULT_JOB_TYPE
+	desc = "A card issued to passengers aboard the NTEV Blue Jay."
+	job_access_type = /datum/job/assistant
 	detail_color = COLOR_PAKISTAN_GREEN
 
 /obj/item/weapon/card/id/torch/passenger/research
-	desc = "A card issued to corporate personnel aboard the SEV Torch."
+	desc = "A card issued to corporate personnel aboard the NTEV Blue Jay."
 	job_access_type = /datum/job/scientist_assistant
 	detail_color = COLOR_BOTTLE_GREEN
 

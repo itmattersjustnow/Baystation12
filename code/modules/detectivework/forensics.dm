@@ -193,7 +193,7 @@ atom/proc/add_fibers(mob/living/carbon/human/M)
 
 //on examination get hints of evidence
 /mob/examinate(atom/A as mob|obj|turf in view())
-	if(UNLINT(..()))
+	if(..())
 		return 1 //I'll admit I am just imitating examine.dm
 
 

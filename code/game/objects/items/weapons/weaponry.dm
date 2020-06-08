@@ -62,19 +62,17 @@
 
 /obj/item/weapon/energy_net/throw_impact(atom/hit_atom)
 	..()
-	try_capture_mob(hit_atom)
 
-// This will validate the hit_atom, then spawn an energy_net effect and qdel itself
-/obj/item/weapon/energy_net/proc/try_capture_mob(mob/living/M)
+	var/mob/living/M = hit_atom
 
 	if(!istype(M) || locate(/obj/effect/energy_net) in M.loc)
 		qdel(src)
-		return FALSE
+		return 0
 
 	var/turf/T = get_turf(M)
 	if(T)
-		var/obj/effect/energy_net/net_effect = new net_type(T)
-		net_effect.capture_mob(M)
+		var/obj/effect/energy_net/net = new net_type(T)
+		net.capture_mob(M)
 		qdel(src)
 
 	// If we miss or hit an obstacle, we still want to delete the net.

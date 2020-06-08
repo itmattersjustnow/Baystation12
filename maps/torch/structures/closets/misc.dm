@@ -25,7 +25,7 @@
 	)
 
 /obj/structure/closet/secure_closet/liaison
-	name = "\improper corporate liaison's locker"
+	name = "\improper internal affairs agent's locker"
 	req_access = list(access_liaison)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/corporate/liaison
 
@@ -56,26 +56,25 @@
 	)
 
 /obj/structure/closet/secure_closet/bodyguard
-	name = "\improper corporate protection locker"
+	name = "\improper SFP protection locker"
 	req_access = list(access_sec_guard)
-	closet_appearance = /decl/closet_appearance/secure_closet/torch/corporate/bodyguard
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/sol
 
 /obj/structure/closet/secure_closet/bodyguard/WillContain()
 	return list(
 		/obj/item/device/flash,
 		/obj/item/clothing/accessory/storage/holster/armpit,
-		/obj/item/weapon/gun/energy/gun/secure/corporate,
+		/obj/item/weapon/gun/energy/gun/secure,
 		/obj/item/weapon/storage/secure/briefcase,
 		/obj/item/clothing/shoes/laceup,
-		/obj/item/clothing/under/rank/internalaffairs/plain/nt,
+		/obj/item/clothing/under/rank/internalaffairs/plain/solgov,
 		/obj/item/clothing/suit/storage/toggle/suit/black,
 		/obj/item/clothing/gloves/color/black,
-		/obj/item/clothing/head/helmet/nt/guard,
-		/obj/item/clothing/suit/armor/pcarrier/medium/nt,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/suit/armor/pcarrier/medium,
 		/obj/item/clothing/glasses/sunglasses/big,
-		/obj/item/clothing/accessory/badge/nanotrasen,
-		/obj/item/device/radio/headset/heads/torchcorp,
-		/obj/item/device/radio/headset/heads/torchcorp/alt,
+		/obj/item/clothing/accessory/badge/agent,
+		/obj/item/device/radio/headset/headset_com,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/weapon/storage/belt/holster/general,
 		/obj/item/device/flashlight/maglight,

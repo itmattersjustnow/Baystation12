@@ -63,7 +63,7 @@
 
 /datum/job/submap/is_restricted(var/datum/preferences/prefs, var/feedback)
 	var/datum/species/S = all_species[prefs.species]
-	if(LAZYACCESS(minimum_character_age, S.get_bodytype()) && (prefs.age < minimum_character_age[S.get_bodytype()]))
+	if(LAZYACCESS(minimum_character_age, S.get_bodytype()) && (prefs.age < minimum_character_age[S.get_bodytype()]) && config.use_char_age_restriction_for_jobs)
 		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.get_bodytype()]].</span>")
 		return TRUE
 	if(LAZYLEN(whitelisted_species) && !(prefs.species in whitelisted_species))

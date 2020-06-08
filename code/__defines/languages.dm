@@ -22,6 +22,11 @@
 #define LANGUAGE_ADHERENT          "Protocol"
 #define LANGUAGE_VOX               "Vox-pidgin"
 #define LANGUAGE_NABBER            "Serpentid"
+#define LANGUAGE_SERGAL            "Sagaru"
+#define LANGUAGE_RESOMI            "Schechi"
+#define LANGUAGE_SIIK_MAAS            "Siik'maas"
+#define LANGUAGE_AKHANI            "Akhani"
+#define LANGUAGE_VULP            "Canilunzt"
 
 //Antag
 #define LANGUAGE_CULT              "Cult"

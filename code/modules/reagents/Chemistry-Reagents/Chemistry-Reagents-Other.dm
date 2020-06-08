@@ -504,6 +504,13 @@
 	color = "#ffe8e8"
 	boompower = 2
 
+/datum/reagent/nutriment/biomass
+	name = "Biomass"
+	id = "biomass"
+	description = "A slurry of compounds that contains the basic requirements for life."
+	taste_description = "salty meat"
+	reagent_state = LIQUID
+	color = "#df9fbf"
 /datum/reagent/dye
 	name = "Dye"
 	description = "Non-toxic artificial coloration used for food and drinks. When mixed with reagents, the compound will take on the dye's coloration."

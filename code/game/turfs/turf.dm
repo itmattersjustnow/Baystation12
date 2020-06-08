@@ -75,9 +75,6 @@
 		SSao.queue -= src
 		ao_queued = 0
 
-	if (z_flags & ZM_MIMIC_BELOW)
-		cleanup_zmimic()
-
 	if (bound_overlay)
 		QDEL_NULL(bound_overlay)
 
@@ -309,7 +306,7 @@ var/const/enterloopsanity = 100
 		var/intial_dir = TT.init_dir
 		spawn(2)
 			step(AM, turn(intial_dir, 180))
-				
+
 /turf/proc/can_engrave()
 	return FALSE
 
@@ -360,7 +357,7 @@ var/const/enterloopsanity = 100
 
 /turf/proc/is_floor()
 	return FALSE
-
+/*
 /turf/proc/get_obstruction()
 	if (density)
 		LAZYADD(., src)
@@ -370,3 +367,4 @@ var/const/enterloopsanity = 100
 		var/atom/movable/AM = thing
 		if (AM.simulated && AM.blocks_airlock())
 			LAZYADD(., AM)
+*/

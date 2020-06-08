@@ -1,3 +1,3 @@
 /obj/machinery/computer/rdconsole/petrov
-	name = "petrov fabricator console"
+	name = "owl fabricator console"
 	id = 3

@@ -18,6 +18,10 @@
 	var/breakouttime = 1200 //Deciseconds = 120s = 2 minutes
 	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
 	var/cuff_type = "handcuffs"
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/misc.dmi'
+		)
+
 
 /obj/item/weapon/handcuffs/examine(mob/user)
 	. = ..()
@@ -179,3 +183,12 @@ var/last_chew = 0
 	breakouttime = 200
 	cuff_type = "duct tape"
 	health = 50
+
+/////////
+// Fuzzy Cuffs. Kill me.
+/////////
+
+/obj/item/weapon/handcuffs/fuzzy
+	name = "fuzzy cuffs"
+	icon_state = "fuzzycuff"
+	desc = "Use this to keep... 'prisoners' in line."

@@ -30,7 +30,7 @@
 	)
 
 /obj/structure/closet/secure_closet/security_torch
-	name = "master at arms' locker"
+	name = "security officer' locker"
 	req_access = list(access_brig)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/security
 
@@ -49,7 +49,7 @@
 		/obj/item/taperoll/police,
 		/obj/item/device/hailer,
 		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/weapon/gun/energy/gun/small/secure,
+		/obj/item/gunbox,
 		/obj/item/device/megaphone,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/gloves/thick/duty/solgov/sec,
@@ -63,21 +63,27 @@
 
 
 /obj/structure/closet/secure_closet/cos
-	name = "chief of security's locker"
+	name = "head of security's locker"
 	req_access = list(access_hos)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/security/hos
 
 /obj/structure/closet/secure_closet/cos/WillContain()
 	return list(
 		/obj/item/clothing/suit/armor/pcarrier/medium/command/security,
+		/obj/item/clothing/suit/armor/hos/jensen,
+		/obj/item/clothing/suit/armor/hos,
 		/obj/item/clothing/head/helmet/solgov/command,
 		/obj/item/device/radio/headset/heads/cos,
 		/obj/item/device/radio/headset/heads/cos/alt,
+		/obj/item/clothing/head/HoS,
+		/obj/item/clothing/under/rank/head_of_security,
+		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/taperoll/police,
 		/obj/item/weapon/handcuffs,
 		/obj/item/weapon/storage/belt/holster/security,
 		/obj/item/weapon/storage/belt/holster/general,
+		/obj/item/clothing/accessory/storage/holster/thigh,
 		/obj/item/device/flash,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/melee/baton/loaded,
@@ -100,7 +106,7 @@
 	)
 
 /obj/structure/closet/secure_closet/brigchief
-	name = "brig chief's locker"
+	name = "warden's locker"
 	req_access = list(access_armory)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/security/warden
 
@@ -143,7 +149,8 @@
 		/obj/item/device/radio/headset/headset_sec/alt,
 		/obj/item/clothing/head/helmet/solgov/security,
 		/obj/item/clothing/suit/armor/pcarrier/medium/security,
-		/obj/item/weapon/gun/energy/gun/small/secure,
+//		/obj/item/weapon/gun/energy/gun/small/secure,
+		/obj/item/gunbox,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/weapon/reagent_containers/spray/pepper,
@@ -155,6 +162,7 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/weapon/storage/belt/holster/forensic,
 		/obj/item/weapon/storage/belt/holster/security,
+		/obj/item/clothing/accessory/storage/holster/armpit,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/gloves/thick/duty/solgov/sec,
 		/obj/item/weapon/material/knife/folding/swiss/sec,

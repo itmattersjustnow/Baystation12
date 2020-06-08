@@ -1,59 +1,59 @@
 
 /datum/computer_file/report/recipient/medical
-	logo = "\[solcrest\]"
-	form_name = "SCG-MED-00"
+	logo = "\[bluelogo\]"
+	form_name = "NT-MED-00"
 
 /datum/computer_file/report/recipient/medical/checkup
-	form_name = "SCG-MED-013b"
-	title = "Regular Health Checkup Checklist"
+	form_name = "NT-MED-013b"
+	title = "Контрольный Список Медицинского Осмотра"
 	available_on_ntnet = 1
 
 /datum/computer_file/report/recipient/medical/checkup/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/instruction, "You would need following equipment for this: stethoscope, health analyzer, penlight.")
-	add_field(/datum/report_field/people/from_manifest, "Patient")
-	add_field(/datum/report_field/date, "Date")
-	add_field(/datum/report_field/time, "Time")
-	add_field(/datum/report_field/simple_text, "Take pulse", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Check blood pressure", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Listen for heart noises", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Listen for lung noises", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask if they exercise", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask if they smoke, and how much per day", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Check eye reaction to penlight", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask about any recent radiation exposure", "NOT CHECKED")
-	add_field(/datum/report_field/simple_text, "Ask about any recent sickness", "NOT CHECKED")
-	add_field(/datum/report_field/pencode_text, "Other Notes")
-	add_field(/datum/report_field/signature, "Doctor's Signature")
+	add_field(/datum/report_field/text_label/instruction, "Для проведения регулярного медицинского осмотра вам понадобится следующее оборудование: стетоскоп, анализатор здоровья, фонарик.")
+	add_field(/datum/report_field/people/from_manifest, "Пациент")
+	add_field(/datum/report_field/date, "Дата")
+	add_field(/datum/report_field/time, "Время")
+	add_field(/datum/report_field/simple_text, "Проверить пульс", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить кровяное давление", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить наличие шумов в сердце", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить наличие шумов в легких", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, занимается ли пациент спортом", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, курит ли пациент; если да, как часто", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Проверить реакцию зрачков на свет", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента, не подвергался ли пациент недавно радиационному облучению", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/simple_text, "Спросить пациента о недавно перенесенных болезнях", "НЕ ПРОВЕРЕНО")
+	add_field(/datum/report_field/pencode_text, "Другие заметки")
+	add_field(/datum/report_field/signature, "Подпись врача")
 	set_access(access_edit = access_medical_equip)
 
 /datum/computer_file/report/recipient/medical/autopsy
-	form_name = "SCG-MED-015"
-	title = "Autopsy Report"
+	form_name = "NT-MED-015"
+	title = "Отчет о Вскрытии"
 	available_on_ntnet = 1
 
 /datum/computer_file/report/recipient/medical/autopsy/generate_fields()
 	..()
-	add_field(/datum/report_field/simple_text, "Vessel", GLOB.using_map.station_name)
-	add_field(/datum/report_field/simple_text, "Patient Name")
-	add_field(/datum/report_field/text_label/header, "Death Information")
-	add_field(/datum/report_field/date, "Date of Death")
-	add_field(/datum/report_field/time, "Time of Death")
-	add_field(/datum/report_field/text_label/instruction, "Check yes if the time of death is estimated, no if it is exact.")
-	add_field(/datum/report_field/options/yes_no, "Estimated")
-	add_field(/datum/report_field/simple_text, "Cause(s) of Death")
-	add_field(/datum/report_field/text_label/instruction, "Describe how the patient died.")
-	add_field(/datum/report_field/pencode_text, "Death Narrative")
-	add_field(/datum/report_field/text_label/instruction, "Describe postmortem handling of the body.")
-	add_field(/datum/report_field/pencode_text, "Postmortem Narrative")
-	add_field(/datum/report_field/text_label/header, "Doctor Information")
-	add_field(/datum/report_field/text_label/instruction, "By signing below, I affirm that all of the above is factually correct to the best of my knowledge.")
-	add_field(/datum/report_field/people/from_manifest, "Doctor")
-	add_field(/datum/report_field/signature, "Doctor's Signature")
+	add_field(/datum/report_field/simple_text, "Судно", GLOB.using_map.station_name)
+	add_field(/datum/report_field/simple_text, "Полное имя пациента")
+	add_field(/datum/report_field/text_label/header, "Сведения о смерти")
+	add_field(/datum/report_field/date, "Дата смерти")
+	add_field(/datum/report_field/time, "Время смерти")
+	add_field(/datum/report_field/text_label/instruction, "Отметьте, является ли время смерти приблизительным.")
+	add_field(/datum/report_field/options/yes_no, "Приблизительное?")
+	add_field(/datum/report_field/simple_text, "Причина(-ы) смерти")
+	add_field(/datum/report_field/text_label/instruction, "Опишите, как умер пациент.")
+	add_field(/datum/report_field/pencode_text, "Описание смерти")
+	add_field(/datum/report_field/text_label/instruction, "Опишите посмертное обращение с телом. Обратитесь к мед.записям.")
+	add_field(/datum/report_field/pencode_text, "Посмертные инструкции")
+	add_field(/datum/report_field/text_label/header, "Сведения о враче")
+	add_field(/datum/report_field/text_label/instruction, "Подписываясь ниже, я подтверждаю, что все вышесказанное соответствует фактам, известным мне.")
+	add_field(/datum/report_field/people/from_manifest, "Врач")
+	add_field(/datum/report_field/signature, "Подпись врача")
 	set_access(access_morgue, access_surgery)
 
-	add_field(/datum/report_field/text_label/instruction, "By signing below, I affirm that I have reviewed all of the above and affirm it is factually correct to the best of my knowledge. If there is no Chief Medical Officer available, this signature may be skipped.")
+	add_field(/datum/report_field/text_label/instruction, "Подписываясь ниже, я подтверждаю, что я рассмотрел все вышеизложенное и могу сказать, что это соответствует фактам, известным мне. Если Главный Врач отсутствует, то эта подпись может быть пропущена.")
 	var/datum/report_field/cmofield = add_field(/datum/report_field/people/from_manifest, "Chief Medical Officer")
-	cmofield.set_access(access_morgue, access_cmo)	
-	cmofield = add_field(/datum/report_field/signature, "Chief Medical Officer's Signature")
+	cmofield.set_access(access_morgue, access_cmo)
+	cmofield = add_field(/datum/report_field/signature, "Подпись Главного Врача")
 	cmofield.set_access(access_morgue, access_cmo)

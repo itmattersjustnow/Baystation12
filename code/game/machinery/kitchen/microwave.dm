@@ -182,7 +182,7 @@
 				user.visible_message(SPAN_NOTICE("\The [user] empties \the [P] into \the [src]."),
 				SPAN_NOTICE("You empty what you can from \the [P] into \the [src]."))
 			return TRUE
-			
+
 		else
 			to_chat(user, SPAN_WARNING("\The [P] doesn't contain any compatible items to put into \the [src]!"))
 
@@ -207,7 +207,7 @@
 
 	else
 		to_chat(user, "<span class='warning'>You have no idea what you can cook with this [O].</span>")
-		
+
 	updateUsrDialog()
 
 /obj/machinery/microwave/components_are_accessible(path)

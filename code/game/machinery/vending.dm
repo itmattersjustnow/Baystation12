@@ -1118,6 +1118,7 @@
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/syndicola = 50,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/syndicolax = 30,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/artbru = 20,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/revo = 20,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/square/boda = 20,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/square/bodaplus = 20)
 	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up = 300) // TODO Russian cola can
@@ -1265,7 +1266,7 @@
 // eliza's attempt at a new vending machine
 /obj/machinery/vending/games
 	name = "Good Clean Fun"
-	desc = "Vends things that the CO and SEA are probably not going to appreciate you fiddling with instead of your job..."
+	desc = "Vends things that your boss are probably not going to appreciate you fiddling with instead of your job..."
 	vend_delay = 15
 	product_slogans = "Escape to a fantasy world!;Fuel your gambling addiction!;Ruin your friendships!"
 	product_ads = "Elves and dwarves!;Totally not satanic!;Fun times forever!"

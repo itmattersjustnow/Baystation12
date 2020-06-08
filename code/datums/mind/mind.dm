@@ -105,7 +105,7 @@
 		alert("Not before round-start!", "Alert")
 		return
 
-	var/out = "<B>[name]</B>[(current&&(current.real_name!=name))?" (as [current.real_name])":""]<br>"
+	var/out = "<meta charset=\"UTF-8\"><B>[name]</B>[(current&&(current.real_name!=name))?" (as [current.real_name])":""]<br>"
 	out += "Mind currently owned by key: [key] [active?"(synced)":"(not synced)"]<br>"
 	out += "Assigned role: [assigned_role]. <a href='?src=\ref[src];role_edit=1'>Edit</a><br>"
 	out += "<hr>"
@@ -555,6 +555,10 @@
 /mob/living/carbon/slime/mind_initialize()
 	..()
 	mind.assigned_role = "slime"
+
+/mob/living/carbon/alien/larva/mind_initialize()
+	..()
+	mind.special_role = "Larva"
 
 //AI
 /mob/living/silicon/ai/mind_initialize()

@@ -103,4 +103,9 @@
 			icon_state = "[modifystate][ratio]"
 		else
 			icon_state = "[initial(icon_state)][ratio]"
+	else
+		if(modifystate)
+			icon_state = "[modifystate]0"
+		else
+			icon_state = "[initial(icon_state)]0"
 		update_held_icon()

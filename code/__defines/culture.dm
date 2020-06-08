@@ -104,8 +104,9 @@
 #define FACTION_SKRELL_QERRVOAL "Qerr'voal"
 #define FACTION_SKRELL_QALAOA "Qala'oa"
 #define FACTION_SKRELL_YIITALANA "Yii'talana"
-#define FACTION_SKRELL_KRRIGLI "Krri'gli"
+#define FACTION_SKRELL_KRIGLI "Kri'gli"
 #define FACTION_SKRELL_QONPRRI "Qon'prri"
+#define FACTION_SKRELL_KRRIGLI "Krri'gli"
 
 // Adherent cultures.
 #define CULTURE_ADHERENT             "The Vigil"
@@ -177,10 +178,34 @@
 #define CULTURE_NABBER_A      "Grade A"
 #define CULTURE_NABBER_APLUS  "Grade A+"
 
-// Ascent culture.
+// Ascent cultures.
 #define CULTURE_ASCENT           "The Ascent"
 #define HOME_SYSTEM_KHARMAANI    "Core"
 #define FACTION_ASCENT_GYNE      "Ascent Gyne"
 #define FACTION_ASCENT_ALATE     "Ascent Alate"
 #define FACTION_ASCENT_SERPENTID "Ascent Serpentid"
 #define RELIGION_KHARMAANI       "Nest-Lineage Veneration"
+
+// Sergal cultures.
+#define CULTURE_SERGAL "The Sergals"
+#define HOME_SYSTEM_SERGALTAL "Tal"
+#define FACTION_SERGAL_SHIGU "Shigu Dukedom"
+#define FACTION_SERGAL_GOLD_RING "Gold ring megalopolis"
+#define FACTION_SERGAL_REONO "Reono lands"
+#define RELIGION_SERGAL_ANIMISM "northern religions"
+#define RELIGION_SERGAL_GOLD_RING "religion of Gold ring"
+
+// Tajaran cultures.
+#define CULTURE_HHARAR       "Hharar, Tajaran"
+#define CULTURE_NJARIR_AKHAN       "Njarir'Akhan, Tajaran"
+#define CULTURE_ZHAN_KHAZAN        "Zhan-Khazan, Tajaran"
+#define HOME_SYSTEM_MERALAR "Meralar"
+#define RELIGION_TAJRKII        "Tajr'kii Rarkajar"
+
+// Vulpkanin cultures.
+#define CULTURE_VULP       "Vazzendian, Vulpkanin"
+#define CULTURE_VULP_KELE       "Kelebunztim, Vulpkanin"
+#define CULTURE_VULP_SOL       "Sol, Vulpkanin"
+#define HOME_SYSTEM_ALTAM "Altam"
+#define HOME_SYSTEM_KELUNE "Kelune"
+#define HOME_SYSTEM_DALSTADT "Dalstadt"

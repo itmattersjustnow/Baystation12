@@ -9,18 +9,29 @@
 		/datum/species/human/mule = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant)
 	)
 
-#define HUMAN_ONLY_JOBS /datum/job/captain, /datum/job/hop, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/representative, /datum/job/sea, /datum/job/pathfinder, /datum/job/rd
+#define HUMAN_ONLY_JOBS /datum/job/representative
 	species_to_job_blacklist = list(
-		/datum/species/unathi  = list(HUMAN_ONLY_JOBS, /datum/job/liaison, /datum/job/warden), //Other jobs unavailable via branch restrictions,
-		/datum/species/unathi/yeosa = list(HUMAN_ONLY_JOBS, /datum/job/liaison, /datum/job/warden),
-		/datum/species/skrell  = list(HUMAN_ONLY_JOBS),
-		/datum/species/machine = list(HUMAN_ONLY_JOBS, /datum/job/liaison, /datum/job/psychiatrist),
-		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/officer, /datum/job/bodyguard, /datum/job/liaison, /datum/job/warden),	//Other jobs unavailable via branch restrictions,
+		/datum/species/unathi  = list(HUMAN_ONLY_JOBS, /datum/job/representative), //Other jobs unavailable via branch restrictions,
+		/datum/species/unathi/yeosa = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/skrell  = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/machine = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/officer, /datum/job/warden, /datum/job/detective),
+		/datum/species/sergal = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/sergal/northern = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/sergal/eastern = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/akula = list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/humanathi= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/tajaran= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/vasilissan= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/vulpkanin= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/customhuman= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/custom= list(HUMAN_ONLY_JOBS, /datum/job/representative),
+		/datum/species/resomi= list(HUMAN_ONLY_JOBS, /datum/job/representative)
 	)
 #undef HUMAN_ONLY_JOBS
 
 	allowed_jobs = list(/datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos,
-						/datum/job/liaison, /datum/job/bodyguard, /datum/job/representative, /datum/job/sea,
+						/datum/job/liaison, /datum/job/bodyguard, /datum/job/representative,
 						/datum/job/bridgeofficer, /datum/job/pathfinder, /datum/job/nt_pilot, /datum/job/explorer,
 						/datum/job/senior_engineer, /datum/job/engineer, /datum/job/roboticist, /datum/job/engineer_trainee,
 						/datum/job/officer, /datum/job/warden, /datum/job/detective,

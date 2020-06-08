@@ -11,8 +11,16 @@
 	cold_protection =    HEAD|FACE|EYES
 	brightness_on = 0.5
 	sprite_sheets = list(
-		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_head_helmet_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulpkanin.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_head_helmet_tajaran.dmi',
+		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
+		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
+		SPECIES_EASTERN = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_head_resomi.dmi',
+		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi'
 		)
 	species_restricted = null
 
@@ -49,7 +57,16 @@
 	resilience = 0.2
 	can_breach = 1
 	sprite_sheets = list(
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_suit_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_suit_vulpkanin.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_suit_tajaran.dmi',
+		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
+		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
+		SPECIES_EASTERN = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_suit_skrell.dmi'
 		)
 	var/list/supporting_limbs = list() //If not-null, automatically splints breaks. Checked when removing the suit.
 

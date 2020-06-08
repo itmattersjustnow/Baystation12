@@ -1265,8 +1265,8 @@
 	pixel_y = 8;
 	req_access = list("ACCESS_SYNDICATE")
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/external_air{
+	dir = 4;
 	id_tag = "skipjack_shuttle_pump"
 	},
 /turf/simulated/floor/plating,

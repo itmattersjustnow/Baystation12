@@ -1,14 +1,28 @@
-# baystation12
+# [RU]The Donnarex Project
 
-[Website](http://baystation12.net/) - [Code](http://github.com/Baystation12/Baystation12/) - [Discord](https://discord.baystation12.net/) - [IRC](https://kiwiirc.com/client/irc.sorcery.net/codershuttle): irc://irc.sorcery.net/#codershuttle
+# CREDITS
+[Code of The Donnarex Project](https://github.com/AshtonFox/Donnarex) - [Code of The Fluffy Frontier](https://github.com/Low3/The-Fluffy-Frontier) - [Code of The Original BoH](https://github.com/BoHBranch/BoH-Bay) - [Code of Baystation12](https://github.com/Baystation12/Baystation12)
+
+[Discord](https://discord.gg/MQDs753)
+
+This is a fork of Baystation12's (And Bastion of Hestia's) code for BYOND on Space Station 13. Previously used on The Fluffy Frontier server, it was then replaced with another build and left idle. This splice was created to keep the build up-to-date, mainly counting on the Baystation12 repository and also on the BoH Branch.
 
 ---
 
 ### CONTRIBUTING GUIDELINES
 
-**Please refrain from making non code related comments in pull requests on GitHub.** See the Code of Conduct on where you may provide feedback to users.
+**Please refrain from making non code related comments in pull requests on GitHub.**
+-Basically:
 
-All users are expected to review [/docs/CODE_OF_CONDUCT.md](/docs/CODE_OF_CONDUCT.md) before interacting with the repository or other users.
+Don't be a dick.
+
+Make a logical argument.
+
+Maintainer has final say on code issues.
+
+
+Maintainers have the right to punish you for breaking these rules.
+
 
 ---
 

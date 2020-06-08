@@ -14,7 +14,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump/get_mechanics_info()
 	. = ..()
-	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by XO. \
+	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by HoP. \
 	<br>While you can load this gun with lethal ammo, there's a considerable risk of explosion when fired."
 
 /obj/item/weapon/gun/projectile/shotgun/pump/exploration/get_antag_info()
@@ -102,7 +102,7 @@
 
 /obj/item/projectile/bullet/shotgun/beanbag/net/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
 	var/obj/item/weapon/energy_net/safari/net = new(loc)
-	net.try_capture_mob(target)
+	net.throw_impact(target)
 	return TRUE
 
 /obj/item/weapon/storage/box/ammo/explo_shells

@@ -18,6 +18,9 @@
 	//left for backward compatability
 	var/ks1type = /obj/item/device/encryptionkey
 	var/ks2type = null
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_ears_resomi.dmi'
+		)
 
 /obj/item/device/radio/headset/Initialize()
 	. = ..()
@@ -195,7 +198,7 @@
 	return ..(freq, level, 1)
 
 /obj/item/device/radio/headset/heads/rd
-	name = "chief science officer's headset"
+	name = "research director's headset"
 	desc = "Headset of the researching God."
 	icon_state = "com_headset"
 	item_state = "headset"

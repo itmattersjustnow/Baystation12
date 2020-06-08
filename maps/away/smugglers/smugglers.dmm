@@ -445,7 +445,7 @@
 "aX" = (
 /obj/structure/table/rack{
 	dir = 8;
-	
+
 	},
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor,
@@ -498,7 +498,7 @@
 "bf" = (
 /obj/structure/table/rack{
 	dir = 8;
-	
+
 	},
 /obj/item/weapon/tank/air{
 	pixel_x = 5
@@ -547,7 +547,7 @@
 "bm" = (
 /obj/structure/table/rack{
 	dir = 8;
-	
+
 	},
 /obj/random/voidsuit,
 /obj/random/voidhelmet,

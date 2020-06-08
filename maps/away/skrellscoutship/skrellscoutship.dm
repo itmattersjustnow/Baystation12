@@ -16,8 +16,8 @@
 	)
 
 /obj/effect/overmap/visitable/sector/skrellscoutspace
-	name = "Empty Sector"
-	desc = "Slight traces of a cloaking device are present. Unable to determine exact location."
+	name = "ion cloud"
+	desc = "Slight traces of a strange signal are present. Unable to determine exact location."
 	in_space = 1
 	icon_state = "event"
 	hide_from_reports = TRUE
@@ -204,8 +204,8 @@
 
 /obj/machinery/power/smes/buildable/preset/skrell
 	uncreated_component_parts = list(
-		/obj/item/weapon/stock_parts/smes_coil/super_io = 2,
-		/obj/item/weapon/stock_parts/smes_coil/super_capacity = 2)
+		/obj/item/weapon/stock_parts/smes_coil/super_io = 4,
+		/obj/item/weapon/stock_parts/smes_coil/super_capacity = 4)
 	_input_maxed = TRUE
 	_output_maxed = TRUE
 	_input_on = TRUE

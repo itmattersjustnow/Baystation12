@@ -67,9 +67,9 @@ obj/machinery/computer/air_control/Destroy()
 			temp += list("pressure" = sensor_info["pressure"])
 		if(sensor_info["temperature"])
 			temp += list("temperature" = sensor_info["temperature"])
-		
+
 		data["gasses"] = list()
-		
+
 		if(sensor_info["gas"])
 			data["gasses"] = sensor_info["gas"]
 
@@ -134,7 +134,7 @@ obj/machinery/computer/air_control/Destroy()
 /obj/machinery/computer/air_control/OnTopic(mob/user, href_list, datum/topic_state/state)
 	if(..())
 		return TOPIC_HANDLED
-		
+
 	var/datum/signal/signal = new
 	signal.transmission_method = 1 //radio signal
 	signal.source = src
@@ -175,7 +175,7 @@ obj/machinery/computer/air_control/Destroy()
 	if(href_list["out_toggle_power"])
 		output_info = null
 		refreshing_output = TRUE
-		signal.data = list ("tag" = output_tag, "power_toggle" = 1, "status" = 1)
+		signal.data = list ("tag" = output_tag, "power_toggle" = 1)
 		. = 1
 
 	if(href_list["out_set_pressure"])
@@ -185,7 +185,7 @@ obj/machinery/computer/air_control/Destroy()
 		pressure_setting = between(0, pressure_setting, MAX_PUMP_PRESSURE)
 		signal.data = list ("tag" = output_tag, "set_internal_pressure" = pressure_setting, "status" = 1)
 		. = 1
-	
+
 	if(href_list["s_out_set_pressure"])
 		output_info = null
 		refreshing_output = TRUE
@@ -234,7 +234,7 @@ obj/machinery/computer/air_control/Destroy()
 		if(t)
 			src.sensor_tag = t
 		return TOPIC_REFRESH
-	
+
 	if(href_list["set_sensor_name"])
 		var/t = sanitizeSafe(input(usr, "Enter the sensor name.", src.name, src.sensor_name))
 		t = sanitizeSafe(t, MAX_NAME_LEN)
@@ -249,7 +249,7 @@ obj/machinery/computer/air_control/Destroy()
 	if(href_list["set_screen"])
 		data["screen"] = text2num(href_list["set_screen"])
 		return TOPIC_REFRESH
-	
+
 	if(!radio_connection)
 		return TOPIC_HANDLED
 
@@ -316,6 +316,7 @@ obj/machinery/computer/air_control/Destroy()
 		signal.data = list(
 			"tag" = device_tag,
 			"set_power" = injecting,
+			"power" = injecting,
 			"sigtype" = "command"
 		)
 

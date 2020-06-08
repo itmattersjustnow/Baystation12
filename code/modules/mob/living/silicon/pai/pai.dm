@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 	icon_state = "drone"
 	hud_type = /datum/hud/pai
 	emote_type = 2		// pAIs emotes are heard, not seen, so they can be seen through a container (eg. person)
-	pass_flags = PASS_FLAG_TABLE
+	pass_flags = 1
 	mob_size = MOB_SMALL
 
 	can_pull_size = ITEM_SIZE_SMALL
@@ -217,6 +217,12 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 
 	if(world.time <= last_special)
 		return
+
+	var/obj/item/integrated_circuit/manipulation/ai/A = src.loc //Frontier add start
+	if(istype(A))
+		A.unload_ai()
+		src.visible_message("[src] ejects from [A].") //Frontier add end
+
 	last_special = world.time + 100
 
 	// Move us into the card and move the card to the ground.

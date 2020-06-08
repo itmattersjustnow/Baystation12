@@ -148,6 +148,9 @@
 	name = "\improper Laundry Room"
 	icon_state = "Sleep"
 
+/area/crew_quarters/garden
+	name = "\improper Ship Garden"
+
 //Second Deck (Z-3)
 /area/maintenance/seconddeck
 	name = "Second Deck Maintenance"
@@ -343,34 +346,34 @@
 //Charon
 
 /area/exploration_shuttle/
-	name = "\improper Charon"
+	name = "\improper NTEV Falcon"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/exploration_shuttle/cockpit
-	name = "\improper Charon - Cockpit"
+	name = "\improper NTEV Falcon - Cockpit"
 	req_access = list(access_expedition_shuttle)
 
 /area/exploration_shuttle/atmos
-	name = "\improper Charon - Atmos Compartment"
+	name = "\improper NTEV Falcon - Atmos Compartment"
 
 /area/exploration_shuttle/power
-	name = "\improper Charon - Power Compartment"
+	name = "\improper NTEV Falcon - Power Compartment"
 
 /area/exploration_shuttle/crew
-	name = "\improper Charon - Crew Compartment"
+	name = "\improper NTEV Falcon - Crew Compartment"
 
 /area/exploration_shuttle/cargo
-	name = "\improper Charon - Cargo Bay"
+	name = "\improper NTEV Falcon - Cargo Bay"
 
 /area/exploration_shuttle/airlock
-	name = "\improper Charon - Airlock Compartment"
+	name = "\improper NTEV Falcon - Airlock Compartment"
 
 //Aquila
 
 /area/aquila
-	name = "\improper SEV Aquila"
+	name = "\improper NTSC Eagle"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/reinforced/airless
 	requires_power = 1
@@ -378,41 +381,41 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/aquila/cockpit
-	name = "\improper SEV Aquila - Cockpit"
+	name = "\improper NTSC Eagle - Cockpit"
 	req_access = list(access_aquila)
 
 /area/aquila/maintenance
-	name = "\improper SEV Aquila - Maintenance"
+	name = "\improper NTSC Eagle - Maintenance"
 	req_access = list(access_solgov_crew)
 
 /area/aquila/storage
-	name = "\improper SEV Aquila - Storage"
+	name = "\improper NTSC Eagle - Storage"
 	req_access = list(access_solgov_crew)
 
 /area/aquila/secure_storage
-	name = "\improper SEV Aquila - Secure Storage"
+	name = "\improper NTSC Eagle - Secure Storage"
 	req_access = list(access_aquila)
 
 /area/aquila/mess
-	name = "\improper SEV Aquila - Mess Hall"
+	name = "\improper NTSC Eagle - Mess Hall"
 
 /area/aquila/passenger
-	name = "\improper SEV Aquila - Passenger Compartment"
+	name = "\improper NTSC Eagle - Passenger Compartment"
 
 /area/aquila/medical
-	name = "\improper SEV Aquila - Medical"
+	name = "\improper NTSC Eagle - Medical"
 
 /area/aquila/head
-	name = "\improper SEV Aquila - Head"
+	name = "\improper NTSC Eagle - Cannon"
 
 /area/aquila/airlock
-	name = "\improper SEV Aquila - Airlock Compartment"
+	name = "\improper NTSC Eagle - Airlock Compartment"
 	req_access = list(access_solgov_crew)
 
 //Guppy
 
 /area/guppy_hangar/start
-	name = "\improper Guppy"
+	name = "\improper NTRP Kestrel"
 	icon_state = "shuttlered"
 	requires_power = 1
 	dynamic_lighting = 1
@@ -423,80 +426,80 @@
 //Petrov
 
 /area/shuttle/petrov
-	name = "\improper SRV Petrov"
+	name = "\improper NTRL Owl"
 	requires_power = 1
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 	req_access = list(access_petrov)
 
 /area/shuttle/petrov/cell1
-	name = "\improper SRV Petrov - Isolation Cell 1"
+	name = "\improper NTRL Owl - Isolation Cell 1"
 	icon_state = "shuttle"
 /area/shuttle/petrov/cell2
-	name = "\improper SRV Petrov - Isolation Cell 2"
+	name = "\improper NTRL Owl - Isolation Cell 2"
 	icon_state = "shuttlegrn"
 /area/shuttle/petrov/cell3
-	name = "\improper SRV Petrov - Isolation Cell 3"
+	name = "\improper NTRL Owl - Isolation Cell 3"
 	icon_state = "shuttle"
 
 /area/shuttle/petrov/hallwaya
-	name = "\improper SRV Petrov - Lower Hallway"
+	name = "\improper NTRL Owl - Lower Hallway"
 	icon_state = "hallA"
 
 /area/shuttle/petrov/security
-	name = "\improper SRV Petrov - Security Office"
+	name = "\improper NTRL Owl - Security Office"
 	icon_state = "checkpoint1"
 	req_access = list(access_petrov_security)
 
 /area/shuttle/petrov/rd
 	icon_state = "heads_rd"
-	name = "\improper SRV Petrov - CSO's Office"
+	name = "\improper NTRL Owl - CSO's Office"
 	icon_state = "head_quarters"
 	req_access = list(access_petrov_rd)
 
 /area/shuttle/petrov/cockpit
-	name = "\improper SRV Petrov - Cockpit"
+	name = "\improper NTRL Owl - Cockpit"
 	icon_state = "shuttlered"
 	req_access = list(access_petrov_helm)
 
 /area/shuttle/petrov/maint
-	name = "\improper SRV Petrov - Maintenance"
+	name = "\improper NTRL Owl - Maintenance"
 	icon_state = "engine"
 	req_access = list(access_petrov_maint)
 
 /area/shuttle/petrov/analysis
-	name = "\improper SRV Petrov - Analysis Lab"
+	name = "\improper NTRL Owl - Analysis Lab"
 	icon_state = "devlab"
 	req_access = list(access_petrov_analysis)
 
 /area/shuttle/petrov/toxins
-	name = "\improper SRV Petrov - Toxins Lab"
+	name = "\improper NTRL Owl - Toxins Lab"
 	icon_state = "toxstorage"
 	req_access = list(access_petrov_toxins)
 
 /area/shuttle/petrov/rnd
-	name = "\improper SRV Petrov - Fabricator Lab"
+	name = "\improper NTRL Owl - Fabricator Lab"
 	icon_state = "devlab"
 
 /area/shuttle/petrov/isolation
-	name = "\improper SRV Petrov - Isolation Lab"
+	name = "\improper SNTRL Owl - Isolation Lab"
 	icon_state = "xeno_lab"
 
 /area/shuttle/petrov/phoron
-	name = "\improper SRV Petrov - Sublimation Lab"
+	name = "\improper NTRL Owl - Sublimation Lab"
 	icon_state = "toxstorage"
 	req_access = list(access_petrov_phoron)
 
 /area/shuttle/petrov/custodial
-	name = "\improper SRV Petrov - Custodial"
+	name = "\improper NTRL Owl - Custodial"
 	icon_state = "decontamination"
 
 /area/shuttle/petrov/equipment
-	name = "\improper SRV Petrov - Equipment Storage"
+	name = "\improper NTRL Owl - Equipment Storage"
 	icon_state = "locker"
 
 /area/shuttle/petrov/eva
-	name = "\improper SRV Petrov - EVA Storage"
+	name = "\improper NTRL Owl - EVA Storage"
 	icon_state = "locker"
 
 //Turbolift
@@ -594,7 +597,7 @@
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/command/captainmess
-	name = "Officer's Mess"
+	name = "Mess Hall Downstairs"
 	icon_state = "bar"
 	sound_env = MEDIUM_SOFTFLOOR
 
@@ -634,24 +637,24 @@
 
 /area/crew_quarters/heads/cobed
 	icon_state = "heads_cap"
-	name = "\improper Command - CO's Quarters"
+	name = "\improper Command - Captain's Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_captain)
 
 /area/crew_quarters/heads/office/co
 	icon_state = "heads_cap"
-	name = "\improper Command - CO's Office"
+	name = "\improper Command - Captain's Office"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_captain)
 
 /area/crew_quarters/heads/office/xo
 	icon_state = "heads_hop"
-	name = "\improper Command - XO's Office"
+	name = "\improper Command - HoP's Office"
 	req_access = list(access_hop)
 
 /area/crew_quarters/heads/office/rd
 	icon_state = "heads_rd"
-	name = "\improper Command - CSO's Office"
+	name = "\improper Command - RD's Office"
 	req_access = list(access_rd)
 
 /area/crew_quarters/heads/office/cmo
@@ -666,23 +669,23 @@
 
 /area/crew_quarters/heads/office/cos
 	icon_state = "heads_hos"
-	name = "\improper Command - CoS' Office"
+	name = "\improper Command - HoS' Office"
 	req_access = list(access_hos)
 
 /area/crew_quarters/heads/office/cl
 	icon_state = "heads_cl"
-	name = "\improper Command - CL's Office"
+	name = "\improper Command - IAA's Office"
 	req_access = list(access_liaison)
 
 /area/crew_quarters/heads/office/cl/backroom
 	icon_state = "heads_cl"
-	name = "\improper Command - CL's Backroom"
+	name = "\improper Command - IAA's Backroom"
 	req_access = list(access_liaison)
 
 /area/crew_quarters/heads/office/sgr
 	icon_state = "heads_sr"
 	name = "\improper Command - SCGR's Office"
-	req_access = list(access_representative)
+	req_access = list(list(access_representative, access_sec_guard))
 
 /area/crew_quarters/heads/office/sea
 	icon_state = "heads_sea"
@@ -771,10 +774,6 @@
 /area/vacant/cargo
 	name = "\improper Requisitions Office"
 	icon_state = "quart"
-
-/area/vacant/brig
-	name = "\improper Permanent Brig"
-	icon_state = "brig"
 
 /area/vacant/bar
 	name = "\improper Hidden Bar"
@@ -973,6 +972,18 @@
 	sound_env = SMALL_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
+/area/crew_quarters/sleep/dorm1
+	name = "\improper Dorm 1"
+	icon_state = "Sleep"
+	sound_env = SMALL_ENCLOSED
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+/area/crew_quarters/sleep/dorm2
+	name = "\improper Dorm 2"
+	icon_state = "Sleep"
+	sound_env = SMALL_ENCLOSED
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
 /area/crew_quarters/sleep/cryo/aux
 	name = "\improper First Deck Cryogenic Storage"
 	icon_state = "Sleep"
@@ -1000,7 +1011,7 @@
 // Security
 
 /area/security/bo
-	name = "\improper Security - Brig Chief"
+	name = "\improper Security - Warden"
 	icon_state = "Warden"
 	req_access = list(access_armory)
 
@@ -1059,6 +1070,16 @@
 /area/security/oldopscheck
 	name = "\improper Deactivated Security Checkpoint"
 	icon_state = "checkpoint"
+
+/area/security/brig
+	name = "\improper Permanent Brig"
+	icon_state = "brig"
+	req_access = list(access_brig)
+
+/area/security/brig/chamber
+	name = "\improper Permanent Brig Executions"
+	icon_state = "toxstorage"
+	req_access = list(access_brig)
 
 // AI
 /area/turret_protected/ai_foyer
@@ -1183,7 +1204,7 @@
 // Command
 
 /area/bridge
-	name = "\improper SEV Torch Bridge"
+	name = "\improper NTEV Blue Jay Bridge"
 	icon_state = "bridge"
 	req_access = list(access_bridge)
 

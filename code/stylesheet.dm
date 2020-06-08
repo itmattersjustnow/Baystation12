@@ -98,6 +98,8 @@ h1.alert, h2.alert		{color: #000000;}
 /* Languages */
 
 .alien					{color: #543354;}
+.tajaran				{color: #803b56;}
+.akhani					{color: #AC398C;}
 .skrell					{color: #00ced1;}
 .soghun					{color: #228b22;}
 .yeosa					{color: #218b89;}
@@ -107,6 +109,7 @@ h1.alert, h2.alert		{color: #000000;}
 .rough					{font-family: "Trebuchet MS", cursive, sans-serif;}
 .say_quote				{font-family: Georgia, Verdana, sans-serif;}
 .adherent				{color: #526c7a;}
+.vulpkanin				{color: #B97A57;}
 
 .chinese				{color: #d4a52a;}
 .indian					{color: #422863;}

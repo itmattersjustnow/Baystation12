@@ -50,8 +50,10 @@
 /datum/reagent/nutriment/proc/adjust_nutrition(var/mob/living/carbon/M, var/alien, var/removed)
 	var/nut_removed = removed
 	var/hyd_removed = removed
-	if(alien == IS_UNATHI)
-		removed *= 0.1 // Unathi get most of their nutrition from meat.
+	switch(alien)
+		if(IS_RESOMI) removed *= 0.65 // Resomi get a bit more nutrition from meat, a bit less from other stuff to compensate
+		if(IS_UNATHI) removed *= 0.1 // Unathi get most of their nutrition from meat.
+		if(IS_CARNIVORE) removed *= 0.1 // Technically a copy of IS_UNATHI, and likely spaghetti code, but whatever.
 	if(nutriment_factor)
 		M.adjust_nutrition(nutriment_factor * nut_removed) // For hunger and fatness
 	if(hydration_factor)
@@ -74,19 +76,44 @@
 		if(IS_SKRELL)
 			M.adjustToxLoss(0.5 * removed)
 			return
+		if(IS_HERBIVORE)
+			M.adjustToxLoss(0.5 * removed)
+			return
 	..()
 
 /datum/reagent/nutriment/protein/adjust_nutrition(var/mob/living/carbon/M, var/alien, var/removed)
 	switch(alien)
+		if(IS_RESOMI) removed *= 1.55
 		if(IS_UNATHI) removed *= 2.25
+		if(IS_CARNIVORE) removed *= 2.25
 	M.adjust_nutrition(nutriment_factor * removed)
 
 /datum/reagent/nutriment/protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien && alien == IS_SKRELL)
+	if(alien)
+		switch(alien)
+			if(IS_SKRELL)
+				M.adjustToxLoss(2 * removed)
+				return
+			if(IS_HERBIVORE)
+				M.adjustToxLoss(2 * removed)
+				return
+		..()
+/*
+/datum/reagent/nutriment/protein/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(!skrell_toxic)
+		return ..()
+	switch(alien)
+		if(IS_HERBIVORE)
+			M.adjustToxLoss(0.5 * removed)
+			return
+	..()
+
+/datum/reagent/nutriment/protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien && alien == IS_HERBIVORE && skrell_toxic)
 		M.adjustToxLoss(2 * removed)
 		return
 	..()
-
+*/
 /datum/reagent/nutriment/protein/egg // Also bad for skrell.
 	name = "egg yolk"
 	taste_description = "egg"
@@ -799,7 +826,9 @@
 	if(alien == IS_DIONA)
 		return
 	..()
-
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(0.5 * removed)
+		M.make_jittery(4) //extra sensitive to caffine
 	if(adj_temp > 0)
 		holder.remove_reagent(/datum/reagent/frostoil, 10 * removed)
 	if(volume > 15)
@@ -809,11 +838,17 @@
 
 /datum/reagent/nutriment/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(2 * removed)
+		M.make_jittery(4)
 	M.add_chemical_effect(CE_PULSE, 2)
 
 /datum/reagent/drink/coffee/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien == IS_DIONA)
 		return
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(4 * REM)
+		M.apply_effect(3, STUTTER)
 	M.make_jittery(5)
 	M.add_chemical_effect(CE_PULSE, 1)
 
@@ -1371,10 +1406,23 @@
 	M.sleeping = max(0, M.sleeping - 2)
 	if(M.bodytemperature > 310)
 		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(0.5 * removed)
+		M.make_jittery(4) //extra sensitive to caffine
+
+/datum/reagent/ethanol/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(2 * removed)
+		M.make_jittery(4)
+		return
+	..()
 
 /datum/reagent/ethanol/coffee/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien == IS_DIONA)
 		return
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(4 * REM)
+		M.apply_effect(3, STUTTER)
 	M.make_jittery(5)
 
 /datum/reagent/ethanol/coffee/kahlua

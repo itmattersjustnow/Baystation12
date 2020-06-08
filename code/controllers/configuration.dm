@@ -67,7 +67,7 @@ var/list/gamemode_cache = list()
 	var/mod_job_tempban_max = 1440
 	var/load_jobs_from_txt = 0
 	var/jobs_have_minimal_access = 0	//determines whether jobs use minimal access or expanded access.
-
+	var/use_cortical_stacks = 1
 	var/cult_ghostwriter = 1               //Allows ghosts to write in blood in cult rounds...
 	var/cult_ghostwriter_req_cultists = 10 //...so long as this many cultists are active.
 
@@ -94,6 +94,7 @@ var/list/gamemode_cache = list()
 	var/banappeals
 	var/wikiurl
 	var/forumurl
+	var/ruleurl
 	var/githuburl
 	var/issuereporturl
 
@@ -147,6 +148,7 @@ var/list/gamemode_cache = list()
 	var/admin_legacy_system = 0	//Defines whether the server uses the legacy admin system with admins.txt or the SQL system. Config option in config.txt
 	var/ban_legacy_system = 0	//Defines whether the server uses the legacy banning system with the files in /data or the SQL system. Config option in config.txt
 	var/use_age_restriction_for_jobs = 0   //Do jobs use account age restrictions?   --requires database
+	var/use_char_age_restriction_for_jobs = 0   //Do jobs use in-game character age restrictions?
 	var/use_age_restriction_for_antags = 0 //Do antags use account age restrictions? --requires database
 
 	var/simultaneous_pm_warning_timeout = 100
@@ -159,6 +161,10 @@ var/list/gamemode_cache = list()
 
 	var/comms_password = null
 	var/ban_comms_password = null
+
+	var/webhook_address
+	var/webhook_key
+
 	var/list/forbidden_versions = list() // Clients with these byond versions will be autobanned. Format: string "byond_version.byond_build"; separate with ; in config, e.g. 512.1234;512.1235
 	var/minimum_byond_version = 0
 	var/minimum_byond_build = 0
@@ -288,6 +294,9 @@ var/list/gamemode_cache = list()
 
 				if ("use_age_restriction_for_jobs")
 					config.use_age_restriction_for_jobs = 1
+
+				if ("use_char_age_restriction_for_jobs")
+					config.use_char_age_restriction_for_jobs = 1
 
 				if ("use_age_restriction_for_antags")
 					config.use_age_restriction_for_antags = 1
@@ -434,6 +443,9 @@ var/list/gamemode_cache = list()
 				if ("forumurl")
 					config.forumurl = value
 
+				if ("ruleurl")
+					config.ruleurl = value
+
 				if ("githuburl")
 					config.githuburl = value
 
@@ -506,6 +518,9 @@ var/list/gamemode_cache = list()
 							else
 								log_misc("Incorrect objective disabled definition: [value]")
 								config.objectives_disabled = CONFIG_OBJECTIVE_NONE
+				if("use_cortical_stacks")
+					config.use_cortical_stacks = 1
+
 				if("protect_roles_from_antagonist")
 					config.protect_roles_from_antagonist = 1
 
@@ -604,6 +619,14 @@ var/list/gamemode_cache = list()
 
 				if("ban_comms_password")
 					config.ban_comms_password = value
+
+
+				if("webhook_address")
+					config.webhook_address = value
+
+				if("webhook_key")
+					config.webhook_key = value
+
 
 				if("forbidden_versions")
 					config.forbidden_versions = splittext(value, ";")

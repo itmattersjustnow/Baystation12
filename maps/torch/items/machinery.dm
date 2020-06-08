@@ -4,7 +4,7 @@
 	req_access = list(access_medical)
 
 /obj/machinery/drone_fabricator/torch
-	fabricator_tag = "SEV Torch Maintenance"
+	fabricator_tag = "NTEV Blue Jay Maintenance"
 
 /obj/machinery/drone_fabricator/torch/adv
 	name = "advanced drone fabricator"
@@ -48,7 +48,7 @@
 	model_text = "Exploration"
 	req_access = list(access_explorer)
 	available_modifications = list(/decl/item_modifier/space_suit/explorer)
-	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_SERGAL)
 
 /obj/machinery/suit_storage_unit/explorer
 	name = "Exploration Voidsuit Storage Unit"

@@ -62,7 +62,7 @@
 	var/taste_sensitivity = TASTE_NORMAL      // How sensitive the species is to minute tastes.
 	var/silent_steps
 
-	var/min_age = 17
+	var/min_age = 18
 	var/max_age = 70
 
 	// Speech vars.
@@ -227,7 +227,9 @@
 	var/list/base_auras
 
 	var/sexybits_location	//organ tag where they are located if they can be kicked for increased pain
-	
+
+	var/list/prone_overlay_offset = list(0, 0) // amount to shift overlays when lying
+
 	var/job_skill_buffs = list()				// A list containing jobs (/datum/job), with values the extra points that job receives.
 
 	var/list/descriptors = list(

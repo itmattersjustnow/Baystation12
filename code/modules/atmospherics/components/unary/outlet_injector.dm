@@ -32,7 +32,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector/Initialize()
 	. = ..()
 	//Give it a small reservoir for injecting. Also allows it to have a higher flow rate limit than vent pumps, to differentiate injectors a bit more.
-	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP + 500	
+	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP + 500
 
 /obj/machinery/atmospherics/unary/outlet_injector/Initialize()
 	. = ..()
@@ -43,7 +43,7 @@
 	unregister_radio(src, frequency)
 	. = ..()
 
-/obj/machinery/atmospherics/unary/outlet_injector/on_update_icon()	
+/obj/machinery/atmospherics/unary/outlet_injector/on_update_icon()
 	if (!node)
 		update_use_power(POWER_USE_OFF)
 
@@ -209,7 +209,7 @@
 		popup.set_content(jointext(get_console_data(),"<br>"))
 		popup.open()
 		return
-		
+
 	if(isWrench(O))
 		new /obj/item/pipe(loc, src)
 		qdel(src)

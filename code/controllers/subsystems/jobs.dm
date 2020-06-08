@@ -29,7 +29,7 @@ SUBSYSTEM_DEF(jobs)
 
 	// Create main map jobs.
 	primary_job_datums.Cut()
-	for(var/jobtype in (list(DEFAULT_JOB_TYPE) | GLOB.using_map.allowed_jobs))
+	for(var/jobtype in (list(/datum/job/assistant) | GLOB.using_map.allowed_jobs))
 		var/datum/job/job = get_by_path(jobtype)
 		if(!job)
 			job = new jobtype
@@ -141,7 +141,6 @@ SUBSYSTEM_DEF(jobs)
 	return titles_to_datums[rank]
 
 /datum/controller/subsystem/jobs/proc/get_by_path(var/path)
-	RETURN_TYPE(/datum/job)
 	return types_to_datums[path]
 
 /datum/controller/subsystem/jobs/proc/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/job)
@@ -164,7 +163,7 @@ SUBSYSTEM_DEF(jobs)
 /datum/controller/subsystem/jobs/proc/check_latejoin_blockers(var/mob/new_player/joining, var/datum/job/job)
 	if(!check_general_join_blockers(joining, job))
 		return FALSE
-	if(job.minimum_character_age && (joining.client.prefs.age < job.minimum_character_age))
+	if(job.minimum_character_age && (joining.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 		to_chat(joining, "<span class='warning'>Your character's in-game age is too low for this job.</span>")
 		return FALSE
 	if(!job.player_old_enough(joining.client))
@@ -222,7 +221,7 @@ SUBSYSTEM_DEF(jobs)
 			continue
 		if(!job.player_old_enough(player.client))
 			continue
-		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
+		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 			continue
 		if(flag && !(flag in player.client.prefs.be_special_role))
 			continue
@@ -234,7 +233,7 @@ SUBSYSTEM_DEF(jobs)
 	for(var/datum/job/job in shuffle(primary_job_datums))
 		if(!job)
 			continue
-		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
+		if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs)
 			continue
 		if(istype(job, get_by_title(GLOB.using_map.default_assistant_title))) // We don't want to give him assistant, that's boring!
 			continue
@@ -267,7 +266,7 @@ SUBSYSTEM_DEF(jobs)
 				// Log-out during round-start? What a bad boy, no head position for you!
 				if(!V.client) continue
 				var/age = V.client.prefs.age
-				if(age < job.minimum_character_age) // Nope.
+				if((age < job.minimum_character_age) && config.use_char_age_restriction_for_jobs) // Nope.
 					continue
 				switch(age)
 					if(job.minimum_character_age to (job.minimum_character_age+10))
@@ -364,7 +363,7 @@ SUBSYSTEM_DEF(jobs)
 	// For those who wanted to be assistant if their preferences were filled, here you go.
 	for(var/mob/new_player/player in unassigned_roundstart)
 		if(player.client.prefs.alternate_option == BE_ASSISTANT)
-			var/datum/job/ass = DEFAULT_JOB_TYPE
+			var/datum/job/ass = /datum/job/assistant
 			if((GLOB.using_map.flags & MAP_HAS_BRANCH) && player.client.prefs.branches[initial(ass.title)])
 				var/datum/mil_branch/branch = mil_branches.get_branch(player.client.prefs.branches[initial(ass.title)])
 				ass = branch.assistant_job

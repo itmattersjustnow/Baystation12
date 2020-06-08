@@ -1,8 +1,8 @@
 /datum/job/submap/voxship_vox
 	title = "Shoal Scavenger"
-	total_positions = 2
+	total_positions = 4
 	outfit_type = /decl/hierarchy/outfit/job/voxship/crew
-	supervisors = "quill, apex and the arkship"
+	supervisors = "apex and the arkship"
 	info = "Scrap is thin. Not much food is left, but thankfully the sector is quite rich, and it's time to get some more supplies. \
 	although staying on base is tempting. Plenty of nitrogen, and not much hazards to worry about."
 	whitelisted_species = list(SPECIES_VOX)
@@ -43,8 +43,7 @@
 		SKILL_EVA = SKILL_EXPERT,
 		SKILL_MEDICAL = SKILL_EXPERT,
 		SKILL_ANATOMY = SKILL_EXPERT,
-		SKILL_CHEMISTRY = SKILL_BASIC,
-		SKILL_DEVICES = SKILL_ADEPT
+		SKILL_CHEMISTRY = SKILL_BASIC
 	)
 
 	max_skill = list(

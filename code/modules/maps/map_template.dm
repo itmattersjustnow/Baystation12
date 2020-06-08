@@ -7,7 +7,7 @@
 	var/list/mappaths = null
 	var/loaded = 0 // Times loaded this round
 	var/list/shuttles_to_initialise = list()
-	var/list/subtemplates_to_spawn
+	var/list/subtemplates_to_spawn = list()
 	var/base_turf_for_zs = null
 	var/accessibility_weight = 0
 	var/template_flags = TEMPLATE_FLAG_ALLOW_DUPLICATES
@@ -58,7 +58,7 @@
 		if(istype(A, /obj/machinery))
 			machines += A
 		if(istype(A,/obj/effect/landmark/map_load_mark))
-			LAZYADD(subtemplates_to_spawn, A)
+			subtemplates_to_spawn += A
 
 	var/notsuspended
 	if(!SSmachines.suspended)
@@ -170,13 +170,11 @@
 
 /datum/map_template/proc/after_load(z)
 	for(var/obj/effect/landmark/map_load_mark/mark in subtemplates_to_spawn)
-		subtemplates_to_spawn -= mark
 		if(LAZYLEN(mark.templates))
 			var/template = pick(mark.templates)
 			var/datum/map_template/M = new template()
 			M.load(get_turf(mark), TRUE)
 			qdel(mark)
-	LAZYCLEARLIST(subtemplates_to_spawn)
 
 /datum/map_template/proc/extend_bounds_if_needed(var/list/existing_bounds, var/list/new_bounds)
 	var/list/bounds_to_combine = existing_bounds.Copy()

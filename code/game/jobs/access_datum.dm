@@ -58,6 +58,12 @@
 	desc = "Toxins Lab"
 	region = ACCESS_REGION_RESEARCH
 
+/var/const/access_genetics = "ACCESS_GENETICS'" //9
+/datum/access/genetics
+	id = access_genetics
+	desc = "Genetics Lab"
+	region = ACCESS_REGION_MEDBAY
+
 /var/const/access_engine = "ACCESS_ENGINEERING" //10
 /datum/access/engine
 	id = access_engine
@@ -181,7 +187,7 @@
 /var/const/access_rd = "ACCESS_RESEARCH_DIRECTOR" //30
 /datum/access/rd
 	id = access_rd
-	desc = "Chief Science Officer"
+	desc = "Researcch Director"
 	region = ACCESS_REGION_RESEARCH
 
 /var/const/access_cargo = "ACCESS_CARGO" //31

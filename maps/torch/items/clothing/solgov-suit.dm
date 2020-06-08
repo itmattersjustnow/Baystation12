@@ -304,51 +304,16 @@
 		rad = ARMOR_RAD_MINOR
 		)
 	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA,ACCESSORY_SLOT_RANK)
-	allowed = list (/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll,/obj/item/device/scanner/gas, /obj/item/device/flashlight, /obj/item/device/multitool, /obj/item/device/pipe_painter, /obj/item/device/radio, /obj/item/device/t_scanner, \
+	allowed = list (/obj/item/device/scanner/gas, /obj/item/device/flashlight, /obj/item/device/multitool, /obj/item/device/pipe_painter, /obj/item/device/radio, /obj/item/device/t_scanner, \
 	/obj/item/weapon/crowbar, /obj/item/weapon/screwdriver, /obj/item/weapon/weldingtool, /obj/item/weapon/wirecutters, /obj/item/weapon/wrench, /obj/item/weapon/tank/emergency, \
 	/obj/item/clothing/mask/gas, /obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat)
 
-/obj/item/clothing/suit/storage/jacket/solgov/fleet/medical
-	name = "fleet jacket"
-	desc = "A jacket commonly issued by the fleet to its medical staff. It sports some discrete blue markings, and has thin elbow pads."
-	icon_state = "navymedjacket"
-	allowed = list (/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll,/obj/item/stack/medical, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/hypospray, /obj/item/weapon/reagent_containers/syringe, \
-	/obj/item/device/scanner/health, /obj/item/device/flashlight, /obj/item/device/radio, /obj/item/clothing/head/hardhat, /obj/item/weapon/tank/emergency, /obj/item/weapon/reagent_containers/ivbag
-	)
-
-/obj/item/clothing/suit/storage/jacket/solgov/fleet/security
-	name = "fleet jacket"
-	desc = "A jacket commonly issued by the fleet to its security staff. It sports some discrete red markings, and has elbow pads."
-	icon_state = "navysecjacket"
-	allowed = list (/obj/item/weapon/tank/emergency,/obj/item/device/flashlight,/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll,/obj/item/weapon/gun/energy,/obj/item/device/radio,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/gun/magnetic,/obj/item/clothing/head/helmet
-	)
-
-/obj/item/clothing/suit/storage/jacket/solgov/fleet/service
-	name = "fleet jacket"
-	desc = "A jacket commonly issued by the fleet to its service staff. It sports some discrete green markings."
-	icon_state = "navysrvjacket"
-	allowed = list (/obj/item/weapon/tank/emergency,/obj/item/device/flashlight,/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll
-	)
-
-/obj/item/clothing/suit/storage/jacket/solgov/fleet/supply
-	name = "fleet jacket"
-	desc = "A jacket commonly issued by the fleet to its deck staff. It sports some discrete brown markings, and has elbow pads."
-	icon_state = "navysupjacket"
-	allowed = list (/obj/item/weapon/tank/emergency,/obj/item/device/flashlight,/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll
-	)
-
-/obj/item/clothing/suit/storage/jacket/solgov/fleet/command
-	name = "fleet jacket"
-	desc = "A jacket commonly issued by the fleet to its command staff. It sports some gold markings."
-	icon_state = "navycomjacket"
-	allowed = list (/obj/item/weapon/tank/emergency,/obj/item/device/flashlight,/obj/item/weapon/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/scanner/gas,/obj/item/device/radio,/obj/item/taperoll
-	)
 
 //SolGov Hardsuits
 
 /obj/item/clothing/suit/space/void/engineering/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
@@ -363,8 +328,8 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/atmos/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
@@ -379,8 +344,8 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/pilot/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
@@ -395,8 +360,8 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/medical/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
@@ -420,8 +385,8 @@
 	light_overlay = "helmet_light_dual_green"
 
 /obj/item/clothing/suit/space/void/command
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	icon_state = "void_command"
 	name = "command voidsuit"
 	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an EC seal on its chest plate and command department markings."
@@ -460,8 +425,8 @@
 
 /obj/item/clothing/suit/space/void/exploration
 	name = "exploration voidsuit"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
+	icon = 'frontier/maps/torch/icons/obj/obj_suit_solgov.dmi'
+	item_icons = list(slot_wear_suit_str = 'frontier/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	desc = "The bulky Exoplanet Exploration Unit is a standard voidsuit for Expeditionary Corps field operations. It features extra padding and respectable radiation-resistant lining."
 	icon_state = "void_explorer"
 	sprite_sheets = list(

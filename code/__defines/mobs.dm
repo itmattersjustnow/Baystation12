@@ -293,6 +293,9 @@
 #define SPECIES_VOX_ARMALIS "Vox Armalis"
 #define SPECIES_IPC         "Machine"
 #define SPECIES_UNATHI      "Unathi"
+#define SPECIES_SERGAL      "Sergal"
+#define SPECIES_NORTHERN    "Northern Sergal"
+#define SPECIES_EASTERN     "Eastern Sergal"
 #define SPECIES_SKRELL      "Skrell"
 #define SPECIES_PROMETHEAN  "Promethean"
 #define SPECIES_ALIEN       "Humanoid"
@@ -305,8 +308,16 @@
 #define SPECIES_GRAVWORLDER "Grav-Adapted Human"
 #define SPECIES_MULE        "Mule"
 #define SPECIES_BOOSTER     "Booster"
+#define SPECIES_RESOMI      "Resomi"
+#define SPECIES_AKULA       "Akula"
+#define SPECIES_CUSTOM      "Custom Species"
+#define SPECIES_VULP        "Vulpkanin"
+#define SPECIES_VASS        "Vasilissan"
+#define SPECIES_TAJ         "Tajaran"
+#define SPECIES_OLDUNATHI   "Humanathi" //Placeholder name
+#define SPECIES_HUMAN2      "Custom Human" //Placeholder name maybe. Might just go with it.
 
-#define UNRESTRICTED_SPECIES list(SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_BOOSTER, SPECIES_MULE)
+#define UNRESTRICTED_SPECIES list(SPECIES_NABBER, SPECIES_PROMETHEAN, SPECIES_YEOSA, SPECIES_EASTERN, SPECIES_NORTHERN, SPECIES_SERGAL, SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_BOOSTER, SPECIES_MULE, SPECIES_RESOMI, SPECIES_AKULA, SPECIES_CUSTOM, SPECIES_VULP, SPECIES_VASS, SPECIES_TAJ, SPECIES_OLDUNATHI, SPECIES_HUMAN2)
 #define RESTRICTED_SPECIES   list(SPECIES_VOX, SPECIES_ALIEN, SPECIES_GOLEM, SPECIES_MANTID_GYNE, SPECIES_MANTID_ALATE, SPECIES_MONARCH_WORKER, SPECIES_MONARCH_QUEEN)
 
 #define SPECIES_NABBER         "giant armoured serpentid"
@@ -354,6 +365,11 @@
 
 #define MARKING_TARGET_SKIN 0 // Draw a datum/sprite_accessory/marking to the mob's body, eg. tattoos
 #define MARKING_TARGET_HAIR 1 // Draw a datum/sprite_accessory/marking to the mob's hair, eg. ears & horns
+#define MODIFIER_STACK_FORBID	1	// Disallows stacking entirely.
+#define MODIFIER_STACK_EXTEND	2	// Disallows a second instance, but will extend the first instance if possible.
+#define MODIFIER_STACK_ALLOWED	3	// Multiple instances are allowed.
+
+#define MODIFIER_GENETIC	1	// Modifiers with this flag will be copied to mobs who get cloned.
 
 // used in /mob/living/carbon/human/can_inject, and by various callers of that proc
 #define CAN_INJECT 1

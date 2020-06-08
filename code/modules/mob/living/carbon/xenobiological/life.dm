@@ -125,9 +125,9 @@
 
 	src.set_density(!src.lying)
 
-	if (src.sdisabilities & BLINDED)
+	if (src.sdisabilities & BLIND)
 		src.blinded = 1
-	if (src.sdisabilities & DEAFENED)
+	if (src.sdisabilities & DEAF)
 		src.ear_deaf = 1
 
 	if (src.eye_blurry > 0)

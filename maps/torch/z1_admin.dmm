@@ -10374,7 +10374,7 @@
 /area/merchant_station)
 "aUi" = (
 /obj/machinery/firealarm{
-	dir = 1;
+	dir = 2;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -10547,7 +10547,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	dir = 1;
+	dir = 2;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,

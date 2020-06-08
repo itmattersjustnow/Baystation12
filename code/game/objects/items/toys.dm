@@ -142,7 +142,7 @@
 	name = "foam dart crossbow"
 	desc = "A weapon favored by many overactive children. Ages 8 and up."
 	icon = 'icons/obj/guns/energy_crossbow.dmi'
-	icon_state = "crossbow"
+	icon_state = "crossbow0"
 	item_state = "crossbow"
 	item_icons = list(
 		icon_l_hand = 'icons/mob/onmob/items/lefthand_guns.dmi',
@@ -232,7 +232,7 @@
 				if (O.client)	O.show_message(text("<span class='danger'>\The [] casually lines up a shot with []'s head, pulls the trigger, then realizes they are out of ammo and drops to the floor in search of some!</span>", user, M), 1, "<span class='warning'>You hear someone fall</span>", 2)
 			user.Weaken(5)
 		return
-		
+
 /obj/item/toy/crossbow/examine(mob/user, distance)
 	. = ..()
 	if(distance <= 2 && bullets)
@@ -590,8 +590,8 @@
 	icon_state = "wizard"
 
 /obj/item/toy/figure/rd
-	name = "Chief Science Officer action figure"
-	desc = "A \"Space Life\" brand Chief Science Officer action figure."
+	name = "Research Director action figure"
+	desc = "A \"Space Life\" brand Research Director action figure."
 	icon_state = "rd"
 
 /obj/item/toy/figure/roboticist
@@ -830,8 +830,8 @@
 							"<span class='warning'>You frantically wave \the [src] above your head!</span>")
 
 /obj/item/toy/torchmodel
-	name = "table-top SEV Torch model"
-	desc = "This is a replica of the SEV Torch, in 1:250th scale, on a handsome wooden stand. Small lights blink on the hull and at the engine exhaust."
+	name = "table-top NTEV Blue Jay model"
+	desc = "This is a replica of the NTEV Blue Jay, in 1:250th scale, on a handsome wooden stand. Small lights blink on the hull and at the engine exhaust."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "torch_model_figure"
 
