@@ -24,7 +24,7 @@
 	Genemodes, initially patented by VeyMed, were made popular about the middle of the 22nd century, and have only increased in number since. \
 	While new genomodders appear by making changes to DNA at an early stage of development, there are also those whose ancestors, \
 	also genomodders with similar modifications, passed their genes on to subsequent generations. \
-	Changes made with DNA can have various and significant phenotypic implications. \
+	Changes made with DNA can have various and significant phenotypic implications. \ 
 	Here you can assign various gene traits to them as you wish, to create a (hopefully) balanced genemodder. \
 	It can also works as custom species (whose meant to be not only a genemodder), subspecies or hybrid of some sorts. \
 	You may bring in your own special snowflake! As long as they, and by extension you, follow our rules over playing server appropriate characters. \
